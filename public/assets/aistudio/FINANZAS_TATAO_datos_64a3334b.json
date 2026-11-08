@@ -1,0 +1,9246 @@
+{
+ "meta": {
+  "negocio": "TATAO — dulcería/repostería (registro financiero)",
+  "archivo_origen": "FINANZAS_TATAO.xlsm",
+  "extraido_el": "2026-11-06",
+  "periodo_con_datos": {
+   "desde": "2026-09-21",
+   "hasta": "2026-11-05"
+  },
+  "formato": {
+   "fechas": "ISO 8601 (YYYY-MM-DD)",
+   "numeros": "punto decimal, sin separador de miles",
+   "moneda": "los montos no indican moneda en el libro",
+   "orden": "los registros van en orden cronológico; id es correlativo y fila_excel es la fila original en la hoja"
+  },
+  "conteos": {
+   "produccion": 165,
+   "ingresos": 465,
+   "gastos": 176,
+   "movimientos": 10,
+   "almacen_items": 24,
+   "materiales": 24,
+   "recetas": 2,
+   "clientes": 11,
+   "productos": 6,
+   "caja_dias": 46,
+   "caja_semanas_reparto": 7
+  },
+  "hojas_fuente": {
+   "registros": [
+    "Producción",
+    "Ingresos",
+    "Gastos",
+    "MOVIMIENTOS"
+   ],
+   "catalogos_y_ajustes": [
+    "Listas",
+    "Ajustes (ganancia por unidad con vigencia)",
+    "Materiales"
+   ],
+   "inventario_y_costos": [
+    "ALMACÉN",
+    "Recetas (2)"
+   ],
+   "caja": [
+    "CAJA (configuración, reparto semanal y diario calculado)",
+    "PANEL (solo los parámetros de reparto)"
+   ],
+   "no_incluidas": {
+    "PANEL / DIARIO / Cálculo": "vistas y cálculos derivados de los registros; la app debe recalcularlos",
+    "REGISTRO": "formulario de captura, sin datos guardados",
+    "CAJA_ANTERIOR": "versión anterior de la caja, reemplazada por CAJA"
+   }
+  }
+ },
+ "configuracion": {
+  "reparto_ganancia": {
+   "porcentaje_fondo_negocio": 0.3,
+   "porcentaje_administrador_sobre_lo_que_queda": 0.2,
+   "numero_duenos": 2
+  },
+  "caja": {
+   "saldo_inicial": 1300000,
+   "fecha_inicio": "2026-09-21",
+   "efectivo_contado": null
+  },
+  "semana_de_reparto": "domingo a sábado"
+ },
+ "catalogos": {
+  "clientes": [
+   "Carlos",
+   "Erick",
+   "Jose",
+   "Oliver",
+   "Osdael",
+   "Rentería",
+   "Nuevo",
+   "Titi",
+   "Otros",
+   "Yoan",
+   "Yanosky"
+  ],
+  "productos": [
+   {
+    "nombre": "Conos",
+    "precio_venta_referencia": 220,
+    "pago_por_unidad_trabajadores": 15,
+    "ganancia_por_unidad_vigente": 52
+   },
+   {
+    "nombre": "Masarreal",
+    "precio_venta_referencia": 160,
+    "pago_por_unidad_trabajadores": 15,
+    "ganancia_por_unidad_vigente": 25
+   },
+   {
+    "nombre": "Masas",
+    "precio_venta_referencia": null,
+    "pago_por_unidad_trabajadores": 150,
+    "ganancia_por_unidad_vigente": 0
+   },
+   {
+    "nombre": "Palmeritas",
+    "precio_venta_referencia": 160,
+    "pago_por_unidad_trabajadores": 10,
+    "ganancia_por_unidad_vigente": 30
+   },
+   {
+    "nombre": "Pasteles",
+    "precio_venta_referencia": 160,
+    "pago_por_unidad_trabajadores": 10,
+    "ganancia_por_unidad_vigente": 42
+   },
+   {
+    "nombre": "Señoritas",
+    "precio_venta_referencia": 250,
+    "pago_por_unidad_trabajadores": 15,
+    "ganancia_por_unidad_vigente": 77
+   }
+  ],
+  "ganancia_por_unidad_vigencias": [
+   {
+    "producto": "Señoritas",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 77
+   },
+   {
+    "producto": "Conos",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 22
+   },
+   {
+    "producto": "Conos",
+    "vigente_desde": "2026-09-24",
+    "ganancia_por_unidad": 52
+   },
+   {
+    "producto": "Pasteles",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 42
+   },
+   {
+    "producto": "Masarreal",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 25
+   },
+   {
+    "producto": "Palmeritas",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 30
+   },
+   {
+    "producto": "Masas",
+    "vigente_desde": "2026-09-21",
+    "ganancia_por_unidad": 0
+   }
+  ],
+  "conceptos_gasto_en_hoja_listas": [
+   "Salario Trab",
+   "Salario Econ",
+   "Salario Tatao",
+   "Salario Carlos",
+   "Corriente"
+  ],
+  "conceptos_movimientos": [
+   "Materias Primas",
+   "Materiales",
+   "Limpieza",
+   "Electricidad"
+  ],
+  "materiales": [
+   {
+    "nombre": "Aceite",
+    "precio_compra": 100,
+    "contenido": 1000,
+    "unidad_medida": "mL",
+    "precio_unitario": 0.1
+   },
+   {
+    "nombre": "Azúcar",
+    "precio_compra": 41000,
+    "contenido": 50000,
+    "unidad_medida": "g",
+    "precio_unitario": 0.82
+   },
+   {
+    "nombre": "Barra de guayaba",
+    "precio_compra": 320,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 320
+   },
+   {
+    "nombre": "Bicarbonato",
+    "precio_compra": 2700,
+    "contenido": 1000,
+    "unidad_medida": "g",
+    "precio_unitario": 2.7
+   },
+   {
+    "nombre": "Cobertura de chocolate",
+    "precio_compra": 10000,
+    "contenido": 4000,
+    "unidad_medida": "g",
+    "precio_unitario": 2.5
+   },
+   {
+    "nombre": "Coco",
+    "precio_compra": 1000,
+    "contenido": 1250,
+    "unidad_medida": "g",
+    "precio_unitario": 0.8
+   },
+   {
+    "nombre": "Crema de guayaba",
+    "precio_compra": 2700,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 2700
+   },
+   {
+    "nombre": "Crema pastelera",
+    "precio_compra": 1311,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 1311
+   },
+   {
+    "nombre": "Harina",
+    "precio_compra": 41000,
+    "contenido": 50000,
+    "unidad_medida": "g",
+    "precio_unitario": 0.82
+   },
+   {
+    "nombre": "Huevo",
+    "precio_compra": 3000,
+    "contenido": 30,
+    "unidad_medida": "U",
+    "precio_unitario": 100
+   },
+   {
+    "nombre": "Leche",
+    "precio_compra": 84000,
+    "contenido": 25000,
+    "unidad_medida": "g",
+    "precio_unitario": 3.36
+   },
+   {
+    "nombre": "Leche evaporada",
+    "precio_compra": 600,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 600
+   },
+   {
+    "nombre": "Maicena",
+    "precio_compra": 25000,
+    "contenido": 25000,
+    "unidad_medida": "g",
+    "precio_unitario": 1
+   },
+   {
+    "nombre": "Manteca Croasan",
+    "precio_compra": 24200,
+    "contenido": 10000,
+    "unidad_medida": "g",
+    "precio_unitario": 2.42
+   },
+   {
+    "nombre": "Manteca Gold",
+    "precio_compra": 33500,
+    "contenido": 20000,
+    "unidad_medida": "g",
+    "precio_unitario": 1.675
+   },
+   {
+    "nombre": "Manteca pastelera",
+    "precio_compra": 24000,
+    "contenido": 10000,
+    "unidad_medida": "g",
+    "precio_unitario": 2.4
+   },
+   {
+    "nombre": "Margarina",
+    "precio_compra": 18000,
+    "contenido": 15000,
+    "unidad_medida": "g",
+    "precio_unitario": 1.2
+   },
+   {
+    "nombre": "Masa de hojaldre",
+    "precio_compra": 1910,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 1910
+   },
+   {
+    "nombre": "Masa de hojaldre con Croasan",
+    "precio_compra": 2400,
+    "contenido": 1,
+    "unidad_medida": "U",
+    "precio_unitario": 2400
+   },
+   {
+    "nombre": "Polvo de hornear",
+    "precio_compra": 10000,
+    "contenido": 4000,
+    "unidad_medida": "g",
+    "precio_unitario": 2.5
+   },
+   {
+    "nombre": "Sabor",
+    "precio_compra": 11000,
+    "contenido": 500,
+    "unidad_medida": "mL",
+    "precio_unitario": 22
+   },
+   {
+    "nombre": "Sal",
+    "precio_compra": 300,
+    "contenido": 1000,
+    "unidad_medida": "g",
+    "precio_unitario": 0.3
+   },
+   {
+    "nombre": "Salario",
+    "precio_compra": null,
+    "contenido": null,
+    "unidad_medida": null,
+    "precio_unitario": 0
+   },
+   {
+    "nombre": "Supernotermul",
+    "precio_compra": 45000,
+    "contenido": 5000,
+    "unidad_medida": "g",
+    "precio_unitario": 9
+   }
+  ]
+ },
+ "registros": {
+  "produccion": [
+   {
+    "id": 1,
+    "fecha": "2026-09-21",
+    "producto": "Conos",
+    "cantidad": 135,
+    "precio": 170,
+    "importe": 22950,
+    "fila_excel": 2
+   },
+   {
+    "id": 2,
+    "fecha": "2026-09-21",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 140,
+    "importe": 33600,
+    "fila_excel": 3
+   },
+   {
+    "id": 3,
+    "fecha": "2026-09-21",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 4
+   },
+   {
+    "id": 4,
+    "fecha": "2026-09-21",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 140,
+    "importe": 28000,
+    "fila_excel": 5
+   },
+   {
+    "id": 5,
+    "fecha": "2026-09-21",
+    "producto": "Señoritas",
+    "cantidad": 144,
+    "precio": 230,
+    "importe": 33120,
+    "fila_excel": 6
+   },
+   {
+    "id": 6,
+    "fecha": "2026-09-22",
+    "producto": "Conos",
+    "cantidad": 158,
+    "precio": 170,
+    "importe": 26860,
+    "fila_excel": 7
+   },
+   {
+    "id": 7,
+    "fecha": "2026-09-22",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 140,
+    "importe": 33600,
+    "fila_excel": 8
+   },
+   {
+    "id": 8,
+    "fecha": "2026-09-22",
+    "producto": "Masas",
+    "cantidad": 13,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 9
+   },
+   {
+    "id": 9,
+    "fecha": "2026-09-22",
+    "producto": "Pasteles",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 10
+   },
+   {
+    "id": 10,
+    "fecha": "2026-09-22",
+    "producto": "Señoritas",
+    "cantidad": 216,
+    "precio": 230,
+    "importe": 49680,
+    "fila_excel": 11
+   },
+   {
+    "id": 11,
+    "fecha": "2026-09-23",
+    "producto": "Conos",
+    "cantidad": 153,
+    "precio": 170,
+    "importe": 26010,
+    "fila_excel": 12
+   },
+   {
+    "id": 12,
+    "fecha": "2026-09-23",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 13
+   },
+   {
+    "id": 13,
+    "fecha": "2026-09-23",
+    "producto": "Masas",
+    "cantidad": 11,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 14
+   },
+   {
+    "id": 14,
+    "fecha": "2026-09-23",
+    "producto": "Pasteles",
+    "cantidad": 39,
+    "precio": 140,
+    "importe": 5460,
+    "fila_excel": 15
+   },
+   {
+    "id": 15,
+    "fecha": "2026-09-23",
+    "producto": "Señoritas",
+    "cantidad": 216,
+    "precio": 230,
+    "importe": 49680,
+    "fila_excel": 16
+   },
+   {
+    "id": 16,
+    "fecha": "2026-09-24",
+    "producto": "Conos",
+    "cantidad": 166,
+    "precio": 200,
+    "importe": 33200,
+    "fila_excel": 17
+   },
+   {
+    "id": 17,
+    "fecha": "2026-09-24",
+    "producto": "Masarreal",
+    "cantidad": 180,
+    "precio": 140,
+    "importe": 25200,
+    "fila_excel": 18
+   },
+   {
+    "id": 18,
+    "fecha": "2026-09-24",
+    "producto": "Masas",
+    "cantidad": 9,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 19
+   },
+   {
+    "id": 19,
+    "fecha": "2026-09-24",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "precio": 140,
+    "importe": 5600,
+    "fila_excel": 20
+   },
+   {
+    "id": 20,
+    "fecha": "2026-09-24",
+    "producto": "Señoritas",
+    "cantidad": 144,
+    "precio": 230,
+    "importe": 33120,
+    "fila_excel": 21
+   },
+   {
+    "id": 21,
+    "fecha": "2026-09-25",
+    "producto": "Conos",
+    "cantidad": 166,
+    "precio": 200,
+    "importe": 33200,
+    "fila_excel": 22
+   },
+   {
+    "id": 22,
+    "fecha": "2026-09-25",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 140,
+    "importe": 33600,
+    "fila_excel": 23
+   },
+   {
+    "id": 23,
+    "fecha": "2026-09-25",
+    "producto": "Masas",
+    "cantidad": 14,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 24
+   },
+   {
+    "id": 24,
+    "fecha": "2026-09-25",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 140,
+    "importe": 28000,
+    "fila_excel": 25
+   },
+   {
+    "id": 25,
+    "fecha": "2026-09-25",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 230,
+    "importe": 41400,
+    "fila_excel": 26
+   },
+   {
+    "id": 26,
+    "fecha": "2026-09-26",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 27
+   },
+   {
+    "id": 27,
+    "fecha": "2026-09-28",
+    "producto": "Conos",
+    "cantidad": 155,
+    "precio": 200,
+    "importe": 31000,
+    "fila_excel": 28
+   },
+   {
+    "id": 28,
+    "fecha": "2026-09-28",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 29
+   },
+   {
+    "id": 29,
+    "fecha": "2026-09-28",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 230,
+    "importe": 16560,
+    "fila_excel": 30
+   },
+   {
+    "id": 30,
+    "fecha": "2026-09-29",
+    "producto": "Conos",
+    "cantidad": 170,
+    "precio": 200,
+    "importe": 34000,
+    "fila_excel": 31
+   },
+   {
+    "id": 31,
+    "fecha": "2026-09-29",
+    "producto": "Masarreal",
+    "cantidad": 360,
+    "precio": 140,
+    "importe": 50400,
+    "fila_excel": 32
+   },
+   {
+    "id": 32,
+    "fecha": "2026-09-29",
+    "producto": "Masas",
+    "cantidad": 13,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 33
+   },
+   {
+    "id": 33,
+    "fecha": "2026-09-29",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 140,
+    "importe": 28000,
+    "fila_excel": 34
+   },
+   {
+    "id": 34,
+    "fecha": "2026-09-29",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 230,
+    "importe": 41400,
+    "fila_excel": 35
+   },
+   {
+    "id": 35,
+    "fecha": "2026-09-30",
+    "producto": "Conos",
+    "cantidad": 165,
+    "precio": 200,
+    "importe": 33000,
+    "fila_excel": 36
+   },
+   {
+    "id": 36,
+    "fecha": "2026-09-30",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 37
+   },
+   {
+    "id": 37,
+    "fecha": "2026-09-30",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 38
+   },
+   {
+    "id": 38,
+    "fecha": "2026-09-30",
+    "producto": "Pasteles",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 39
+   },
+   {
+    "id": 39,
+    "fecha": "2026-09-30",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 230,
+    "importe": 41400,
+    "fila_excel": 40
+   },
+   {
+    "id": 40,
+    "fecha": "2026-10-01",
+    "producto": "Conos",
+    "cantidad": 180,
+    "precio": 200,
+    "importe": 36000,
+    "fila_excel": 41
+   },
+   {
+    "id": 41,
+    "fecha": "2026-10-01",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 42
+   },
+   {
+    "id": 42,
+    "fecha": "2026-10-01",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 43
+   },
+   {
+    "id": 43,
+    "fecha": "2026-10-01",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "precio": 140,
+    "importe": 14000,
+    "fila_excel": 44
+   },
+   {
+    "id": 44,
+    "fecha": "2026-10-01",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 230,
+    "importe": 24840,
+    "fila_excel": 45
+   },
+   {
+    "id": 45,
+    "fecha": "2026-10-02",
+    "producto": "Conos",
+    "cantidad": 82,
+    "precio": 200,
+    "importe": 16400,
+    "fila_excel": 46
+   },
+   {
+    "id": 46,
+    "fecha": "2026-10-02",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 140,
+    "importe": 16800,
+    "fila_excel": 47
+   },
+   {
+    "id": 47,
+    "fecha": "2026-10-02",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 48
+   },
+   {
+    "id": 48,
+    "fecha": "2026-10-02",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 230,
+    "importe": 16560,
+    "fila_excel": 49
+   },
+   {
+    "id": 49,
+    "fecha": "2026-10-03",
+    "producto": "Conos",
+    "cantidad": 45,
+    "precio": 200,
+    "importe": 9000,
+    "fila_excel": 50
+   },
+   {
+    "id": 50,
+    "fecha": "2026-10-03",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 140,
+    "importe": 33600,
+    "fila_excel": 51
+   },
+   {
+    "id": 51,
+    "fecha": "2026-10-03",
+    "producto": "Palmeritas",
+    "cantidad": 30,
+    "precio": 80,
+    "importe": 2400,
+    "fila_excel": 52
+   },
+   {
+    "id": 52,
+    "fecha": "2026-10-03",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 140,
+    "importe": 28000,
+    "fila_excel": 53
+   },
+   {
+    "id": 53,
+    "fecha": "2026-10-03",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 230,
+    "importe": 24840,
+    "fila_excel": 54
+   },
+   {
+    "id": 54,
+    "fecha": "2026-10-05",
+    "producto": "Conos",
+    "cantidad": 170,
+    "precio": 210,
+    "importe": 35700,
+    "fila_excel": 55
+   },
+   {
+    "id": 55,
+    "fecha": "2026-10-05",
+    "producto": "Masarreal",
+    "cantidad": 180,
+    "precio": 150,
+    "importe": 27000,
+    "fila_excel": 56
+   },
+   {
+    "id": 56,
+    "fecha": "2026-10-05",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 57
+   },
+   {
+    "id": 57,
+    "fecha": "2026-10-05",
+    "producto": "Señoritas",
+    "cantidad": 140,
+    "precio": 240,
+    "importe": 33600,
+    "fila_excel": 58
+   },
+   {
+    "id": 58,
+    "fecha": "2026-10-06",
+    "producto": "Conos",
+    "cantidad": 128,
+    "precio": 210,
+    "importe": 26880,
+    "fila_excel": 59
+   },
+   {
+    "id": 59,
+    "fecha": "2026-10-06",
+    "producto": "Masas",
+    "cantidad": 13,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 60
+   },
+   {
+    "id": 60,
+    "fecha": "2026-10-06",
+    "producto": "Pasteles",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 61
+   },
+   {
+    "id": 61,
+    "fecha": "2026-10-06",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 240,
+    "importe": 25920,
+    "fila_excel": 62
+   },
+   {
+    "id": 62,
+    "fecha": "2026-10-07",
+    "producto": "Conos",
+    "cantidad": 131,
+    "precio": 210,
+    "importe": 27510,
+    "fila_excel": 63
+   },
+   {
+    "id": 63,
+    "fecha": "2026-10-07",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 64
+   },
+   {
+    "id": 64,
+    "fecha": "2026-10-07",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 65
+   },
+   {
+    "id": 65,
+    "fecha": "2026-10-07",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "precio": 150,
+    "importe": 15000,
+    "fila_excel": 66
+   },
+   {
+    "id": 66,
+    "fecha": "2026-10-07",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 240,
+    "importe": 17280,
+    "fila_excel": 67
+   },
+   {
+    "id": 67,
+    "fecha": "2026-10-08",
+    "producto": "Conos",
+    "cantidad": 86,
+    "precio": 210,
+    "importe": 18060,
+    "fila_excel": 68
+   },
+   {
+    "id": 68,
+    "fecha": "2026-10-08",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 69
+   },
+   {
+    "id": 69,
+    "fecha": "2026-10-08",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 70
+   },
+   {
+    "id": 70,
+    "fecha": "2026-10-08",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "precio": 150,
+    "importe": 15000,
+    "fila_excel": 71
+   },
+   {
+    "id": 71,
+    "fecha": "2026-10-08",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 240,
+    "importe": 43200,
+    "fila_excel": 72
+   },
+   {
+    "id": 72,
+    "fecha": "2026-10-09",
+    "producto": "Conos",
+    "cantidad": 170,
+    "precio": 210,
+    "importe": 35700,
+    "fila_excel": 73
+   },
+   {
+    "id": 73,
+    "fecha": "2026-10-09",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 74
+   },
+   {
+    "id": 74,
+    "fecha": "2026-10-09",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 75
+   },
+   {
+    "id": 75,
+    "fecha": "2026-10-09",
+    "producto": "Pasteles",
+    "cantidad": 80,
+    "precio": 150,
+    "importe": 12000,
+    "fila_excel": 76
+   },
+   {
+    "id": 76,
+    "fecha": "2026-10-09",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 240,
+    "importe": 43200,
+    "fila_excel": 77
+   },
+   {
+    "id": 77,
+    "fecha": "2026-10-10",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 78
+   },
+   {
+    "id": 78,
+    "fecha": "2026-10-11",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 79
+   },
+   {
+    "id": 79,
+    "fecha": "2026-10-12",
+    "producto": "Conos",
+    "cantidad": 176,
+    "precio": 210,
+    "importe": 36960,
+    "fila_excel": 80
+   },
+   {
+    "id": 80,
+    "fecha": "2026-10-12",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 81
+   },
+   {
+    "id": 81,
+    "fecha": "2026-10-12",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 82
+   },
+   {
+    "id": 82,
+    "fecha": "2026-10-12",
+    "producto": "Señoritas",
+    "cantidad": 216,
+    "precio": 240,
+    "importe": 51840,
+    "fila_excel": 83
+   },
+   {
+    "id": 83,
+    "fecha": "2026-10-13",
+    "producto": "Conos",
+    "cantidad": 172,
+    "precio": 210,
+    "importe": 36120,
+    "fila_excel": 84
+   },
+   {
+    "id": 84,
+    "fecha": "2026-10-13",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 85
+   },
+   {
+    "id": 85,
+    "fecha": "2026-10-13",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 86
+   },
+   {
+    "id": 86,
+    "fecha": "2026-10-13",
+    "producto": "Señoritas",
+    "cantidad": 252,
+    "precio": 240,
+    "importe": 60480,
+    "fila_excel": 87
+   },
+   {
+    "id": 87,
+    "fecha": "2026-10-14",
+    "producto": "Conos",
+    "cantidad": 124,
+    "precio": 210,
+    "importe": 26040,
+    "fila_excel": 88
+   },
+   {
+    "id": 88,
+    "fecha": "2026-10-15",
+    "producto": "Conos",
+    "cantidad": 125,
+    "precio": 210,
+    "importe": 26250,
+    "fila_excel": 89
+   },
+   {
+    "id": 89,
+    "fecha": "2026-10-15",
+    "producto": "Masarreal",
+    "cantidad": 170,
+    "precio": 150,
+    "importe": 25500,
+    "fila_excel": 90
+   },
+   {
+    "id": 90,
+    "fecha": "2026-10-15",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 91
+   },
+   {
+    "id": 91,
+    "fecha": "2026-10-15",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 240,
+    "importe": 17280,
+    "fila_excel": 92
+   },
+   {
+    "id": 92,
+    "fecha": "2026-10-16",
+    "producto": "Masarreal",
+    "cantidad": 70,
+    "precio": 150,
+    "importe": 10500,
+    "fila_excel": 93
+   },
+   {
+    "id": 93,
+    "fecha": "2026-10-17",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 94
+   },
+   {
+    "id": 94,
+    "fecha": "2026-10-19",
+    "producto": "Conos",
+    "cantidad": 206,
+    "precio": 210,
+    "importe": 43260,
+    "fila_excel": 95
+   },
+   {
+    "id": 95,
+    "fecha": "2026-10-19",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 96
+   },
+   {
+    "id": 96,
+    "fecha": "2026-10-19",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 97
+   },
+   {
+    "id": 97,
+    "fecha": "2026-10-19",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "precio": 150,
+    "importe": 6000,
+    "fila_excel": 98
+   },
+   {
+    "id": 98,
+    "fecha": "2026-10-20",
+    "producto": "Conos",
+    "cantidad": 127,
+    "precio": 210,
+    "importe": 26670,
+    "fila_excel": 99
+   },
+   {
+    "id": 99,
+    "fecha": "2026-10-20",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 100
+   },
+   {
+    "id": 100,
+    "fecha": "2026-10-20",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 101
+   },
+   {
+    "id": 101,
+    "fecha": "2026-10-20",
+    "producto": "Pasteles",
+    "cantidad": 205,
+    "precio": 150,
+    "importe": 30750,
+    "fila_excel": 102
+   },
+   {
+    "id": 102,
+    "fecha": "2026-10-20",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 240,
+    "importe": 25920,
+    "fila_excel": 103
+   },
+   {
+    "id": 103,
+    "fecha": "2026-10-21",
+    "producto": "Conos",
+    "cantidad": 120,
+    "precio": 210,
+    "importe": 25200,
+    "fila_excel": 104
+   },
+   {
+    "id": 104,
+    "fecha": "2026-10-21",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 105
+   },
+   {
+    "id": 105,
+    "fecha": "2026-10-21",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 106
+   },
+   {
+    "id": 106,
+    "fecha": "2026-10-21",
+    "producto": "Pasteles",
+    "cantidad": 160,
+    "precio": 150,
+    "importe": 24000,
+    "fila_excel": 107
+   },
+   {
+    "id": 107,
+    "fecha": "2026-10-21",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 240,
+    "importe": 25920,
+    "fila_excel": 108
+   },
+   {
+    "id": 108,
+    "fecha": "2026-10-22",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 109
+   },
+   {
+    "id": 109,
+    "fecha": "2026-10-23",
+    "producto": "Conos",
+    "cantidad": 89,
+    "precio": 210,
+    "importe": 18690,
+    "fila_excel": 110
+   },
+   {
+    "id": 110,
+    "fecha": "2026-10-23",
+    "producto": "Masarreal",
+    "cantidad": 360,
+    "precio": 150,
+    "importe": 54000,
+    "fila_excel": 111
+   },
+   {
+    "id": 111,
+    "fecha": "2026-10-23",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 112
+   },
+   {
+    "id": 112,
+    "fecha": "2026-10-23",
+    "producto": "Pasteles",
+    "cantidad": 80,
+    "precio": 150,
+    "importe": 12000,
+    "fila_excel": 113
+   },
+   {
+    "id": 113,
+    "fecha": "2026-10-23",
+    "producto": "Señoritas",
+    "cantidad": 144,
+    "precio": 240,
+    "importe": 34560,
+    "fila_excel": 114
+   },
+   {
+    "id": 114,
+    "fecha": "2026-10-24",
+    "producto": "Conos",
+    "cantidad": 94,
+    "precio": 210,
+    "importe": 19740,
+    "fila_excel": 115
+   },
+   {
+    "id": 115,
+    "fecha": "2026-10-24",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 116
+   },
+   {
+    "id": 116,
+    "fecha": "2026-10-24",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 117
+   },
+   {
+    "id": 117,
+    "fecha": "2026-10-24",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 150,
+    "importe": 30000,
+    "fila_excel": 118
+   },
+   {
+    "id": 118,
+    "fecha": "2026-10-24",
+    "producto": "Señoritas",
+    "cantidad": 144,
+    "precio": 240,
+    "importe": 34560,
+    "fila_excel": 119
+   },
+   {
+    "id": 119,
+    "fecha": "2026-10-26",
+    "producto": "Conos",
+    "cantidad": 131,
+    "precio": 210,
+    "importe": 27510,
+    "fila_excel": 120
+   },
+   {
+    "id": 120,
+    "fecha": "2026-10-26",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 121
+   },
+   {
+    "id": 121,
+    "fecha": "2026-10-26",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 122
+   },
+   {
+    "id": 122,
+    "fecha": "2026-10-26",
+    "producto": "Pasteles",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 123
+   },
+   {
+    "id": 123,
+    "fecha": "2026-10-26",
+    "producto": "Señoritas",
+    "cantidad": 107,
+    "precio": 240,
+    "importe": 25680,
+    "fila_excel": 124
+   },
+   {
+    "id": 124,
+    "fecha": "2026-10-27",
+    "producto": "Conos",
+    "cantidad": 127,
+    "precio": 210,
+    "importe": 26670,
+    "fila_excel": 125
+   },
+   {
+    "id": 125,
+    "fecha": "2026-10-27",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 126
+   },
+   {
+    "id": 126,
+    "fecha": "2026-10-27",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 127
+   },
+   {
+    "id": 127,
+    "fecha": "2026-10-27",
+    "producto": "Pasteles",
+    "cantidad": 160,
+    "precio": 150,
+    "importe": 24000,
+    "fila_excel": 128
+   },
+   {
+    "id": 128,
+    "fecha": "2026-10-27",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 240,
+    "importe": 17280,
+    "fila_excel": 129
+   },
+   {
+    "id": 129,
+    "fecha": "2026-10-28",
+    "producto": "Conos",
+    "cantidad": 151,
+    "precio": 210,
+    "importe": 31710,
+    "fila_excel": 130
+   },
+   {
+    "id": 130,
+    "fecha": "2026-10-28",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "precio": 150,
+    "importe": 9000,
+    "fila_excel": 131
+   },
+   {
+    "id": 131,
+    "fecha": "2026-10-28",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 132
+   },
+   {
+    "id": 132,
+    "fecha": "2026-10-28",
+    "producto": "Pasteles",
+    "cantidad": 160,
+    "precio": 150,
+    "importe": 24000,
+    "fila_excel": 133
+   },
+   {
+    "id": 133,
+    "fecha": "2026-10-28",
+    "producto": "Señoritas",
+    "cantidad": 107,
+    "precio": 240,
+    "importe": 25680,
+    "fila_excel": 134
+   },
+   {
+    "id": 134,
+    "fecha": "2026-10-29",
+    "producto": "Conos",
+    "cantidad": 166,
+    "precio": 210,
+    "importe": 34860,
+    "fila_excel": 135
+   },
+   {
+    "id": 135,
+    "fecha": "2026-10-29",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 136
+   },
+   {
+    "id": 136,
+    "fecha": "2026-10-29",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 137
+   },
+   {
+    "id": 137,
+    "fecha": "2026-10-29",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "precio": 150,
+    "importe": 6000,
+    "fila_excel": 138
+   },
+   {
+    "id": 138,
+    "fecha": "2026-10-29",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 240,
+    "importe": 43200,
+    "fila_excel": 139
+   },
+   {
+    "id": 139,
+    "fecha": "2026-10-30",
+    "producto": "Conos",
+    "cantidad": 86,
+    "precio": 210,
+    "importe": 18060,
+    "fila_excel": 140
+   },
+   {
+    "id": 140,
+    "fecha": "2026-10-30",
+    "producto": "Masarreal",
+    "cantidad": 84,
+    "precio": 150,
+    "importe": 12600,
+    "fila_excel": 141
+   },
+   {
+    "id": 141,
+    "fecha": "2026-10-30",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 142
+   },
+   {
+    "id": 142,
+    "fecha": "2026-10-30",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 150,
+    "importe": 30000,
+    "fila_excel": 143
+   },
+   {
+    "id": 143,
+    "fecha": "2026-10-30",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 240,
+    "importe": 17280,
+    "fila_excel": 144
+   },
+   {
+    "id": 144,
+    "fecha": "2026-10-31",
+    "producto": "Conos",
+    "cantidad": 85,
+    "precio": 210,
+    "importe": 17850,
+    "fila_excel": 145
+   },
+   {
+    "id": 145,
+    "fecha": "2026-10-31",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "precio": 150,
+    "importe": 13500,
+    "fila_excel": 146
+   },
+   {
+    "id": 146,
+    "fecha": "2026-10-31",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 147
+   },
+   {
+    "id": 147,
+    "fecha": "2026-10-31",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "precio": 150,
+    "importe": 6000,
+    "fila_excel": 148
+   },
+   {
+    "id": 148,
+    "fecha": "2026-11-02",
+    "producto": "Conos",
+    "cantidad": 125,
+    "precio": 210,
+    "importe": 26250,
+    "fila_excel": 149
+   },
+   {
+    "id": 149,
+    "fecha": "2026-11-02",
+    "producto": "Masarreal",
+    "cantidad": 240,
+    "precio": 150,
+    "importe": 36000,
+    "fila_excel": 150
+   },
+   {
+    "id": 150,
+    "fecha": "2026-11-02",
+    "producto": "Masas",
+    "cantidad": 7,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 151
+   },
+   {
+    "id": 151,
+    "fecha": "2026-11-02",
+    "producto": "Pasteles",
+    "cantidad": 120,
+    "precio": 150,
+    "importe": 18000,
+    "fila_excel": 152
+   },
+   {
+    "id": 152,
+    "fecha": "2026-11-02",
+    "producto": "Señoritas",
+    "cantidad": 180,
+    "precio": 240,
+    "importe": 43200,
+    "fila_excel": 153
+   },
+   {
+    "id": 153,
+    "fecha": "2026-11-03",
+    "producto": "Conos",
+    "cantidad": 132,
+    "precio": 220,
+    "importe": 29040,
+    "fila_excel": 154
+   },
+   {
+    "id": 154,
+    "fecha": "2026-11-03",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "precio": 160,
+    "importe": 19200,
+    "fila_excel": 155
+   },
+   {
+    "id": 155,
+    "fecha": "2026-11-03",
+    "producto": "Masas",
+    "cantidad": 12,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 156
+   },
+   {
+    "id": 156,
+    "fecha": "2026-11-03",
+    "producto": "Pasteles",
+    "cantidad": 200,
+    "precio": 160,
+    "importe": 32000,
+    "fila_excel": 157
+   },
+   {
+    "id": 157,
+    "fecha": "2026-11-03",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 250,
+    "importe": 27000,
+    "fila_excel": 158
+   },
+   {
+    "id": 158,
+    "fecha": "2026-11-04",
+    "producto": "Conos",
+    "cantidad": 125,
+    "precio": 220,
+    "importe": 27500,
+    "fila_excel": 159
+   },
+   {
+    "id": 159,
+    "fecha": "2026-11-04",
+    "producto": "Masas",
+    "cantidad": 6,
+    "precio": 0,
+    "importe": 0,
+    "fila_excel": 160
+   },
+   {
+    "id": 160,
+    "fecha": "2026-11-04",
+    "producto": "Pasteles",
+    "cantidad": 160,
+    "precio": 160,
+    "importe": 25600,
+    "fila_excel": 161
+   },
+   {
+    "id": 161,
+    "fecha": "2026-11-04",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "precio": 250,
+    "importe": 18000,
+    "fila_excel": 162
+   },
+   {
+    "id": 162,
+    "fecha": "2026-11-05",
+    "producto": "Conos",
+    "cantidad": 177,
+    "precio": 220,
+    "importe": 38940,
+    "fila_excel": 163
+   },
+   {
+    "id": 163,
+    "fecha": "2026-11-05",
+    "producto": "Masarreal",
+    "cantidad": 420,
+    "precio": 160,
+    "importe": 67200,
+    "fila_excel": 164
+   },
+   {
+    "id": 164,
+    "fecha": "2026-11-05",
+    "producto": "Pasteles",
+    "cantidad": 98,
+    "precio": 160,
+    "importe": 15680,
+    "fila_excel": 165
+   },
+   {
+    "id": 165,
+    "fecha": "2026-11-05",
+    "producto": "Señoritas",
+    "cantidad": 108,
+    "precio": 250,
+    "importe": 27000,
+    "fila_excel": 166
+   }
+  ],
+  "ingresos": [
+   {
+    "id": 1,
+    "fecha": "2026-09-21",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "004-A",
+    "fila_excel": 450
+   },
+   {
+    "id": 2,
+    "fecha": "2026-09-21",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "004-A",
+    "fila_excel": 451
+   },
+   {
+    "id": 3,
+    "fecha": "2026-09-21",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 3,
+    "importe": 420,
+    "vale": "004-A",
+    "fila_excel": 452
+   },
+   {
+    "id": 4,
+    "fecha": "2026-09-21",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 19,
+    "importe": 3230,
+    "vale": "004",
+    "fila_excel": 453
+   },
+   {
+    "id": 5,
+    "fecha": "2026-09-21",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "004",
+    "fila_excel": 454
+   },
+   {
+    "id": 6,
+    "fecha": "2026-09-21",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "004",
+    "fila_excel": 455
+   },
+   {
+    "id": 7,
+    "fecha": "2026-09-21",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 84,
+    "importe": 19320,
+    "vale": "004",
+    "fila_excel": 456
+   },
+   {
+    "id": 8,
+    "fecha": "2026-09-21",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 6800,
+    "vale": "003",
+    "fila_excel": 457
+   },
+   {
+    "id": 9,
+    "fecha": "2026-09-21",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "003",
+    "fila_excel": 458
+   },
+   {
+    "id": 10,
+    "fecha": "2026-09-21",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "003",
+    "fila_excel": 459
+   },
+   {
+    "id": 11,
+    "fecha": "2026-09-21",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 8500,
+    "vale": "002",
+    "fila_excel": 460
+   },
+   {
+    "id": 12,
+    "fecha": "2026-09-21",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 72,
+    "importe": 10080,
+    "vale": "002",
+    "fila_excel": 461
+   },
+   {
+    "id": 13,
+    "fecha": "2026-09-21",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "importe": 14000,
+    "vale": "002",
+    "fila_excel": 462
+   },
+   {
+    "id": 14,
+    "fecha": "2026-09-21",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 25,
+    "importe": 4250,
+    "vale": "001",
+    "fila_excel": 463
+   },
+   {
+    "id": 15,
+    "fecha": "2026-09-21",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "001",
+    "fila_excel": 464
+   },
+   {
+    "id": 16,
+    "fecha": "2026-09-21",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 2800,
+    "vale": "001",
+    "fila_excel": 465
+   },
+   {
+    "id": 17,
+    "fecha": "2026-09-21",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4600,
+    "vale": "001",
+    "fila_excel": 466
+   },
+   {
+    "id": 18,
+    "fecha": "2026-09-22",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "008-A",
+    "fila_excel": 435
+   },
+   {
+    "id": 19,
+    "fecha": "2026-09-22",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "008-A",
+    "fila_excel": 436
+   },
+   {
+    "id": 20,
+    "fecha": "2026-09-22",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 5,
+    "importe": 700,
+    "vale": "008-A",
+    "fila_excel": 437
+   },
+   {
+    "id": 21,
+    "fecha": "2026-09-22",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 5,
+    "importe": 1150,
+    "vale": "008-A",
+    "fila_excel": 438
+   },
+   {
+    "id": 22,
+    "fecha": "2026-09-22",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 58,
+    "importe": 9860,
+    "vale": "008",
+    "fila_excel": 439
+   },
+   {
+    "id": 23,
+    "fecha": "2026-09-22",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 35,
+    "importe": 4900,
+    "vale": "008",
+    "fila_excel": 440
+   },
+   {
+    "id": 24,
+    "fecha": "2026-09-22",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 76,
+    "importe": 17480,
+    "vale": "008",
+    "fila_excel": 441
+   },
+   {
+    "id": 25,
+    "fecha": "2026-09-22",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 6800,
+    "vale": "007",
+    "fila_excel": 442
+   },
+   {
+    "id": 26,
+    "fecha": "2026-09-22",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "007",
+    "fila_excel": 443
+   },
+   {
+    "id": 27,
+    "fecha": "2026-09-22",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 75,
+    "importe": 17250,
+    "vale": "007",
+    "fila_excel": 444
+   },
+   {
+    "id": 28,
+    "fecha": "2026-09-22",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 60,
+    "importe": 10200,
+    "vale": "006",
+    "fila_excel": 445
+   },
+   {
+    "id": 29,
+    "fecha": "2026-09-22",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 16800,
+    "vale": "006",
+    "fila_excel": 446
+   },
+   {
+    "id": 30,
+    "fecha": "2026-09-22",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "006",
+    "fila_excel": 447
+   },
+   {
+    "id": 31,
+    "fecha": "2026-09-22",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 60,
+    "importe": 13800,
+    "vale": "006",
+    "fila_excel": 448
+   },
+   {
+    "id": 32,
+    "fecha": "2026-09-22",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "005",
+    "fila_excel": 449
+   },
+   {
+    "id": 33,
+    "fecha": "2026-09-23",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 46,
+    "importe": 7820,
+    "vale": "012",
+    "fila_excel": 425
+   },
+   {
+    "id": 34,
+    "fecha": "2026-09-23",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 39,
+    "importe": 5460,
+    "vale": "012",
+    "fila_excel": 426
+   },
+   {
+    "id": 35,
+    "fecha": "2026-09-23",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 100,
+    "importe": 23000,
+    "vale": "012",
+    "fila_excel": 427
+   },
+   {
+    "id": 36,
+    "fecha": "2026-09-23",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 42,
+    "importe": 7140,
+    "vale": "011",
+    "fila_excel": 428
+   },
+   {
+    "id": 37,
+    "fecha": "2026-09-23",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 76,
+    "importe": 17480,
+    "vale": "011",
+    "fila_excel": 429
+   },
+   {
+    "id": 38,
+    "fecha": "2026-09-23",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 6800,
+    "vale": "010",
+    "fila_excel": 430
+   },
+   {
+    "id": 39,
+    "fecha": "2026-09-23",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 75,
+    "importe": 10500,
+    "vale": "010",
+    "fila_excel": 431
+   },
+   {
+    "id": 40,
+    "fecha": "2026-09-23",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 25,
+    "importe": 5000,
+    "vale": "009",
+    "fila_excel": 432
+   },
+   {
+    "id": 41,
+    "fecha": "2026-09-23",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "009",
+    "fila_excel": 433
+   },
+   {
+    "id": 42,
+    "fecha": "2026-09-23",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "009",
+    "fila_excel": 434
+   },
+   {
+    "id": 43,
+    "fecha": "2026-09-24",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 4,
+    "importe": 800,
+    "vale": "016-A",
+    "fila_excel": 412
+   },
+   {
+    "id": 44,
+    "fecha": "2026-09-24",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 10,
+    "importe": 1400,
+    "vale": "016-A",
+    "fila_excel": 413
+   },
+   {
+    "id": 45,
+    "fecha": "2026-09-24",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 5,
+    "importe": 1150,
+    "vale": "016-A",
+    "fila_excel": 414
+   },
+   {
+    "id": 46,
+    "fecha": "2026-09-24",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 35,
+    "importe": 4900,
+    "vale": "016",
+    "fila_excel": 415
+   },
+   {
+    "id": 47,
+    "fecha": "2026-09-24",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 42,
+    "importe": 8400,
+    "vale": "015",
+    "fila_excel": 416
+   },
+   {
+    "id": 48,
+    "fecha": "2026-09-24",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 75,
+    "importe": 10500,
+    "vale": "015",
+    "fila_excel": 417
+   },
+   {
+    "id": 49,
+    "fecha": "2026-09-24",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "015",
+    "fila_excel": 418
+   },
+   {
+    "id": 50,
+    "fecha": "2026-09-24",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8000,
+    "vale": "014",
+    "fila_excel": 419
+   },
+   {
+    "id": 51,
+    "fecha": "2026-09-24",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 39,
+    "importe": 8970,
+    "vale": "014",
+    "fila_excel": 420
+   },
+   {
+    "id": 52,
+    "fecha": "2026-09-24",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 80,
+    "importe": 16000,
+    "vale": "013",
+    "fila_excel": 421
+   },
+   {
+    "id": 53,
+    "fecha": "2026-09-24",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "013",
+    "fila_excel": 422
+   },
+   {
+    "id": 54,
+    "fecha": "2026-09-24",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "013",
+    "fila_excel": 423
+   },
+   {
+    "id": 55,
+    "fecha": "2026-09-24",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 60,
+    "importe": 13800,
+    "vale": "013",
+    "fila_excel": 424
+   },
+   {
+    "id": 56,
+    "fecha": "2026-09-25",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 5,
+    "importe": 700,
+    "vale": "021-A",
+    "fila_excel": 394
+   },
+   {
+    "id": 57,
+    "fecha": "2026-09-25",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "021",
+    "fila_excel": 395
+   },
+   {
+    "id": 58,
+    "fecha": "2026-09-25",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "021",
+    "fila_excel": 396
+   },
+   {
+    "id": 59,
+    "fecha": "2026-09-25",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 26,
+    "importe": 5200,
+    "vale": "020",
+    "fila_excel": 397
+   },
+   {
+    "id": 60,
+    "fecha": "2026-09-25",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 65,
+    "importe": 9100,
+    "vale": "020",
+    "fila_excel": 398
+   },
+   {
+    "id": 61,
+    "fecha": "2026-09-25",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "020",
+    "fila_excel": 399
+   },
+   {
+    "id": 62,
+    "fecha": "2026-09-25",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "020",
+    "fila_excel": 400
+   },
+   {
+    "id": 63,
+    "fecha": "2026-09-25",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6000,
+    "vale": "019",
+    "fila_excel": 401
+   },
+   {
+    "id": 64,
+    "fecha": "2026-09-25",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "019",
+    "fila_excel": 402
+   },
+   {
+    "id": 65,
+    "fecha": "2026-09-25",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 50,
+    "importe": 11500,
+    "vale": "019",
+    "fila_excel": 403
+   },
+   {
+    "id": 66,
+    "fecha": "2026-09-25",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10000,
+    "vale": "018",
+    "fila_excel": 404
+   },
+   {
+    "id": 67,
+    "fecha": "2026-09-25",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "018",
+    "fila_excel": 405
+   },
+   {
+    "id": 68,
+    "fecha": "2026-09-25",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 70,
+    "importe": 9800,
+    "vale": "018",
+    "fila_excel": 406
+   },
+   {
+    "id": 69,
+    "fecha": "2026-09-25",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 30,
+    "importe": 6900,
+    "vale": "018",
+    "fila_excel": 407
+   },
+   {
+    "id": 70,
+    "fecha": "2026-09-25",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 60,
+    "importe": 12000,
+    "vale": "017",
+    "fila_excel": 408
+   },
+   {
+    "id": 71,
+    "fecha": "2026-09-25",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "017",
+    "fila_excel": 409
+   },
+   {
+    "id": 72,
+    "fecha": "2026-09-25",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "017",
+    "fila_excel": 410
+   },
+   {
+    "id": 73,
+    "fecha": "2026-09-25",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 60,
+    "importe": 13800,
+    "vale": "017",
+    "fila_excel": 411
+   },
+   {
+    "id": 74,
+    "fecha": "2026-09-26",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 6,
+    "importe": 840,
+    "vale": "024",
+    "fila_excel": 390
+   },
+   {
+    "id": 75,
+    "fecha": "2026-09-26",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 4,
+    "importe": 560,
+    "vale": "024",
+    "fila_excel": 391
+   },
+   {
+    "id": 76,
+    "fecha": "2026-09-26",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "023",
+    "fila_excel": 392
+   },
+   {
+    "id": 77,
+    "fecha": "2026-09-26",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "022",
+    "fila_excel": 393
+   },
+   {
+    "id": 78,
+    "fecha": "2026-09-28",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8000,
+    "vale": "027",
+    "fila_excel": 385
+   },
+   {
+    "id": 79,
+    "fecha": "2026-09-28",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 52,
+    "importe": 11960,
+    "vale": "027",
+    "fila_excel": 386
+   },
+   {
+    "id": 80,
+    "fecha": "2026-09-28",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 85,
+    "importe": 17000,
+    "vale": "026",
+    "fila_excel": 387
+   },
+   {
+    "id": 81,
+    "fecha": "2026-09-28",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6000,
+    "vale": "025",
+    "fila_excel": 388
+   },
+   {
+    "id": 82,
+    "fecha": "2026-09-28",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4600,
+    "vale": "025",
+    "fila_excel": 389
+   },
+   {
+    "id": 83,
+    "fecha": "2026-09-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 32,
+    "importe": 4480,
+    "vale": "032",
+    "fila_excel": 365
+   },
+   {
+    "id": 84,
+    "fecha": "2026-09-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "032",
+    "fila_excel": 366
+   },
+   {
+    "id": 85,
+    "fecha": "2026-09-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 1,
+    "importe": 140,
+    "vale": "032",
+    "fila_excel": 367
+   },
+   {
+    "id": 86,
+    "fecha": "2026-09-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 3,
+    "importe": 420,
+    "vale": "032",
+    "fila_excel": 368
+   },
+   {
+    "id": 87,
+    "fecha": "2026-09-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 2,
+    "importe": 280,
+    "vale": "032",
+    "fila_excel": 369
+   },
+   {
+    "id": 88,
+    "fecha": "2026-09-29",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8000,
+    "vale": "031",
+    "fila_excel": 370
+   },
+   {
+    "id": 89,
+    "fecha": "2026-09-29",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 100,
+    "importe": 14000,
+    "vale": "031",
+    "fila_excel": 371
+   },
+   {
+    "id": 90,
+    "fecha": "2026-09-29",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "031",
+    "fila_excel": 372
+   },
+   {
+    "id": 91,
+    "fecha": "2026-09-29",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "031",
+    "fila_excel": 373
+   },
+   {
+    "id": 92,
+    "fecha": "2026-09-29",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 28,
+    "importe": 5600,
+    "vale": "030",
+    "fila_excel": 374
+   },
+   {
+    "id": 93,
+    "fecha": "2026-09-29",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 28,
+    "importe": 3920,
+    "vale": "030",
+    "fila_excel": 375
+   },
+   {
+    "id": 94,
+    "fecha": "2026-09-29",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 38,
+    "importe": 8740,
+    "vale": "030",
+    "fila_excel": 376
+   },
+   {
+    "id": 95,
+    "fecha": "2026-09-29",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 80,
+    "importe": 16000,
+    "vale": "029",
+    "fila_excel": 377
+   },
+   {
+    "id": 96,
+    "fecha": "2026-09-29",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 16800,
+    "vale": "029",
+    "fila_excel": 378
+   },
+   {
+    "id": 97,
+    "fecha": "2026-09-29",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "importe": 14000,
+    "vale": "029",
+    "fila_excel": 379
+   },
+   {
+    "id": 98,
+    "fecha": "2026-09-29",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 80,
+    "importe": 18400,
+    "vale": "029",
+    "fila_excel": 380
+   },
+   {
+    "id": 99,
+    "fecha": "2026-09-29",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4000,
+    "vale": "028",
+    "fila_excel": 381
+   },
+   {
+    "id": 100,
+    "fecha": "2026-09-29",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "028",
+    "fila_excel": 382
+   },
+   {
+    "id": 101,
+    "fecha": "2026-09-29",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "028",
+    "fila_excel": 383
+   },
+   {
+    "id": 102,
+    "fecha": "2026-09-29",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4600,
+    "vale": "028",
+    "fila_excel": 384
+   },
+   {
+    "id": 103,
+    "fecha": "2026-09-30",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 35,
+    "importe": 7000,
+    "vale": "036",
+    "fila_excel": 352
+   },
+   {
+    "id": 104,
+    "fecha": "2026-09-30",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 50,
+    "importe": 11500,
+    "vale": "036",
+    "fila_excel": 353
+   },
+   {
+    "id": 105,
+    "fecha": "2026-09-30",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6000,
+    "vale": "035",
+    "fila_excel": 354
+   },
+   {
+    "id": 106,
+    "fecha": "2026-09-30",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "035",
+    "fila_excel": 355
+   },
+   {
+    "id": 107,
+    "fecha": "2026-09-30",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 38,
+    "importe": 8740,
+    "vale": "035",
+    "fila_excel": 356
+   },
+   {
+    "id": 108,
+    "fecha": "2026-09-30",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 80,
+    "importe": 16000,
+    "vale": "034",
+    "fila_excel": 357
+   },
+   {
+    "id": 109,
+    "fecha": "2026-09-30",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 12600,
+    "vale": "034",
+    "fila_excel": 358
+   },
+   {
+    "id": 110,
+    "fecha": "2026-09-30",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "034",
+    "fila_excel": 359
+   },
+   {
+    "id": 111,
+    "fecha": "2026-09-30",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 80,
+    "importe": 18400,
+    "vale": "034",
+    "fila_excel": 360
+   },
+   {
+    "id": 112,
+    "fecha": "2026-09-30",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4000,
+    "vale": "033",
+    "fila_excel": 361
+   },
+   {
+    "id": 113,
+    "fecha": "2026-09-30",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "033",
+    "fila_excel": 362
+   },
+   {
+    "id": 114,
+    "fecha": "2026-09-30",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "033",
+    "fila_excel": 363
+   },
+   {
+    "id": 115,
+    "fecha": "2026-09-30",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 10,
+    "importe": 2300,
+    "vale": "033",
+    "fila_excel": 364
+   },
+   {
+    "id": 116,
+    "fecha": "2026-10-01",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 99,
+    "importe": 19800,
+    "vale": "039",
+    "fila_excel": 343
+   },
+   {
+    "id": 117,
+    "fecha": "2026-10-01",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 16800,
+    "vale": "039",
+    "fila_excel": 344
+   },
+   {
+    "id": 118,
+    "fecha": "2026-10-01",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "039",
+    "fila_excel": 345
+   },
+   {
+    "id": 119,
+    "fecha": "2026-10-01",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 68,
+    "importe": 15640,
+    "vale": "039",
+    "fila_excel": 346
+   },
+   {
+    "id": 120,
+    "fecha": "2026-10-01",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8000,
+    "vale": "038",
+    "fila_excel": 347
+   },
+   {
+    "id": 121,
+    "fecha": "2026-10-01",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "038",
+    "fila_excel": 348
+   },
+   {
+    "id": 122,
+    "fecha": "2026-10-01",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9200,
+    "vale": "038",
+    "fila_excel": 349
+   },
+   {
+    "id": 123,
+    "fecha": "2026-10-01",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 41,
+    "importe": 8200,
+    "vale": "037",
+    "fila_excel": 350
+   },
+   {
+    "id": 124,
+    "fecha": "2026-10-01",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 2800,
+    "vale": "037",
+    "fila_excel": 351
+   },
+   {
+    "id": 125,
+    "fecha": "2026-10-02",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 22,
+    "importe": 4400,
+    "vale": "042",
+    "fila_excel": 334
+   },
+   {
+    "id": 126,
+    "fecha": "2026-10-02",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "042",
+    "fila_excel": 335
+   },
+   {
+    "id": 127,
+    "fecha": "2026-10-02",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 32,
+    "importe": 7360,
+    "vale": "042",
+    "fila_excel": 336
+   },
+   {
+    "id": 128,
+    "fecha": "2026-10-02",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6000,
+    "vale": "041",
+    "fila_excel": 337
+   },
+   {
+    "id": 129,
+    "fecha": "2026-10-02",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4200,
+    "vale": "041",
+    "fila_excel": 338
+   },
+   {
+    "id": 130,
+    "fecha": "2026-10-02",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4600,
+    "vale": "041",
+    "fila_excel": 339
+   },
+   {
+    "id": 131,
+    "fecha": "2026-10-02",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6000,
+    "vale": "040",
+    "fila_excel": 340
+   },
+   {
+    "id": 132,
+    "fecha": "2026-10-02",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "040",
+    "fila_excel": 341
+   },
+   {
+    "id": 133,
+    "fecha": "2026-10-02",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4600,
+    "vale": "040",
+    "fila_excel": 342
+   },
+   {
+    "id": 134,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 1,
+    "importe": 140,
+    "vale": "046",
+    "fila_excel": 318
+   },
+   {
+    "id": 135,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 1,
+    "importe": 140,
+    "vale": "046",
+    "fila_excel": 319
+   },
+   {
+    "id": 136,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 1,
+    "importe": 140,
+    "vale": "046",
+    "fila_excel": 320
+   },
+   {
+    "id": 137,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 6,
+    "importe": 840,
+    "vale": "046",
+    "fila_excel": 321
+   },
+   {
+    "id": 138,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "046",
+    "fila_excel": 322
+   },
+   {
+    "id": 139,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Palmeritas",
+    "cantidad": 30,
+    "importe": 2400,
+    "vale": "046",
+    "fila_excel": 323
+   },
+   {
+    "id": 140,
+    "fecha": "2026-10-03",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 2800,
+    "vale": "046",
+    "fila_excel": 324
+   },
+   {
+    "id": 141,
+    "fecha": "2026-10-03",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 25,
+    "importe": 5000,
+    "vale": "045",
+    "fila_excel": 325
+   },
+   {
+    "id": 142,
+    "fecha": "2026-10-03",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 8400,
+    "vale": "045",
+    "fila_excel": 326
+   },
+   {
+    "id": 143,
+    "fecha": "2026-10-03",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7000,
+    "vale": "044",
+    "fila_excel": 327
+   },
+   {
+    "id": 144,
+    "fecha": "2026-10-03",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 5600,
+    "vale": "044",
+    "fila_excel": 328
+   },
+   {
+    "id": 145,
+    "fecha": "2026-10-03",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 28,
+    "importe": 6440,
+    "vale": "044",
+    "fila_excel": 329
+   },
+   {
+    "id": 146,
+    "fecha": "2026-10-03",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4000,
+    "vale": "043",
+    "fila_excel": 330
+   },
+   {
+    "id": 147,
+    "fecha": "2026-10-03",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 16800,
+    "vale": "043",
+    "fila_excel": 331
+   },
+   {
+    "id": 148,
+    "fecha": "2026-10-03",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 80,
+    "importe": 11200,
+    "vale": "043",
+    "fila_excel": 332
+   },
+   {
+    "id": 149,
+    "fecha": "2026-10-03",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 80,
+    "importe": 18400,
+    "vale": "043",
+    "fila_excel": 333
+   },
+   {
+    "id": 150,
+    "fecha": "2026-10-05",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "050",
+    "fila_excel": 307
+   },
+   {
+    "id": 151,
+    "fecha": "2026-10-05",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "050",
+    "fila_excel": 308
+   },
+   {
+    "id": 152,
+    "fecha": "2026-10-05",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "050",
+    "fila_excel": 309
+   },
+   {
+    "id": 153,
+    "fecha": "2026-10-05",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 52,
+    "importe": 10920,
+    "vale": "049",
+    "fila_excel": 310
+   },
+   {
+    "id": 154,
+    "fecha": "2026-10-05",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "049",
+    "fila_excel": 311
+   },
+   {
+    "id": 155,
+    "fecha": "2026-10-05",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "048",
+    "fila_excel": 312
+   },
+   {
+    "id": 156,
+    "fecha": "2026-10-05",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "048",
+    "fila_excel": 313
+   },
+   {
+    "id": 157,
+    "fecha": "2026-10-05",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "048",
+    "fila_excel": 314
+   },
+   {
+    "id": 158,
+    "fecha": "2026-10-05",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 28,
+    "importe": 5880,
+    "vale": "047",
+    "fila_excel": 315
+   },
+   {
+    "id": 159,
+    "fecha": "2026-10-05",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "047",
+    "fila_excel": 316
+   },
+   {
+    "id": 160,
+    "fecha": "2026-10-05",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "047",
+    "fila_excel": 317
+   },
+   {
+    "id": 161,
+    "fecha": "2026-10-06",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "053",
+    "fila_excel": 298
+   },
+   {
+    "id": 162,
+    "fecha": "2026-10-06",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "053",
+    "fila_excel": 299
+   },
+   {
+    "id": 163,
+    "fecha": "2026-10-06",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "053",
+    "fila_excel": 300
+   },
+   {
+    "id": 164,
+    "fecha": "2026-10-06",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 38,
+    "importe": 7980,
+    "vale": "052",
+    "fila_excel": 301
+   },
+   {
+    "id": 165,
+    "fecha": "2026-10-06",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "052",
+    "fila_excel": 302
+   },
+   {
+    "id": 166,
+    "fecha": "2026-10-06",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 33,
+    "importe": 7920,
+    "vale": "052",
+    "fila_excel": 303
+   },
+   {
+    "id": 167,
+    "fecha": "2026-10-06",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "051",
+    "fila_excel": 304
+   },
+   {
+    "id": 168,
+    "fecha": "2026-10-06",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "051",
+    "fila_excel": 305
+   },
+   {
+    "id": 169,
+    "fecha": "2026-10-06",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "051",
+    "fila_excel": 306
+   },
+   {
+    "id": 170,
+    "fecha": "2026-10-07",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 1,
+    "importe": 150,
+    "vale": "057-A",
+    "fila_excel": 284
+   },
+   {
+    "id": 171,
+    "fecha": "2026-10-07",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 31,
+    "importe": 6510,
+    "vale": "057",
+    "fila_excel": 285
+   },
+   {
+    "id": 172,
+    "fecha": "2026-10-07",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 59,
+    "importe": 8850,
+    "vale": "057",
+    "fila_excel": 286
+   },
+   {
+    "id": 173,
+    "fecha": "2026-10-07",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "057",
+    "fila_excel": 287
+   },
+   {
+    "id": 174,
+    "fecha": "2026-10-07",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 17,
+    "importe": 4080,
+    "vale": "057",
+    "fila_excel": 288
+   },
+   {
+    "id": 175,
+    "fecha": "2026-10-07",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "056",
+    "fila_excel": 289
+   },
+   {
+    "id": 176,
+    "fecha": "2026-10-07",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "056",
+    "fila_excel": 290
+   },
+   {
+    "id": 177,
+    "fecha": "2026-10-07",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "055",
+    "fila_excel": 291
+   },
+   {
+    "id": 178,
+    "fecha": "2026-10-07",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 18000,
+    "vale": "055",
+    "fila_excel": 292
+   },
+   {
+    "id": 179,
+    "fecha": "2026-10-07",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "055",
+    "fila_excel": 293
+   },
+   {
+    "id": 180,
+    "fecha": "2026-10-07",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "055",
+    "fila_excel": 294
+   },
+   {
+    "id": 181,
+    "fecha": "2026-10-07",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "054",
+    "fila_excel": 295
+   },
+   {
+    "id": 182,
+    "fecha": "2026-10-07",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "054",
+    "fila_excel": 296
+   },
+   {
+    "id": 183,
+    "fecha": "2026-10-07",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "054",
+    "fila_excel": 297
+   },
+   {
+    "id": 184,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 2,
+    "importe": 300,
+    "vale": "062",
+    "fila_excel": 261
+   },
+   {
+    "id": 185,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 1,
+    "importe": 210,
+    "vale": "062",
+    "fila_excel": 262
+   },
+   {
+    "id": 186,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 2,
+    "importe": 300,
+    "vale": "062",
+    "fila_excel": 263
+   },
+   {
+    "id": 187,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 2,
+    "importe": 300,
+    "vale": "062",
+    "fila_excel": 264
+   },
+   {
+    "id": 188,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 1,
+    "importe": 150,
+    "vale": "062",
+    "fila_excel": 265
+   },
+   {
+    "id": 189,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 1,
+    "importe": 240,
+    "vale": "062",
+    "fila_excel": 266
+   },
+   {
+    "id": 190,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 2,
+    "importe": 420,
+    "vale": "062",
+    "fila_excel": 267
+   },
+   {
+    "id": 191,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 5,
+    "importe": 750,
+    "vale": "062",
+    "fila_excel": 268
+   },
+   {
+    "id": 192,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 2,
+    "importe": 300,
+    "vale": "062",
+    "fila_excel": 269
+   },
+   {
+    "id": 193,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 2,
+    "importe": 480,
+    "vale": "062",
+    "fila_excel": 270
+   },
+   {
+    "id": 194,
+    "fecha": "2026-10-08",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 3,
+    "importe": 450,
+    "vale": "062",
+    "fila_excel": 271
+   },
+   {
+    "id": 195,
+    "fecha": "2026-10-08",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 23,
+    "importe": 4830,
+    "vale": "061",
+    "fila_excel": 272
+   },
+   {
+    "id": 196,
+    "fecha": "2026-10-08",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "061",
+    "fila_excel": 273
+   },
+   {
+    "id": 197,
+    "fecha": "2026-10-08",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 35,
+    "importe": 5250,
+    "vale": "060",
+    "fila_excel": 274
+   },
+   {
+    "id": 198,
+    "fecha": "2026-10-08",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 49,
+    "importe": 11760,
+    "vale": "060",
+    "fila_excel": 275
+   },
+   {
+    "id": 199,
+    "fecha": "2026-10-08",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "059",
+    "fila_excel": 276
+   },
+   {
+    "id": 200,
+    "fecha": "2026-10-08",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 58,
+    "importe": 8700,
+    "vale": "059",
+    "fila_excel": 277
+   },
+   {
+    "id": 201,
+    "fecha": "2026-10-08",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "059",
+    "fila_excel": 278
+   },
+   {
+    "id": 202,
+    "fecha": "2026-10-08",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 68,
+    "importe": 16320,
+    "vale": "059",
+    "fila_excel": 279
+   },
+   {
+    "id": 203,
+    "fecha": "2026-10-08",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "058",
+    "fila_excel": 280
+   },
+   {
+    "id": 204,
+    "fecha": "2026-10-08",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "058",
+    "fila_excel": 281
+   },
+   {
+    "id": 205,
+    "fecha": "2026-10-08",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "058",
+    "fila_excel": 282
+   },
+   {
+    "id": 206,
+    "fecha": "2026-10-08",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "058",
+    "fila_excel": 283
+   },
+   {
+    "id": 207,
+    "fecha": "2026-10-09",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "066",
+    "fila_excel": 247
+   },
+   {
+    "id": 208,
+    "fecha": "2026-10-09",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "066",
+    "fila_excel": 248
+   },
+   {
+    "id": 209,
+    "fecha": "2026-10-09",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 48,
+    "importe": 11520,
+    "vale": "066",
+    "fila_excel": 249
+   },
+   {
+    "id": 210,
+    "fecha": "2026-10-09",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "065",
+    "fila_excel": 250
+   },
+   {
+    "id": 211,
+    "fecha": "2026-10-09",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "065",
+    "fila_excel": 251
+   },
+   {
+    "id": 212,
+    "fecha": "2026-10-09",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "065",
+    "fila_excel": 252
+   },
+   {
+    "id": 213,
+    "fecha": "2026-10-09",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 70,
+    "importe": 14700,
+    "vale": "064",
+    "fila_excel": 253
+   },
+   {
+    "id": 214,
+    "fecha": "2026-10-09",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "064",
+    "fila_excel": 254
+   },
+   {
+    "id": 215,
+    "fecha": "2026-10-09",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "064",
+    "fila_excel": 255
+   },
+   {
+    "id": 216,
+    "fecha": "2026-10-09",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "importe": 17280,
+    "vale": "064",
+    "fila_excel": 256
+   },
+   {
+    "id": 217,
+    "fecha": "2026-10-09",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "063",
+    "fila_excel": 257
+   },
+   {
+    "id": 218,
+    "fecha": "2026-10-09",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "063",
+    "fila_excel": 258
+   },
+   {
+    "id": 219,
+    "fecha": "2026-10-09",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "063",
+    "fila_excel": 259
+   },
+   {
+    "id": 220,
+    "fecha": "2026-10-09",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "063",
+    "fila_excel": 260
+   },
+   {
+    "id": 221,
+    "fecha": "2026-10-10",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 11,
+    "importe": 1650,
+    "vale": "067-B",
+    "fila_excel": 245
+   },
+   {
+    "id": 222,
+    "fecha": "2026-10-10",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 109,
+    "importe": 16350,
+    "vale": "067",
+    "fila_excel": 246
+   },
+   {
+    "id": 223,
+    "fecha": "2026-10-12",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "071",
+    "fila_excel": 234
+   },
+   {
+    "id": 224,
+    "fecha": "2026-10-12",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "071",
+    "fila_excel": 235
+   },
+   {
+    "id": 225,
+    "fecha": "2026-10-12",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 72,
+    "importe": 17280,
+    "vale": "071",
+    "fila_excel": 236
+   },
+   {
+    "id": 226,
+    "fecha": "2026-10-12",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 36,
+    "importe": 7560,
+    "vale": "070",
+    "fila_excel": 237
+   },
+   {
+    "id": 227,
+    "fecha": "2026-10-12",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 54,
+    "importe": 12960,
+    "vale": "070",
+    "fila_excel": 238
+   },
+   {
+    "id": 228,
+    "fecha": "2026-10-12",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "069",
+    "fila_excel": 239
+   },
+   {
+    "id": 229,
+    "fecha": "2026-10-12",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "069",
+    "fila_excel": 240
+   },
+   {
+    "id": 230,
+    "fecha": "2026-10-12",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 70,
+    "importe": 16800,
+    "vale": "069",
+    "fila_excel": 241
+   },
+   {
+    "id": 231,
+    "fecha": "2026-10-12",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "068",
+    "fila_excel": 242
+   },
+   {
+    "id": 232,
+    "fecha": "2026-10-12",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "068",
+    "fila_excel": 243
+   },
+   {
+    "id": 233,
+    "fecha": "2026-10-12",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "068",
+    "fila_excel": 244
+   },
+   {
+    "id": 234,
+    "fecha": "2026-10-13",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 56,
+    "importe": 13440,
+    "vale": "076",
+    "fila_excel": 220
+   },
+   {
+    "id": 235,
+    "fecha": "2026-10-13",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 81,
+    "importe": 17010,
+    "vale": "075",
+    "fila_excel": 221
+   },
+   {
+    "id": 236,
+    "fecha": "2026-10-13",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 51,
+    "importe": 7650,
+    "vale": "075",
+    "fila_excel": 222
+   },
+   {
+    "id": 237,
+    "fecha": "2026-10-13",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 70,
+    "importe": 16800,
+    "vale": "075",
+    "fila_excel": 223
+   },
+   {
+    "id": 238,
+    "fecha": "2026-10-13",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "074",
+    "fila_excel": 224
+   },
+   {
+    "id": 239,
+    "fecha": "2026-10-13",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "074",
+    "fila_excel": 225
+   },
+   {
+    "id": 240,
+    "fecha": "2026-10-13",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "074",
+    "fila_excel": 226
+   },
+   {
+    "id": 241,
+    "fecha": "2026-10-13",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 60,
+    "importe": 12600,
+    "vale": "073",
+    "fila_excel": 227
+   },
+   {
+    "id": 242,
+    "fecha": "2026-10-13",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "073",
+    "fila_excel": 228
+   },
+   {
+    "id": 243,
+    "fecha": "2026-10-13",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 100,
+    "importe": 24000,
+    "vale": "073",
+    "fila_excel": 229
+   },
+   {
+    "id": 244,
+    "fecha": "2026-10-13",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 1,
+    "importe": 210,
+    "vale": "072",
+    "fila_excel": 230
+   },
+   {
+    "id": 245,
+    "fecha": "2026-10-13",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 5,
+    "importe": 750,
+    "vale": "072",
+    "fila_excel": 231
+   },
+   {
+    "id": 246,
+    "fecha": "2026-10-13",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 6,
+    "importe": 1440,
+    "vale": "072",
+    "fila_excel": 232
+   },
+   {
+    "id": 247,
+    "fecha": "2026-10-13",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 4,
+    "importe": 600,
+    "vale": "072",
+    "fila_excel": 233
+   },
+   {
+    "id": 248,
+    "fecha": "2026-10-14",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 5,
+    "importe": 1050,
+    "vale": "079",
+    "fila_excel": 217
+   },
+   {
+    "id": 249,
+    "fecha": "2026-10-14",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 79,
+    "importe": 16590,
+    "vale": "078",
+    "fila_excel": 218
+   },
+   {
+    "id": 250,
+    "fecha": "2026-10-14",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "077",
+    "fila_excel": 219
+   },
+   {
+    "id": 251,
+    "fecha": "2026-10-15",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 5,
+    "importe": 1050,
+    "vale": "083",
+    "fila_excel": 207
+   },
+   {
+    "id": 252,
+    "fecha": "2026-10-15",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 4,
+    "importe": 960,
+    "vale": "083",
+    "fila_excel": 208
+   },
+   {
+    "id": 253,
+    "fecha": "2026-10-15",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "082",
+    "fila_excel": 209
+   },
+   {
+    "id": 254,
+    "fecha": "2026-10-15",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "082",
+    "fila_excel": 210
+   },
+   {
+    "id": 255,
+    "fecha": "2026-10-15",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 18,
+    "importe": 3780,
+    "vale": "081",
+    "fila_excel": 211
+   },
+   {
+    "id": 256,
+    "fecha": "2026-10-15",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "081",
+    "fila_excel": 212
+   },
+   {
+    "id": 257,
+    "fecha": "2026-10-15",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 21,
+    "importe": 5040,
+    "vale": "081",
+    "fila_excel": 213
+   },
+   {
+    "id": 258,
+    "fecha": "2026-10-15",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 34,
+    "importe": 7140,
+    "vale": "080",
+    "fila_excel": 214
+   },
+   {
+    "id": 259,
+    "fecha": "2026-10-15",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "080",
+    "fila_excel": 215
+   },
+   {
+    "id": 260,
+    "fecha": "2026-10-15",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "080",
+    "fila_excel": 216
+   },
+   {
+    "id": 261,
+    "fecha": "2026-10-16",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 70,
+    "importe": 10500,
+    "vale": "084",
+    "fila_excel": 206
+   },
+   {
+    "id": 262,
+    "fecha": "2026-10-17",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "086",
+    "fila_excel": 202
+   },
+   {
+    "id": 263,
+    "fecha": "2026-10-17",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "085",
+    "fila_excel": 203
+   },
+   {
+    "id": 264,
+    "fecha": "2026-10-17",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 4,
+    "importe": 600,
+    "vale": "085",
+    "fila_excel": 204
+   },
+   {
+    "id": 265,
+    "fecha": "2026-10-17",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 6,
+    "importe": 900,
+    "vale": "085",
+    "fila_excel": 205
+   },
+   {
+    "id": 266,
+    "fecha": "2026-10-19",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "090",
+    "fila_excel": 195
+   },
+   {
+    "id": 267,
+    "fecha": "2026-10-19",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 66,
+    "importe": 13860,
+    "vale": "089",
+    "fila_excel": 196
+   },
+   {
+    "id": 268,
+    "fecha": "2026-10-19",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "089",
+    "fila_excel": 197
+   },
+   {
+    "id": 269,
+    "fecha": "2026-10-19",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 100,
+    "importe": 21000,
+    "vale": "088",
+    "fila_excel": 198
+   },
+   {
+    "id": 270,
+    "fecha": "2026-10-19",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "088",
+    "fila_excel": 199
+   },
+   {
+    "id": 271,
+    "fecha": "2026-10-19",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "087",
+    "fila_excel": 200
+   },
+   {
+    "id": 272,
+    "fecha": "2026-10-19",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "087",
+    "fila_excel": 201
+   },
+   {
+    "id": 273,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 1,
+    "importe": 150,
+    "vale": "095",
+    "fila_excel": 176
+   },
+   {
+    "id": 274,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "095",
+    "fila_excel": 177
+   },
+   {
+    "id": 275,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 1,
+    "importe": 150,
+    "vale": "095",
+    "fila_excel": 178
+   },
+   {
+    "id": 276,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 3,
+    "importe": 630,
+    "vale": "095",
+    "fila_excel": 179
+   },
+   {
+    "id": 277,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 10,
+    "importe": 1500,
+    "vale": "095",
+    "fila_excel": 180
+   },
+   {
+    "id": 278,
+    "fecha": "2026-10-20",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 3,
+    "importe": 720,
+    "vale": "095",
+    "fila_excel": 181
+   },
+   {
+    "id": 279,
+    "fecha": "2026-10-20",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "094",
+    "fila_excel": 182
+   },
+   {
+    "id": 280,
+    "fecha": "2026-10-20",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 38,
+    "importe": 5700,
+    "vale": "094",
+    "fila_excel": 183
+   },
+   {
+    "id": 281,
+    "fecha": "2026-10-20",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 50,
+    "importe": 12000,
+    "vale": "094",
+    "fila_excel": 184
+   },
+   {
+    "id": 282,
+    "fecha": "2026-10-20",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 19,
+    "importe": 3990,
+    "vale": "093",
+    "fila_excel": 185
+   },
+   {
+    "id": 283,
+    "fecha": "2026-10-20",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "093",
+    "fila_excel": 186
+   },
+   {
+    "id": 284,
+    "fecha": "2026-10-20",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "092",
+    "fila_excel": 187
+   },
+   {
+    "id": 285,
+    "fecha": "2026-10-20",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "092",
+    "fila_excel": 188
+   },
+   {
+    "id": 286,
+    "fecha": "2026-10-20",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 75,
+    "importe": 11250,
+    "vale": "092",
+    "fila_excel": 189
+   },
+   {
+    "id": 287,
+    "fecha": "2026-10-20",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "092",
+    "fila_excel": 190
+   },
+   {
+    "id": 288,
+    "fecha": "2026-10-20",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 35,
+    "importe": 7350,
+    "vale": "091",
+    "fila_excel": 191
+   },
+   {
+    "id": 289,
+    "fecha": "2026-10-20",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "091",
+    "fila_excel": 192
+   },
+   {
+    "id": 290,
+    "fecha": "2026-10-20",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "091",
+    "fila_excel": 193
+   },
+   {
+    "id": 291,
+    "fecha": "2026-10-20",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "091",
+    "fila_excel": 194
+   },
+   {
+    "id": 292,
+    "fecha": "2026-10-21",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 1,
+    "importe": 240,
+    "vale": "s/v",
+    "fila_excel": 159
+   },
+   {
+    "id": 293,
+    "fecha": "2026-10-21",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "100",
+    "fila_excel": 160
+   },
+   {
+    "id": 294,
+    "fecha": "2026-10-21",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 35,
+    "importe": 7350,
+    "vale": "099",
+    "fila_excel": 161
+   },
+   {
+    "id": 295,
+    "fecha": "2026-10-21",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "099",
+    "fila_excel": 162
+   },
+   {
+    "id": 296,
+    "fecha": "2026-10-21",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "099",
+    "fila_excel": 163
+   },
+   {
+    "id": 297,
+    "fecha": "2026-10-21",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 32,
+    "importe": 7680,
+    "vale": "099",
+    "fila_excel": 164
+   },
+   {
+    "id": 298,
+    "fecha": "2026-10-21",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 25,
+    "importe": 5250,
+    "vale": "098",
+    "fila_excel": 165
+   },
+   {
+    "id": 299,
+    "fecha": "2026-10-21",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "098",
+    "fila_excel": 166
+   },
+   {
+    "id": 300,
+    "fecha": "2026-10-21",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "098",
+    "fila_excel": 167
+   },
+   {
+    "id": 301,
+    "fecha": "2026-10-21",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "097",
+    "fila_excel": 168
+   },
+   {
+    "id": 302,
+    "fecha": "2026-10-21",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 13500,
+    "vale": "097",
+    "fila_excel": 169
+   },
+   {
+    "id": 303,
+    "fecha": "2026-10-21",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "097",
+    "fila_excel": 170
+   },
+   {
+    "id": 304,
+    "fecha": "2026-10-21",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "097",
+    "fila_excel": 171
+   },
+   {
+    "id": 305,
+    "fecha": "2026-10-21",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "096",
+    "fila_excel": 172
+   },
+   {
+    "id": 306,
+    "fecha": "2026-10-21",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "096",
+    "fila_excel": 173
+   },
+   {
+    "id": 307,
+    "fecha": "2026-10-21",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "096",
+    "fila_excel": 174
+   },
+   {
+    "id": 308,
+    "fecha": "2026-10-21",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "096",
+    "fila_excel": 175
+   },
+   {
+    "id": 309,
+    "fecha": "2026-10-23",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 18000,
+    "vale": "105",
+    "fila_excel": 143
+   },
+   {
+    "id": 310,
+    "fecha": "2026-10-23",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 2,
+    "importe": 480,
+    "vale": "105",
+    "fila_excel": 144
+   },
+   {
+    "id": 311,
+    "fecha": "2026-10-23",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "104",
+    "fila_excel": 145
+   },
+   {
+    "id": 312,
+    "fecha": "2026-10-23",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 13500,
+    "vale": "104",
+    "fila_excel": 146
+   },
+   {
+    "id": 313,
+    "fecha": "2026-10-23",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 47,
+    "importe": 11280,
+    "vale": "104",
+    "fila_excel": 147
+   },
+   {
+    "id": 314,
+    "fecha": "2026-10-23",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 19,
+    "importe": 3990,
+    "vale": "103",
+    "fila_excel": 148
+   },
+   {
+    "id": 315,
+    "fecha": "2026-10-23",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "103",
+    "fila_excel": 149
+   },
+   {
+    "id": 316,
+    "fecha": "2026-10-23",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "103",
+    "fila_excel": 150
+   },
+   {
+    "id": 317,
+    "fecha": "2026-10-23",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "102",
+    "fila_excel": 151
+   },
+   {
+    "id": 318,
+    "fecha": "2026-10-23",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 13500,
+    "vale": "102",
+    "fila_excel": 152
+   },
+   {
+    "id": 319,
+    "fecha": "2026-10-23",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "102",
+    "fila_excel": 153
+   },
+   {
+    "id": 320,
+    "fecha": "2026-10-23",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "102",
+    "fila_excel": 154
+   },
+   {
+    "id": 321,
+    "fecha": "2026-10-23",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "101",
+    "fila_excel": 155
+   },
+   {
+    "id": 322,
+    "fecha": "2026-10-23",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "101",
+    "fila_excel": 156
+   },
+   {
+    "id": 323,
+    "fecha": "2026-10-23",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "101",
+    "fila_excel": 157
+   },
+   {
+    "id": 324,
+    "fecha": "2026-10-23",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "101",
+    "fila_excel": 158
+   },
+   {
+    "id": 325,
+    "fecha": "2026-10-24",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 5,
+    "importe": 750,
+    "vale": "110",
+    "fila_excel": 129
+   },
+   {
+    "id": 326,
+    "fecha": "2026-10-24",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 12,
+    "importe": 1800,
+    "vale": "110",
+    "fila_excel": 130
+   },
+   {
+    "id": 327,
+    "fecha": "2026-10-24",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 24,
+    "importe": 5040,
+    "vale": "109",
+    "fila_excel": 131
+   },
+   {
+    "id": 328,
+    "fecha": "2026-10-24",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 108,
+    "importe": 16200,
+    "vale": "109",
+    "fila_excel": 132
+   },
+   {
+    "id": 329,
+    "fecha": "2026-10-24",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "109",
+    "fila_excel": 133
+   },
+   {
+    "id": 330,
+    "fecha": "2026-10-24",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 69,
+    "importe": 16560,
+    "vale": "109",
+    "fila_excel": 134
+   },
+   {
+    "id": 331,
+    "fecha": "2026-10-24",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "108",
+    "fila_excel": 135
+   },
+   {
+    "id": 332,
+    "fecha": "2026-10-24",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "108",
+    "fila_excel": 136
+   },
+   {
+    "id": 333,
+    "fecha": "2026-10-24",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "107",
+    "fila_excel": 137
+   },
+   {
+    "id": 334,
+    "fecha": "2026-10-24",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "107",
+    "fila_excel": 138
+   },
+   {
+    "id": 335,
+    "fecha": "2026-10-24",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 115,
+    "importe": 17250,
+    "vale": "107",
+    "fila_excel": 139
+   },
+   {
+    "id": 336,
+    "fecha": "2026-10-24",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "107",
+    "fila_excel": 140
+   },
+   {
+    "id": 337,
+    "fecha": "2026-10-24",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "106",
+    "fila_excel": 141
+   },
+   {
+    "id": 338,
+    "fecha": "2026-10-24",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "106",
+    "fila_excel": 142
+   },
+   {
+    "id": 339,
+    "fecha": "2026-10-26",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "115",
+    "fila_excel": 118
+   },
+   {
+    "id": 340,
+    "fecha": "2026-10-26",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "114",
+    "fila_excel": 119
+   },
+   {
+    "id": 341,
+    "fecha": "2026-10-26",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 31,
+    "importe": 6510,
+    "vale": "113",
+    "fila_excel": 120
+   },
+   {
+    "id": 342,
+    "fecha": "2026-10-26",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "113",
+    "fila_excel": 121
+   },
+   {
+    "id": 343,
+    "fecha": "2026-10-26",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "113",
+    "fila_excel": 122
+   },
+   {
+    "id": 344,
+    "fecha": "2026-10-26",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "113",
+    "fila_excel": 123
+   },
+   {
+    "id": 345,
+    "fecha": "2026-10-26",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 100,
+    "importe": 21000,
+    "vale": "112",
+    "fila_excel": 124
+   },
+   {
+    "id": 346,
+    "fecha": "2026-10-26",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 18000,
+    "vale": "112",
+    "fila_excel": 125
+   },
+   {
+    "id": 347,
+    "fecha": "2026-10-26",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "importe": 15000,
+    "vale": "112",
+    "fila_excel": 126
+   },
+   {
+    "id": 348,
+    "fecha": "2026-10-26",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "112",
+    "fila_excel": 127
+   },
+   {
+    "id": 349,
+    "fecha": "2026-10-26",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 32,
+    "importe": 7680,
+    "vale": "111",
+    "fila_excel": 128
+   },
+   {
+    "id": 350,
+    "fecha": "2026-10-27",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "119",
+    "fila_excel": 106
+   },
+   {
+    "id": 351,
+    "fecha": "2026-10-27",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "119",
+    "fila_excel": 107
+   },
+   {
+    "id": 352,
+    "fecha": "2026-10-27",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "118",
+    "fila_excel": 108
+   },
+   {
+    "id": 353,
+    "fecha": "2026-10-27",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "118",
+    "fila_excel": 109
+   },
+   {
+    "id": 354,
+    "fecha": "2026-10-27",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "118",
+    "fila_excel": 110
+   },
+   {
+    "id": 355,
+    "fecha": "2026-10-27",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 50,
+    "importe": 10500,
+    "vale": "117",
+    "fila_excel": 111
+   },
+   {
+    "id": 356,
+    "fecha": "2026-10-27",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "117",
+    "fila_excel": 112
+   },
+   {
+    "id": 357,
+    "fecha": "2026-10-27",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 100,
+    "importe": 15000,
+    "vale": "117",
+    "fila_excel": 113
+   },
+   {
+    "id": 358,
+    "fecha": "2026-10-27",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "117",
+    "fila_excel": 114
+   },
+   {
+    "id": 359,
+    "fecha": "2026-10-27",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 27,
+    "importe": 5670,
+    "vale": "116",
+    "fila_excel": 115
+   },
+   {
+    "id": 360,
+    "fecha": "2026-10-27",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "116",
+    "fila_excel": 116
+   },
+   {
+    "id": 361,
+    "fecha": "2026-10-27",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 17,
+    "importe": 4080,
+    "vale": "116",
+    "fila_excel": 117
+   },
+   {
+    "id": 362,
+    "fecha": "2026-10-28",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "123",
+    "fila_excel": 92
+   },
+   {
+    "id": 363,
+    "fecha": "2026-10-28",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9000,
+    "vale": "123",
+    "fila_excel": 93
+   },
+   {
+    "id": 364,
+    "fecha": "2026-10-28",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 32,
+    "importe": 7680,
+    "vale": "123",
+    "fila_excel": 94
+   },
+   {
+    "id": 365,
+    "fecha": "2026-10-28",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 23,
+    "importe": 4830,
+    "vale": "122",
+    "fila_excel": 95
+   },
+   {
+    "id": 366,
+    "fecha": "2026-10-28",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3000,
+    "vale": "122",
+    "fila_excel": 96
+   },
+   {
+    "id": 367,
+    "fecha": "2026-10-28",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "122",
+    "fila_excel": 97
+   },
+   {
+    "id": 368,
+    "fecha": "2026-10-28",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 80,
+    "importe": 16800,
+    "vale": "121",
+    "fila_excel": 98
+   },
+   {
+    "id": 369,
+    "fecha": "2026-10-28",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "121",
+    "fila_excel": 99
+   },
+   {
+    "id": 370,
+    "fecha": "2026-10-28",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "121",
+    "fila_excel": 100
+   },
+   {
+    "id": 371,
+    "fecha": "2026-10-28",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "121",
+    "fila_excel": 101
+   },
+   {
+    "id": 372,
+    "fecha": "2026-10-28",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 28,
+    "importe": 5880,
+    "vale": "120",
+    "fila_excel": 102
+   },
+   {
+    "id": 373,
+    "fecha": "2026-10-28",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "120",
+    "fila_excel": 103
+   },
+   {
+    "id": 374,
+    "fecha": "2026-10-28",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "120",
+    "fila_excel": 104
+   },
+   {
+    "id": 375,
+    "fecha": "2026-10-28",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "120",
+    "fila_excel": 105
+   },
+   {
+    "id": 376,
+    "fecha": "2026-10-29",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 16,
+    "importe": 3360,
+    "vale": "128",
+    "fila_excel": 76
+   },
+   {
+    "id": 377,
+    "fecha": "2026-10-29",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 18,
+    "importe": 2700,
+    "vale": "128",
+    "fila_excel": 77
+   },
+   {
+    "id": 378,
+    "fecha": "2026-10-29",
+    "cliente": "Otros",
+    "producto": "Pasteles",
+    "cantidad": 12,
+    "importe": 1800,
+    "vale": "128",
+    "fila_excel": 78
+   },
+   {
+    "id": 379,
+    "fecha": "2026-10-29",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 5,
+    "importe": 1200,
+    "vale": "128",
+    "fila_excel": 79
+   },
+   {
+    "id": 380,
+    "fecha": "2026-10-29",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6300,
+    "vale": "127",
+    "fila_excel": 80
+   },
+   {
+    "id": 381,
+    "fecha": "2026-10-29",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 75,
+    "importe": 11250,
+    "vale": "127",
+    "fila_excel": 81
+   },
+   {
+    "id": 382,
+    "fecha": "2026-10-29",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 80,
+    "importe": 19200,
+    "vale": "127",
+    "fila_excel": 82
+   },
+   {
+    "id": 383,
+    "fecha": "2026-10-29",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "126",
+    "fila_excel": 83
+   },
+   {
+    "id": 384,
+    "fecha": "2026-10-29",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 40,
+    "importe": 9600,
+    "vale": "126",
+    "fila_excel": 84
+   },
+   {
+    "id": 385,
+    "fecha": "2026-10-29",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "125",
+    "fila_excel": 85
+   },
+   {
+    "id": 386,
+    "fecha": "2026-10-29",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 13500,
+    "vale": "125",
+    "fila_excel": 86
+   },
+   {
+    "id": 387,
+    "fecha": "2026-10-29",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 28,
+    "importe": 4200,
+    "vale": "125",
+    "fila_excel": 87
+   },
+   {
+    "id": 388,
+    "fecha": "2026-10-29",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "125",
+    "fila_excel": 88
+   },
+   {
+    "id": 389,
+    "fecha": "2026-10-29",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "124",
+    "fila_excel": 89
+   },
+   {
+    "id": 390,
+    "fecha": "2026-10-29",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 57,
+    "importe": 8550,
+    "vale": "124",
+    "fila_excel": 90
+   },
+   {
+    "id": 391,
+    "fecha": "2026-10-29",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "124",
+    "fila_excel": 91
+   },
+   {
+    "id": 392,
+    "fecha": "2026-10-30",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 24,
+    "importe": 3600,
+    "vale": "133",
+    "fila_excel": 63
+   },
+   {
+    "id": 393,
+    "fecha": "2026-10-30",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 50,
+    "importe": 7500,
+    "vale": "132",
+    "fila_excel": 64
+   },
+   {
+    "id": 394,
+    "fecha": "2026-10-30",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "131",
+    "fila_excel": 65
+   },
+   {
+    "id": 395,
+    "fecha": "2026-10-30",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 17,
+    "importe": 4080,
+    "vale": "131",
+    "fila_excel": 66
+   },
+   {
+    "id": 396,
+    "fecha": "2026-10-30",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 26,
+    "importe": 5460,
+    "vale": "131",
+    "fila_excel": 67
+   },
+   {
+    "id": 397,
+    "fecha": "2026-10-30",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 80,
+    "importe": 12000,
+    "vale": "130",
+    "fila_excel": 68
+   },
+   {
+    "id": 398,
+    "fecha": "2026-10-30",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8400,
+    "vale": "130",
+    "fila_excel": 69
+   },
+   {
+    "id": 399,
+    "fecha": "2026-10-30",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8400,
+    "vale": "130",
+    "fila_excel": 70
+   },
+   {
+    "id": 400,
+    "fecha": "2026-10-30",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "130",
+    "fila_excel": 71
+   },
+   {
+    "id": 401,
+    "fecha": "2026-10-30",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "129",
+    "fila_excel": 72
+   },
+   {
+    "id": 402,
+    "fecha": "2026-10-30",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 4800,
+    "vale": "129",
+    "fila_excel": 73
+   },
+   {
+    "id": 403,
+    "fecha": "2026-10-30",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4200,
+    "vale": "129",
+    "fila_excel": 74
+   },
+   {
+    "id": 404,
+    "fecha": "2026-10-30",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 30,
+    "importe": 4500,
+    "vale": "129",
+    "fila_excel": 75
+   },
+   {
+    "id": 405,
+    "fecha": "2026-10-31",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 88,
+    "importe": 13200,
+    "vale": "135",
+    "fila_excel": 60
+   },
+   {
+    "id": 406,
+    "fecha": "2026-10-31",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 85,
+    "importe": 17850,
+    "vale": "134",
+    "fila_excel": 61
+   },
+   {
+    "id": 407,
+    "fecha": "2026-10-31",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6000,
+    "vale": "134",
+    "fila_excel": 62
+   },
+   {
+    "id": 408,
+    "fecha": "2026-11-02",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 1,
+    "importe": 220,
+    "vale": "140",
+    "fila_excel": 43
+   },
+   {
+    "id": 409,
+    "fecha": "2026-11-02",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 5,
+    "importe": 1250,
+    "vale": "140",
+    "fila_excel": 44
+   },
+   {
+    "id": 410,
+    "fecha": "2026-11-02",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "140",
+    "fila_excel": 45
+   },
+   {
+    "id": 411,
+    "fecha": "2026-11-02",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 34,
+    "importe": 7480,
+    "vale": "139",
+    "fila_excel": 46
+   },
+   {
+    "id": 412,
+    "fecha": "2026-11-02",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 76,
+    "importe": 19000,
+    "vale": "139",
+    "fila_excel": 47
+   },
+   {
+    "id": 413,
+    "fecha": "2026-11-02",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "139",
+    "fila_excel": 48
+   },
+   {
+    "id": 414,
+    "fecha": "2026-11-02",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6400,
+    "vale": "139",
+    "fila_excel": 49
+   },
+   {
+    "id": 415,
+    "fecha": "2026-11-02",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 44,
+    "importe": 11000,
+    "vale": "138",
+    "fila_excel": 50
+   },
+   {
+    "id": 416,
+    "fecha": "2026-11-02",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3200,
+    "vale": "138",
+    "fila_excel": 51
+   },
+   {
+    "id": 417,
+    "fecha": "2026-11-02",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4400,
+    "vale": "138",
+    "fila_excel": 52
+   },
+   {
+    "id": 418,
+    "fecha": "2026-11-02",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 70,
+    "importe": 15400,
+    "vale": "137",
+    "fila_excel": 53
+   },
+   {
+    "id": 419,
+    "fecha": "2026-11-02",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 40,
+    "importe": 6400,
+    "vale": "137",
+    "fila_excel": 54
+   },
+   {
+    "id": 420,
+    "fecha": "2026-11-02",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8750,
+    "vale": "137",
+    "fila_excel": 55
+   },
+   {
+    "id": 421,
+    "fecha": "2026-11-02",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "137",
+    "fila_excel": 56
+   },
+   {
+    "id": 422,
+    "fecha": "2026-11-02",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 5000,
+    "vale": "136",
+    "fila_excel": 57
+   },
+   {
+    "id": 423,
+    "fecha": "2026-11-02",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3200,
+    "vale": "136",
+    "fila_excel": 58
+   },
+   {
+    "id": 424,
+    "fecha": "2026-11-02",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "136",
+    "fila_excel": 59
+   },
+   {
+    "id": 425,
+    "fecha": "2026-11-03",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6600,
+    "vale": "144",
+    "fila_excel": 30
+   },
+   {
+    "id": 426,
+    "fecha": "2026-11-03",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 19200,
+    "vale": "144",
+    "fila_excel": 31
+   },
+   {
+    "id": 427,
+    "fecha": "2026-11-03",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "144",
+    "fila_excel": 32
+   },
+   {
+    "id": 428,
+    "fecha": "2026-11-03",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 33,
+    "importe": 8250,
+    "vale": "144",
+    "fila_excel": 33
+   },
+   {
+    "id": 429,
+    "fecha": "2026-11-03",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 20,
+    "importe": 4400,
+    "vale": "143",
+    "fila_excel": 34
+   },
+   {
+    "id": 430,
+    "fecha": "2026-11-03",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 48,
+    "importe": 7680,
+    "vale": "143",
+    "fila_excel": 35
+   },
+   {
+    "id": 431,
+    "fecha": "2026-11-03",
+    "cliente": "Osdael",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 5000,
+    "vale": "143",
+    "fila_excel": 36
+   },
+   {
+    "id": 432,
+    "fecha": "2026-11-03",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "142",
+    "fila_excel": 37
+   },
+   {
+    "id": 433,
+    "fecha": "2026-11-03",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8750,
+    "vale": "142",
+    "fila_excel": 38
+   },
+   {
+    "id": 434,
+    "fecha": "2026-11-03",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 42,
+    "importe": 9240,
+    "vale": "142",
+    "fila_excel": 39
+   },
+   {
+    "id": 435,
+    "fecha": "2026-11-03",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8800,
+    "vale": "141",
+    "fila_excel": 40
+   },
+   {
+    "id": 436,
+    "fecha": "2026-11-03",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 32,
+    "importe": 5120,
+    "vale": "141",
+    "fila_excel": 41
+   },
+   {
+    "id": 437,
+    "fecha": "2026-11-03",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 5000,
+    "vale": "141",
+    "fila_excel": 42
+   },
+   {
+    "id": 438,
+    "fecha": "2026-11-04",
+    "cliente": "Otros",
+    "producto": "Conos",
+    "cantidad": 1,
+    "importe": 220,
+    "vale": "150",
+    "fila_excel": 15
+   },
+   {
+    "id": 439,
+    "fecha": "2026-11-04",
+    "cliente": "Otros",
+    "producto": "Señoritas",
+    "cantidad": 3,
+    "importe": 750,
+    "vale": "150",
+    "fila_excel": 16
+   },
+   {
+    "id": 440,
+    "fecha": "2026-11-04",
+    "cliente": "Nuevo",
+    "producto": "Conos",
+    "cantidad": 11,
+    "importe": 2420,
+    "vale": "149",
+    "fila_excel": 17
+   },
+   {
+    "id": 441,
+    "fecha": "2026-11-04",
+    "cliente": "Nuevo",
+    "producto": "Pasteles",
+    "cantidad": 14,
+    "importe": 2240,
+    "vale": "149",
+    "fila_excel": 18
+   },
+   {
+    "id": 442,
+    "fecha": "2026-11-04",
+    "cliente": "Nuevo",
+    "producto": "Señoritas",
+    "cantidad": 14,
+    "importe": 3500,
+    "vale": "149",
+    "fila_excel": 19
+   },
+   {
+    "id": 443,
+    "fecha": "2026-11-04",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6600,
+    "vale": "148",
+    "fila_excel": 20
+   },
+   {
+    "id": 444,
+    "fecha": "2026-11-04",
+    "cliente": "Yoan",
+    "producto": "Pasteles",
+    "cantidad": 30,
+    "importe": 4800,
+    "vale": "148",
+    "fila_excel": 21
+   },
+   {
+    "id": 445,
+    "fecha": "2026-11-04",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 13,
+    "importe": 2860,
+    "vale": "147",
+    "fila_excel": 22
+   },
+   {
+    "id": 446,
+    "fecha": "2026-11-04",
+    "cliente": "Osdael",
+    "producto": "Pasteles",
+    "cantidad": 36,
+    "importe": 5760,
+    "vale": "147",
+    "fila_excel": 23
+   },
+   {
+    "id": 447,
+    "fecha": "2026-11-04",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8800,
+    "vale": "146",
+    "fila_excel": 24
+   },
+   {
+    "id": 448,
+    "fecha": "2026-11-04",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "146",
+    "fila_excel": 25
+   },
+   {
+    "id": 449,
+    "fecha": "2026-11-04",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8750,
+    "vale": "146",
+    "fila_excel": 26
+   },
+   {
+    "id": 450,
+    "fecha": "2026-11-04",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 30,
+    "importe": 6600,
+    "vale": "145",
+    "fila_excel": 27
+   },
+   {
+    "id": 451,
+    "fecha": "2026-11-04",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3200,
+    "vale": "145",
+    "fila_excel": 28
+   },
+   {
+    "id": 452,
+    "fecha": "2026-11-04",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 5000,
+    "vale": "145",
+    "fila_excel": 29
+   },
+   {
+    "id": 453,
+    "fecha": "2026-11-05",
+    "cliente": "Otros",
+    "producto": "Masarreal",
+    "cantidad": 90,
+    "importe": 14400,
+    "vale": "155",
+    "fila_excel": 2
+   },
+   {
+    "id": 454,
+    "fecha": "2026-11-05",
+    "cliente": "Yoan",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8800,
+    "vale": "154",
+    "fila_excel": 3
+   },
+   {
+    "id": 455,
+    "fecha": "2026-11-05",
+    "cliente": "Yoan",
+    "producto": "Masarreal",
+    "cantidad": 120,
+    "importe": 19200,
+    "vale": "154",
+    "fila_excel": 4
+   },
+   {
+    "id": 456,
+    "fecha": "2026-11-05",
+    "cliente": "Yoan",
+    "producto": "Señoritas",
+    "cantidad": 53,
+    "importe": 13250,
+    "vale": "154",
+    "fila_excel": 5
+   },
+   {
+    "id": 457,
+    "fecha": "2026-11-05",
+    "cliente": "Osdael",
+    "producto": "Conos",
+    "cantidad": 57,
+    "importe": 12540,
+    "vale": "153",
+    "fila_excel": 6
+   },
+   {
+    "id": 458,
+    "fecha": "2026-11-05",
+    "cliente": "Erick",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8800,
+    "vale": "152",
+    "fila_excel": 7
+   },
+   {
+    "id": 459,
+    "fecha": "2026-11-05",
+    "cliente": "Erick",
+    "producto": "Pasteles",
+    "cantidad": 78,
+    "importe": 12480,
+    "vale": "152",
+    "fila_excel": 8
+   },
+   {
+    "id": 460,
+    "fecha": "2026-11-05",
+    "cliente": "Erick",
+    "producto": "Señoritas",
+    "cantidad": 35,
+    "importe": 8750,
+    "vale": "152",
+    "fila_excel": 9
+   },
+   {
+    "id": 461,
+    "fecha": "2026-11-05",
+    "cliente": "Erick",
+    "producto": "Masarreal",
+    "cantidad": 150,
+    "importe": 24000,
+    "vale": "152",
+    "fila_excel": 10
+   },
+   {
+    "id": 462,
+    "fecha": "2026-11-05",
+    "cliente": "Carlos",
+    "producto": "Conos",
+    "cantidad": 40,
+    "importe": 8800,
+    "vale": "151",
+    "fila_excel": 11
+   },
+   {
+    "id": 463,
+    "fecha": "2026-11-05",
+    "cliente": "Carlos",
+    "producto": "Masarreal",
+    "cantidad": 60,
+    "importe": 9600,
+    "vale": "151",
+    "fila_excel": 12
+   },
+   {
+    "id": 464,
+    "fecha": "2026-11-05",
+    "cliente": "Carlos",
+    "producto": "Pasteles",
+    "cantidad": 20,
+    "importe": 3200,
+    "vale": "151",
+    "fila_excel": 13
+   },
+   {
+    "id": 465,
+    "fecha": "2026-11-05",
+    "cliente": "Carlos",
+    "producto": "Señoritas",
+    "cantidad": 20,
+    "importe": 5000,
+    "vale": "151",
+    "fila_excel": 14
+   }
+  ],
+  "gastos": [
+   {
+    "id": 1,
+    "fecha": "2026-09-21",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2025,
+    "fila_excel": 171
+   },
+   {
+    "id": 2,
+    "fecha": "2026-09-21",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 172
+   },
+   {
+    "id": 3,
+    "fecha": "2026-09-21",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 173
+   },
+   {
+    "id": 4,
+    "fecha": "2026-09-21",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 174
+   },
+   {
+    "id": 5,
+    "fecha": "2026-09-21",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2160,
+    "fila_excel": 175
+   },
+   {
+    "id": 6,
+    "fecha": "2026-09-22",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2370,
+    "fila_excel": 166
+   },
+   {
+    "id": 7,
+    "fecha": "2026-09-22",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 167
+   },
+   {
+    "id": 8,
+    "fecha": "2026-09-22",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1950,
+    "fila_excel": 168
+   },
+   {
+    "id": 9,
+    "fecha": "2026-09-22",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1200,
+    "fila_excel": 169
+   },
+   {
+    "id": 10,
+    "fecha": "2026-09-22",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 3240,
+    "fila_excel": 170
+   },
+   {
+    "id": 11,
+    "fecha": "2026-09-23",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2295,
+    "fila_excel": 161
+   },
+   {
+    "id": 12,
+    "fecha": "2026-09-23",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 162
+   },
+   {
+    "id": 13,
+    "fecha": "2026-09-23",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1650,
+    "fila_excel": 163
+   },
+   {
+    "id": 14,
+    "fecha": "2026-09-23",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 390,
+    "fila_excel": 164
+   },
+   {
+    "id": 15,
+    "fecha": "2026-09-23",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 3240,
+    "fila_excel": 165
+   },
+   {
+    "id": 16,
+    "fecha": "2026-09-24",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2490,
+    "fila_excel": 156
+   },
+   {
+    "id": 17,
+    "fecha": "2026-09-24",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 2700,
+    "fila_excel": 157
+   },
+   {
+    "id": 18,
+    "fecha": "2026-09-24",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1350,
+    "fila_excel": 158
+   },
+   {
+    "id": 19,
+    "fecha": "2026-09-24",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 400,
+    "fila_excel": 159
+   },
+   {
+    "id": 20,
+    "fecha": "2026-09-24",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2160,
+    "fila_excel": 160
+   },
+   {
+    "id": 21,
+    "fecha": "2026-09-25",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2490,
+    "fila_excel": 151
+   },
+   {
+    "id": 22,
+    "fecha": "2026-09-25",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 152
+   },
+   {
+    "id": 23,
+    "fecha": "2026-09-25",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 2100,
+    "fila_excel": 153
+   },
+   {
+    "id": 24,
+    "fecha": "2026-09-25",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 154
+   },
+   {
+    "id": 25,
+    "fecha": "2026-09-25",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 155
+   },
+   {
+    "id": 26,
+    "fecha": "2026-09-26",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 150
+   },
+   {
+    "id": 27,
+    "fecha": "2026-09-28",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2325,
+    "fila_excel": 147
+   },
+   {
+    "id": 28,
+    "fecha": "2026-09-28",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 148
+   },
+   {
+    "id": 29,
+    "fecha": "2026-09-28",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 149
+   },
+   {
+    "id": 30,
+    "fecha": "2026-09-29",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2550,
+    "fila_excel": 142
+   },
+   {
+    "id": 31,
+    "fecha": "2026-09-29",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 5400,
+    "fila_excel": 143
+   },
+   {
+    "id": 32,
+    "fecha": "2026-09-29",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1950,
+    "fila_excel": 144
+   },
+   {
+    "id": 33,
+    "fecha": "2026-09-29",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 145
+   },
+   {
+    "id": 34,
+    "fecha": "2026-09-29",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 146
+   },
+   {
+    "id": 35,
+    "fecha": "2026-09-30",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2475,
+    "fila_excel": 136
+   },
+   {
+    "id": 36,
+    "fecha": "2026-09-30",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 137
+   },
+   {
+    "id": 37,
+    "fecha": "2026-09-30",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 138
+   },
+   {
+    "id": 38,
+    "fecha": "2026-09-30",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1200,
+    "fila_excel": 139
+   },
+   {
+    "id": 39,
+    "fecha": "2026-09-30",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 140
+   },
+   {
+    "id": 40,
+    "fecha": "2026-09-30",
+    "concepto": "Limpieza",
+    "producto": null,
+    "importe": 1000,
+    "fila_excel": 141
+   },
+   {
+    "id": 41,
+    "fecha": "2026-10-01",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2700,
+    "fila_excel": 130
+   },
+   {
+    "id": 42,
+    "fecha": "2026-10-01",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 131
+   },
+   {
+    "id": 43,
+    "fecha": "2026-10-01",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 132
+   },
+   {
+    "id": 44,
+    "fecha": "2026-10-01",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1000,
+    "fila_excel": 133
+   },
+   {
+    "id": 45,
+    "fecha": "2026-10-01",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 134
+   },
+   {
+    "id": 46,
+    "fecha": "2026-10-01",
+    "concepto": "Balanza",
+    "producto": null,
+    "importe": 7000,
+    "fila_excel": 135
+   },
+   {
+    "id": 47,
+    "fecha": "2026-10-02",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1230,
+    "fila_excel": 126
+   },
+   {
+    "id": 48,
+    "fecha": "2026-10-02",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 127
+   },
+   {
+    "id": 49,
+    "fecha": "2026-10-02",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 128
+   },
+   {
+    "id": 50,
+    "fecha": "2026-10-02",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 129
+   },
+   {
+    "id": 51,
+    "fecha": "2026-10-03",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 675,
+    "fila_excel": 121
+   },
+   {
+    "id": 52,
+    "fecha": "2026-10-03",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 122
+   },
+   {
+    "id": 53,
+    "fecha": "2026-10-03",
+    "concepto": "Salario",
+    "producto": "Palmeritas",
+    "importe": 300,
+    "fila_excel": 123
+   },
+   {
+    "id": 54,
+    "fecha": "2026-10-03",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 124
+   },
+   {
+    "id": 55,
+    "fecha": "2026-10-03",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 125
+   },
+   {
+    "id": 56,
+    "fecha": "2026-10-04",
+    "concepto": "Limpieza",
+    "producto": null,
+    "importe": 1000,
+    "fila_excel": 120
+   },
+   {
+    "id": 57,
+    "fecha": "2026-10-05",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2550,
+    "fila_excel": 116
+   },
+   {
+    "id": 58,
+    "fecha": "2026-10-05",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 2700,
+    "fila_excel": 117
+   },
+   {
+    "id": 59,
+    "fecha": "2026-10-05",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 118
+   },
+   {
+    "id": 60,
+    "fecha": "2026-10-05",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2100,
+    "fila_excel": 119
+   },
+   {
+    "id": 61,
+    "fecha": "2026-10-06",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1920,
+    "fila_excel": 112
+   },
+   {
+    "id": 62,
+    "fecha": "2026-10-06",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1950,
+    "fila_excel": 113
+   },
+   {
+    "id": 63,
+    "fecha": "2026-10-06",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1200,
+    "fila_excel": 114
+   },
+   {
+    "id": 64,
+    "fecha": "2026-10-06",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 115
+   },
+   {
+    "id": 65,
+    "fecha": "2026-10-07",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1965,
+    "fila_excel": 106
+   },
+   {
+    "id": 66,
+    "fecha": "2026-10-07",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 107
+   },
+   {
+    "id": 67,
+    "fecha": "2026-10-07",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 108
+   },
+   {
+    "id": 68,
+    "fecha": "2026-10-07",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1000,
+    "fila_excel": 109
+   },
+   {
+    "id": 69,
+    "fecha": "2026-10-07",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 110
+   },
+   {
+    "id": 70,
+    "fecha": "2026-10-07",
+    "concepto": "Electricidad",
+    "producto": null,
+    "importe": 6530,
+    "fila_excel": 111
+   },
+   {
+    "id": 71,
+    "fecha": "2026-10-08",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1290,
+    "fila_excel": 101
+   },
+   {
+    "id": 72,
+    "fecha": "2026-10-08",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 102
+   },
+   {
+    "id": 73,
+    "fecha": "2026-10-08",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 103
+   },
+   {
+    "id": 74,
+    "fecha": "2026-10-08",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1000,
+    "fila_excel": 104
+   },
+   {
+    "id": 75,
+    "fecha": "2026-10-08",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 105
+   },
+   {
+    "id": 76,
+    "fecha": "2026-10-09",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2550,
+    "fila_excel": 96
+   },
+   {
+    "id": 77,
+    "fecha": "2026-10-09",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 97
+   },
+   {
+    "id": 78,
+    "fecha": "2026-10-09",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 98
+   },
+   {
+    "id": 79,
+    "fecha": "2026-10-09",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 800,
+    "fila_excel": 99
+   },
+   {
+    "id": 80,
+    "fecha": "2026-10-09",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 100
+   },
+   {
+    "id": 81,
+    "fecha": "2026-10-10",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 95
+   },
+   {
+    "id": 82,
+    "fecha": "2026-10-11",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 94
+   },
+   {
+    "id": 83,
+    "fecha": "2026-10-12",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2640,
+    "fila_excel": 90
+   },
+   {
+    "id": 84,
+    "fecha": "2026-10-12",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 91
+   },
+   {
+    "id": 85,
+    "fecha": "2026-10-12",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 92
+   },
+   {
+    "id": 86,
+    "fecha": "2026-10-12",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 3240,
+    "fila_excel": 93
+   },
+   {
+    "id": 87,
+    "fecha": "2026-10-13",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2580,
+    "fila_excel": 86
+   },
+   {
+    "id": 88,
+    "fecha": "2026-10-13",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 87
+   },
+   {
+    "id": 89,
+    "fecha": "2026-10-13",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 88
+   },
+   {
+    "id": 90,
+    "fecha": "2026-10-13",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 3780,
+    "fila_excel": 89
+   },
+   {
+    "id": 91,
+    "fecha": "2026-10-14",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1860,
+    "fila_excel": 85
+   },
+   {
+    "id": 92,
+    "fecha": "2026-10-15",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1875,
+    "fila_excel": 81
+   },
+   {
+    "id": 93,
+    "fecha": "2026-10-15",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 2550,
+    "fila_excel": 82
+   },
+   {
+    "id": 94,
+    "fecha": "2026-10-15",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 83
+   },
+   {
+    "id": 95,
+    "fecha": "2026-10-15",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 84
+   },
+   {
+    "id": 96,
+    "fecha": "2026-10-16",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1050,
+    "fila_excel": 80
+   },
+   {
+    "id": 97,
+    "fecha": "2026-10-17",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 79
+   },
+   {
+    "id": 98,
+    "fecha": "2026-10-19",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 3090,
+    "fila_excel": 75
+   },
+   {
+    "id": 99,
+    "fecha": "2026-10-19",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 76
+   },
+   {
+    "id": 100,
+    "fecha": "2026-10-19",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 77
+   },
+   {
+    "id": 101,
+    "fecha": "2026-10-19",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 400,
+    "fila_excel": 78
+   },
+   {
+    "id": 102,
+    "fecha": "2026-10-20",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1905,
+    "fila_excel": 69
+   },
+   {
+    "id": 103,
+    "fecha": "2026-10-20",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 70
+   },
+   {
+    "id": 104,
+    "fecha": "2026-10-20",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 71
+   },
+   {
+    "id": 105,
+    "fecha": "2026-10-20",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2050,
+    "fila_excel": 72
+   },
+   {
+    "id": 106,
+    "fecha": "2026-10-20",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 73
+   },
+   {
+    "id": 107,
+    "fecha": "2026-10-20",
+    "concepto": "Estropajo",
+    "producto": null,
+    "importe": 540,
+    "fila_excel": 74
+   },
+   {
+    "id": 108,
+    "fecha": "2026-10-21",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1800,
+    "fila_excel": 64
+   },
+   {
+    "id": 109,
+    "fecha": "2026-10-21",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 65
+   },
+   {
+    "id": 110,
+    "fecha": "2026-10-21",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 66
+   },
+   {
+    "id": 111,
+    "fecha": "2026-10-21",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1600,
+    "fila_excel": 67
+   },
+   {
+    "id": 112,
+    "fecha": "2026-10-21",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 68
+   },
+   {
+    "id": 113,
+    "fecha": "2026-10-22",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 63
+   },
+   {
+    "id": 114,
+    "fecha": "2026-10-23",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1335,
+    "fila_excel": 58
+   },
+   {
+    "id": 115,
+    "fecha": "2026-10-23",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 5400,
+    "fila_excel": 59
+   },
+   {
+    "id": 116,
+    "fecha": "2026-10-23",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 60
+   },
+   {
+    "id": 117,
+    "fecha": "2026-10-23",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 800,
+    "fila_excel": 61
+   },
+   {
+    "id": 118,
+    "fecha": "2026-10-23",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2160,
+    "fila_excel": 62
+   },
+   {
+    "id": 119,
+    "fecha": "2026-10-24",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1410,
+    "fila_excel": 53
+   },
+   {
+    "id": 120,
+    "fecha": "2026-10-24",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 54
+   },
+   {
+    "id": 121,
+    "fecha": "2026-10-24",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 55
+   },
+   {
+    "id": 122,
+    "fecha": "2026-10-24",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 56
+   },
+   {
+    "id": 123,
+    "fecha": "2026-10-24",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2160,
+    "fila_excel": 57
+   },
+   {
+    "id": 124,
+    "fecha": "2026-10-26",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1965,
+    "fila_excel": 48
+   },
+   {
+    "id": 125,
+    "fecha": "2026-10-26",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 49
+   },
+   {
+    "id": 126,
+    "fecha": "2026-10-26",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 50
+   },
+   {
+    "id": 127,
+    "fecha": "2026-10-26",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1200,
+    "fila_excel": 51
+   },
+   {
+    "id": 128,
+    "fecha": "2026-10-26",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1605,
+    "fila_excel": 52
+   },
+   {
+    "id": 129,
+    "fecha": "2026-10-27",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1905,
+    "fila_excel": 42
+   },
+   {
+    "id": 130,
+    "fecha": "2026-10-27",
+    "concepto": "Materias Primas",
+    "producto": "Leche en polvo",
+    "importe": 45000,
+    "fila_excel": 43
+   },
+   {
+    "id": 131,
+    "fecha": "2026-10-27",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 44
+   },
+   {
+    "id": 132,
+    "fecha": "2026-10-27",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 45
+   },
+   {
+    "id": 133,
+    "fecha": "2026-10-27",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1600,
+    "fila_excel": 46
+   },
+   {
+    "id": 134,
+    "fecha": "2026-10-27",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 47
+   },
+   {
+    "id": 135,
+    "fecha": "2026-10-28",
+    "concepto": "Materias Primas",
+    "producto": "Barra Guayaba",
+    "importe": 42000,
+    "fila_excel": 35
+   },
+   {
+    "id": 136,
+    "fecha": "2026-10-28",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2265,
+    "fila_excel": 36
+   },
+   {
+    "id": 137,
+    "fecha": "2026-10-28",
+    "concepto": "Materias Primas",
+    "producto": "Harina",
+    "importe": 128000,
+    "fila_excel": 37
+   },
+   {
+    "id": 138,
+    "fecha": "2026-10-28",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 900,
+    "fila_excel": 38
+   },
+   {
+    "id": 139,
+    "fecha": "2026-10-28",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 39
+   },
+   {
+    "id": 140,
+    "fecha": "2026-10-28",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1600,
+    "fila_excel": 40
+   },
+   {
+    "id": 141,
+    "fecha": "2026-10-28",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1605,
+    "fila_excel": 41
+   },
+   {
+    "id": 142,
+    "fecha": "2026-10-29",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2490,
+    "fila_excel": 30
+   },
+   {
+    "id": 143,
+    "fecha": "2026-10-29",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 31
+   },
+   {
+    "id": 144,
+    "fecha": "2026-10-29",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 32
+   },
+   {
+    "id": 145,
+    "fecha": "2026-10-29",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 400,
+    "fila_excel": 33
+   },
+   {
+    "id": 146,
+    "fecha": "2026-10-29",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 34
+   },
+   {
+    "id": 147,
+    "fecha": "2026-10-30",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1290,
+    "fila_excel": 24
+   },
+   {
+    "id": 148,
+    "fecha": "2026-10-30",
+    "concepto": "Materiales",
+    "producto": "Lámpara",
+    "importe": 8200,
+    "fila_excel": 25
+   },
+   {
+    "id": 149,
+    "fecha": "2026-10-30",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1260,
+    "fila_excel": 26
+   },
+   {
+    "id": 150,
+    "fecha": "2026-10-30",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 27
+   },
+   {
+    "id": 151,
+    "fecha": "2026-10-30",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 28
+   },
+   {
+    "id": 152,
+    "fecha": "2026-10-30",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 29
+   },
+   {
+    "id": 153,
+    "fecha": "2026-10-31",
+    "concepto": "Materias Primas",
+    "producto": null,
+    "importe": 1956503,
+    "fila_excel": 19
+   },
+   {
+    "id": 154,
+    "fecha": "2026-10-31",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1275,
+    "fila_excel": 20
+   },
+   {
+    "id": 155,
+    "fecha": "2026-10-31",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1350,
+    "fila_excel": 21
+   },
+   {
+    "id": 156,
+    "fecha": "2026-10-31",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 900,
+    "fila_excel": 22
+   },
+   {
+    "id": 157,
+    "fecha": "2026-10-31",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 400,
+    "fila_excel": 23
+   },
+   {
+    "id": 158,
+    "fecha": "2026-11-02",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1875,
+    "fila_excel": 14
+   },
+   {
+    "id": 159,
+    "fecha": "2026-11-02",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 15
+   },
+   {
+    "id": 160,
+    "fecha": "2026-11-02",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1050,
+    "fila_excel": 16
+   },
+   {
+    "id": 161,
+    "fecha": "2026-11-02",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1200,
+    "fila_excel": 17
+   },
+   {
+    "id": 162,
+    "fecha": "2026-11-02",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 2700,
+    "fila_excel": 18
+   },
+   {
+    "id": 163,
+    "fecha": "2026-11-03",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1980,
+    "fila_excel": 9
+   },
+   {
+    "id": 164,
+    "fecha": "2026-11-03",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 1800,
+    "fila_excel": 10
+   },
+   {
+    "id": 165,
+    "fecha": "2026-11-03",
+    "concepto": "Salario",
+    "producto": "Masas",
+    "importe": 1800,
+    "fila_excel": 11
+   },
+   {
+    "id": 166,
+    "fecha": "2026-11-03",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 2000,
+    "fila_excel": 12
+   },
+   {
+    "id": 167,
+    "fecha": "2026-11-03",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 13
+   },
+   {
+    "id": 168,
+    "fecha": "2026-11-04",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 1875,
+    "fila_excel": 6
+   },
+   {
+    "id": 169,
+    "fecha": "2026-11-04",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 1600,
+    "fila_excel": 7
+   },
+   {
+    "id": 170,
+    "fecha": "2026-11-04",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1080,
+    "fila_excel": 8
+   },
+   {
+    "id": 171,
+    "fecha": "2026-11-05",
+    "concepto": "Salario",
+    "producto": "Conos",
+    "importe": 2655,
+    "fila_excel": 2
+   },
+   {
+    "id": 172,
+    "fecha": "2026-11-05",
+    "concepto": "Salario",
+    "producto": "Masarreal",
+    "importe": 3600,
+    "fila_excel": 3
+   },
+   {
+    "id": 173,
+    "fecha": "2026-11-05",
+    "concepto": "Salario",
+    "producto": "Pasteles",
+    "importe": 980,
+    "fila_excel": 4
+   },
+   {
+    "id": 174,
+    "fecha": "2026-11-05",
+    "concepto": "Salario",
+    "producto": "Señoritas",
+    "importe": 1620,
+    "fila_excel": 5
+   },
+   {
+    "id": 175,
+    "fecha": "2026-11-05",
+    "concepto": "Materias Primas",
+    "producto": "Azúcar",
+    "importe": 228160,
+    "fila_excel": 176
+   },
+   {
+    "id": 176,
+    "fecha": "2026-11-05",
+    "concepto": "Materias Primas",
+    "producto": "Huevos",
+    "importe": 300,
+    "fila_excel": 177
+   }
+  ],
+  "movimientos": [
+   {
+    "id": 1,
+    "fecha": "2026-09-30",
+    "concepto": "Limpieza",
+    "importe": 1000,
+    "nota": null,
+    "fila_excel": 5
+   },
+   {
+    "id": 2,
+    "fecha": "2026-10-01",
+    "concepto": "Materiales",
+    "importe": 7000,
+    "nota": "Balanza",
+    "fila_excel": 6
+   },
+   {
+    "id": 3,
+    "fecha": "2026-10-04",
+    "concepto": "Limpieza",
+    "importe": 1000,
+    "nota": null,
+    "fila_excel": 7
+   },
+   {
+    "id": 4,
+    "fecha": "2026-10-07",
+    "concepto": "Electricidad",
+    "importe": 6530,
+    "nota": null,
+    "fila_excel": 8
+   },
+   {
+    "id": 5,
+    "fecha": "2026-10-20",
+    "concepto": "Materiales",
+    "importe": 540,
+    "nota": "Estropajo",
+    "fila_excel": 9
+   },
+   {
+    "id": 6,
+    "fecha": "2026-10-27",
+    "concepto": "Materias Primas",
+    "importe": 45000,
+    "nota": "10 bolsas de Leche en polvo en SAB",
+    "fila_excel": 11
+   },
+   {
+    "id": 7,
+    "fecha": "2026-10-28",
+    "concepto": "Materias Primas",
+    "importe": 128000,
+    "nota": "4 sacos de Harina Porto Bello",
+    "fila_excel": 12
+   },
+   {
+    "id": 8,
+    "fecha": "2026-10-28",
+    "concepto": "Materias Primas",
+    "importe": 42000,
+    "nota": "51 barras de guayaba",
+    "fila_excel": 13
+   },
+   {
+    "id": 9,
+    "fecha": "2026-10-30",
+    "concepto": "Materiales",
+    "importe": 8200,
+    "nota": "Lámpara recargable",
+    "fila_excel": 14
+   },
+   {
+    "id": 10,
+    "fecha": "2026-10-31",
+    "concepto": "Materias Primas",
+    "importe": 1956503,
+    "nota": "Compra de materias primas (antes registrada como Materiales en Gastos)",
+    "fila_excel": 10
+   }
+  ]
+ },
+ "almacen": {
+  "valor_total_inventario": 830087.94109,
+  "items": [
+   {
+    "codigo": "Cob-274",
+    "producto": "Cobertura",
+    "tipo": null,
+    "unidad": "cubeta",
+    "cantidad": 0.5,
+    "precio": 10000,
+    "importe": 5000,
+    "fila_excel": 3
+   },
+   {
+    "codigo": "HN-623",
+    "producto": "Harina",
+    "tipo": "Nacional",
+    "unidad": "saco",
+    "cantidad": 0.7,
+    "precio": 33000,
+    "importe": 23100,
+    "fila_excel": 4
+   },
+   {
+    "codigo": "Col-690",
+    "producto": "Colorante",
+    "tipo": null,
+    "unidad": "bolsa",
+    "cantidad": 0.9,
+    "precio": 20000,
+    "importe": 18000,
+    "fila_excel": 5
+   },
+   {
+    "codigo": "Sal-792",
+    "producto": "Sal",
+    "tipo": null,
+    "unidad": "saco",
+    "cantidad": 0.9,
+    "precio": 11900,
+    "importe": 10710,
+    "fila_excel": 6
+   },
+   {
+    "codigo": "HI-416",
+    "producto": "Harina",
+    "tipo": "IMSA",
+    "unidad": "saco",
+    "cantidad": 1,
+    "precio": 32700,
+    "importe": 32700,
+    "fila_excel": 7
+   },
+   {
+    "codigo": "HD-729",
+    "producto": "Harina",
+    "tipo": "BONOLI",
+    "unidad": "saco",
+    "cantidad": 1,
+    "precio": 21400,
+    "importe": 21400,
+    "fila_excel": 8
+   },
+   {
+    "codigo": "PH-673",
+    "producto": "Polvo de hornear",
+    "tipo": null,
+    "unidad": "pqt",
+    "cantidad": 1.35,
+    "precio": 15500,
+    "importe": 20925,
+    "fila_excel": 9
+   },
+   {
+    "codigo": "M-044",
+    "producto": "Maicena",
+    "tipo": null,
+    "unidad": "saco",
+    "cantidad": 2,
+    "precio": 35300,
+    "importe": 70600,
+    "fila_excel": 10
+   },
+   {
+    "codigo": "SV-669",
+    "producto": "Saborizante",
+    "tipo": "Vainilla",
+    "unidad": "pomo",
+    "cantidad": 2,
+    "precio": 8800,
+    "importe": 17600,
+    "fila_excel": 11
+   },
+   {
+    "codigo": "A-037",
+    "producto": "Azúcar",
+    "tipo": "JOE SUPPLY",
+    "unidad": "saco",
+    "cantidad": 4,
+    "precio": 26000,
+    "importe": 104000,
+    "fila_excel": 12
+   },
+   {
+    "codigo": null,
+    "producto": "Harina",
+    "tipo": "Porto Bello",
+    "unidad": "saco",
+    "cantidad": 4,
+    "precio": 32000,
+    "importe": 128000,
+    "fila_excel": 13
+   },
+   {
+    "codigo": "Lech-501",
+    "producto": "Leche en polvo",
+    "tipo": null,
+    "unidad": "bolsa",
+    "cantidad": 5,
+    "precio": 4500,
+    "importe": 22500,
+    "fila_excel": 14
+   },
+   {
+    "codigo": "MM-013",
+    "producto": "Manteca",
+    "tipo": "masoliver",
+    "unidad": "caja",
+    "cantidad": 5,
+    "precio": 57700,
+    "importe": 288500,
+    "fila_excel": 15
+   },
+   {
+    "codigo": "SL-354",
+    "producto": "Saborizante",
+    "tipo": "Leche condensada",
+    "unidad": "pomo",
+    "cantidad": 3,
+    "precio": 7500,
+    "importe": 22500,
+    "fila_excel": 16
+   },
+   {
+    "codigo": "BG-434",
+    "producto": "Barra de Guayabas",
+    "tipo": "buenas",
+    "unidad": "U",
+    "cantidad": 6,
+    "precio": 700,
+    "importe": 4200,
+    "fila_excel": 17
+   },
+   {
+    "codigo": "BG-682",
+    "producto": "Barra de Guayabas",
+    "tipo": "new",
+    "unidad": "U",
+    "cantidad": 49,
+    "precio": 823.52941,
+    "importe": 40352.94109,
+    "fila_excel": 18
+   },
+   {
+    "codigo": null,
+    "producto": "Detergente",
+    "tipo": null,
+    "unidad": "bolsa",
+    "cantidad": null,
+    "precio": 300,
+    "importe": 0,
+    "fila_excel": 19
+   },
+   {
+    "codigo": null,
+    "producto": "Leche en polvo",
+    "tipo": null,
+    "unidad": "bolsa",
+    "cantidad": null,
+    "precio": 4400,
+    "importe": 0,
+    "fila_excel": 20
+   },
+   {
+    "codigo": null,
+    "producto": "Leche en polvo",
+    "tipo": null,
+    "unidad": "bolsa",
+    "cantidad": null,
+    "precio": 4500,
+    "importe": 0,
+    "fila_excel": 21
+   },
+   {
+    "codigo": null,
+    "producto": "Supernotermul",
+    "tipo": null,
+    "unidad": "cubeta",
+    "cantidad": null,
+    "precio": 45000,
+    "importe": 0,
+    "fila_excel": 22
+   },
+   {
+    "codigo": null,
+    "producto": "Manteca",
+    "tipo": "masoliver",
+    "unidad": "Kg",
+    "cantidad": null,
+    "precio": 3535,
+    "importe": 0,
+    "fila_excel": 23
+   },
+   {
+    "codigo": null,
+    "producto": "Margarina",
+    "tipo": "Cinco estrellas",
+    "unidad": "kg",
+    "cantidad": null,
+    "precio": 2850,
+    "importe": 0,
+    "fila_excel": 24
+   },
+   {
+    "codigo": null,
+    "producto": "Margarina",
+    "tipo": "Alastur",
+    "unidad": "U",
+    "cantidad": null,
+    "precio": 3400,
+    "importe": 0,
+    "fila_excel": 25
+   },
+   {
+    "codigo": null,
+    "producto": "Margarina",
+    "tipo": "Multiusos",
+    "unidad": "U",
+    "cantidad": null,
+    "precio": 3400,
+    "importe": 0,
+    "fila_excel": 26
+   }
+  ]
+ },
+ "recetas": [
+  {
+   "receta": "Conos de hojaldre con Croasan",
+   "unidades_que_rinde": 44,
+   "costo_unitario": 115.72295455,
+   "porcentaje_adicional_sobre_costos": 0.14,
+   "monto_adicional": 625.31,
+   "porcentaje_beneficio_esperado": 0.3,
+   "costo_de_materiales": 4466.5,
+   "costo_total_receta": 5091.81,
+   "valor_venta_unitario": 150.43984091,
+   "ingresos_totales_utilidad": 34.71688636,
+   "ganancia_total": 1527.543,
+   "ingredientes": [
+    {
+     "ingrediente": "Masa de hojaldre con Croasan",
+     "cantidad": 1,
+     "importe": 2400
+    },
+    {
+     "ingrediente": "Huevo",
+     "cantidad": 1,
+     "importe": 100
+    },
+    {
+     "ingrediente": "Crema pastelera",
+     "cantidad": 1.5,
+     "importe": 1966.5
+    }
+   ]
+  },
+  {
+   "receta": "Masarreal",
+   "unidades_que_rinde": 120,
+   "costo_unitario": 97.96,
+   "porcentaje_adicional_sobre_costos": 0.2,
+   "monto_adicional": 1959.2,
+   "porcentaje_beneficio_esperado": 0.23,
+   "costo_de_materiales": 9796,
+   "costo_total_receta": 11755.2,
+   "valor_venta_unitario": 120.4908,
+   "ingresos_totales_utilidad": 22.5308,
+   "ganancia_total": 2703.696,
+   "ingredientes": [
+    {
+     "ingrediente": "Huevo",
+     "cantidad": 1,
+     "importe": 100
+    },
+    {
+     "ingrediente": "Sabor",
+     "cantidad": 10,
+     "importe": 220
+    },
+    {
+     "ingrediente": "Polvo de hornear",
+     "cantidad": 140,
+     "importe": 350
+    },
+    {
+     "ingrediente": "Margarina",
+     "cantidad": 300,
+     "importe": 360
+    },
+    {
+     "ingrediente": "Manteca pastelera",
+     "cantidad": 300,
+     "importe": 720
+    },
+    {
+     "ingrediente": "Leche",
+     "cantidad": 200,
+     "importe": 672
+    },
+    {
+     "ingrediente": "Harina",
+     "cantidad": 4000,
+     "importe": 3280
+    },
+    {
+     "ingrediente": "Crema de guayaba",
+     "cantidad": 1,
+     "importe": 2700
+    },
+    {
+     "ingrediente": "Azúcar",
+     "cantidad": 1700,
+     "importe": 1394
+    }
+   ]
+  }
+ ],
+ "caja": {
+  "configuracion": {
+   "saldo_inicial": 1300000,
+   "fecha_inicio": "2026-09-21",
+   "efectivo_contado": null
+  },
+  "reparto_pendiente_de_pago": 76216,
+  "totales_hoja_caja": {
+   "ventas": 3453110,
+   "salario_trabajadores": 312350,
+   "salario_administrador": 107070.88,
+   "salario_tatao": 214141.76,
+   "salario_carlos": 214141.76,
+   "materias_primas": 2171503,
+   "materiales": 15740,
+   "limpieza": 2000,
+   "electricidad": 6530,
+   "total_gastos": 3043477.4
+  },
+  "reparto_semanal": [
+   {
+    "desde": "2026-09-20",
+    "hasta": "2026-09-26",
+    "ganancia": 150012,
+    "salario_administrador": 21001.68,
+    "salario_tatao": 42003.36,
+    "salario_carlos": 42003.36,
+    "fecha_pago": "2026-09-26",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-09-27",
+    "hasta": "2026-10-03",
+    "ganancia": 147253,
+    "salario_administrador": 20615.42,
+    "salario_tatao": 41230.84,
+    "salario_carlos": 41230.84,
+    "fecha_pago": "2026-10-03",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-10-04",
+    "hasta": "2026-10-10",
+    "ganancia": 124280,
+    "salario_administrador": 17399.2,
+    "salario_tatao": 34798.4,
+    "salario_carlos": 34798.4,
+    "fecha_pago": "2026-10-10",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-10-11",
+    "hasta": "2026-10-17",
+    "ganancia": 84089,
+    "salario_administrador": 11772.46,
+    "salario_tatao": 23544.92,
+    "salario_carlos": 23544.92,
+    "fecha_pago": "2026-10-17",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-10-18",
+    "hasta": "2026-10-24",
+    "ganancia": 127900,
+    "salario_administrador": 17906,
+    "salario_tatao": 35812,
+    "salario_carlos": 35812,
+    "fecha_pago": "2026-10-24",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-10-25",
+    "hasta": "2026-10-31",
+    "ganancia": 131258,
+    "salario_administrador": 18376.12,
+    "salario_tatao": 36752.24,
+    "salario_carlos": 36752.24,
+    "fecha_pago": "2026-10-31",
+    "estado": "Pagado"
+   },
+   {
+    "desde": "2026-11-01",
+    "hasta": "2026-11-07",
+    "ganancia": 108880,
+    "salario_administrador": 15243.2,
+    "salario_tatao": 30486.4,
+    "salario_carlos": 30486.4,
+    "fecha_pago": null,
+    "estado": "Pendiente"
+   }
+  ],
+  "diario_calculado": [
+   {
+    "fecha": "2026-09-21",
+    "saldo_inicial": 1300000,
+    "ventas": 116800,
+    "salario_trabajadores": 11585,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 11585,
+    "saldo_final": 1405215
+   },
+   {
+    "fecha": "2026-09-22",
+    "saldo_inicial": 1405215,
+    "ventas": 126940,
+    "salario_trabajadores": 12360,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 12360,
+    "saldo_final": 1519795
+   },
+   {
+    "fecha": "2026-09-23",
+    "saldo_inicial": 1519795,
+    "ventas": 99400,
+    "salario_trabajadores": 9375,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9375,
+    "saldo_final": 1609820
+   },
+   {
+    "fecha": "2026-09-24",
+    "saldo_inicial": 1609820,
+    "ventas": 97120,
+    "salario_trabajadores": 9100,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9100,
+    "saldo_final": 1697840
+   },
+   {
+    "fecha": "2026-09-25",
+    "saldo_inicial": 1697840,
+    "ventas": 136200,
+    "salario_trabajadores": 12890,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 12890,
+    "saldo_final": 1821150
+   },
+   {
+    "fecha": "2026-09-26",
+    "saldo_inicial": 1821150,
+    "ventas": 16800,
+    "salario_trabajadores": 1800,
+    "salario_administrador": 21001.68,
+    "salario_tatao": 42003.36,
+    "salario_carlos": 42003.36,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 106808.4,
+    "saldo_final": 1731141.6
+   },
+   {
+    "fecha": "2026-09-27",
+    "saldo_inicial": 1731141.6,
+    "ventas": 0,
+    "salario_trabajadores": 0,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 0,
+    "saldo_final": 1731141.6
+   },
+   {
+    "fecha": "2026-09-28",
+    "saldo_inicial": 1731141.6,
+    "ventas": 47560,
+    "salario_trabajadores": 4305,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 4305,
+    "saldo_final": 1774396.6
+   },
+   {
+    "fecha": "2026-09-29",
+    "saldo_inicial": 1774396.6,
+    "ventas": 152380,
+    "salario_trabajadores": 14600,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 14600,
+    "saldo_final": 1912176.6
+   },
+   {
+    "fecha": "2026-09-30",
+    "saldo_inicial": 1912176.6,
+    "ventas": 107540,
+    "salario_trabajadores": 9975,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 1000,
+    "electricidad": 0,
+    "total_gastos": 10975,
+    "saldo_final": 2008741.6
+   },
+   {
+    "fecha": "2026-10-01",
+    "saldo_inicial": 2008741.6,
+    "ventas": 91640,
+    "salario_trabajadores": 8920,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 7000,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 15920,
+    "saldo_final": 2084461.6
+   },
+   {
+    "fecha": "2026-10-02",
+    "saldo_inicial": 2084461.6,
+    "ventas": 49760,
+    "salario_trabajadores": 5910,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 5910,
+    "saldo_final": 2128311.6
+   },
+   {
+    "fecha": "2026-10-03",
+    "saldo_inicial": 2128311.6,
+    "ventas": 97700,
+    "salario_trabajadores": 8195,
+    "salario_administrador": 20615.42,
+    "salario_tatao": 41230.84,
+    "salario_carlos": 41230.84,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 111272.1,
+    "saldo_final": 2114739.5
+   },
+   {
+    "fecha": "2026-10-04",
+    "saldo_inicial": 2114739.5,
+    "ventas": 0,
+    "salario_trabajadores": 0,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 1000,
+    "electricidad": 0,
+    "total_gastos": 1000,
+    "saldo_final": 2113739.5
+   },
+   {
+    "fecha": "2026-10-05",
+    "saldo_inicial": 2113739.5,
+    "ventas": 96300,
+    "salario_trabajadores": 9150,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9150,
+    "saldo_final": 2200889.5
+   },
+   {
+    "fecha": "2026-10-06",
+    "saldo_inicial": 2200889.5,
+    "ventas": 70800,
+    "salario_trabajadores": 6690,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 6690,
+    "saldo_final": 2264999.5
+   },
+   {
+    "fecha": "2026-10-07",
+    "saldo_inicial": 2264999.5,
+    "ventas": 95790,
+    "salario_trabajadores": 8545,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 6530,
+    "total_gastos": 15075,
+    "saldo_final": 2345714.5
+   },
+   {
+    "fecha": "2026-10-08",
+    "saldo_inicial": 2345714.5,
+    "ventas": 94260,
+    "salario_trabajadores": 8590,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 8590,
+    "saldo_final": 2431384.5
+   },
+   {
+    "fecha": "2026-10-09",
+    "saldo_inicial": 2431384.5,
+    "ventas": 108900,
+    "salario_trabajadores": 8750,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 8750,
+    "saldo_final": 2531534.5
+   },
+   {
+    "fecha": "2026-10-10",
+    "saldo_inicial": 2531534.5,
+    "ventas": 18000,
+    "salario_trabajadores": 1800,
+    "salario_administrador": 17399.2,
+    "salario_tatao": 34798.4,
+    "salario_carlos": 34798.4,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 88796,
+    "saldo_final": 2460738.5
+   },
+   {
+    "fecha": "2026-10-11",
+    "saldo_inicial": 2460738.5,
+    "ventas": 0,
+    "salario_trabajadores": 1800,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 1800,
+    "saldo_final": 2458938.5
+   },
+   {
+    "fecha": "2026-10-12",
+    "saldo_inicial": 2458938.5,
+    "ventas": 106800,
+    "salario_trabajadores": 8580,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 8580,
+    "saldo_final": 2557158.5
+   },
+   {
+    "fecha": "2026-10-13",
+    "saldo_inicial": 2557158.5,
+    "ventas": 114600,
+    "salario_trabajadores": 9060,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9060,
+    "saldo_final": 2662698.5
+   },
+   {
+    "fecha": "2026-10-14",
+    "saldo_inicial": 2662698.5,
+    "ventas": 26040,
+    "salario_trabajadores": 1860,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 1860,
+    "saldo_final": 2686878.5
+   },
+   {
+    "fecha": "2026-10-15",
+    "saldo_inicial": 2686878.5,
+    "ventas": 56670,
+    "salario_trabajadores": 7305,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 7305,
+    "saldo_final": 2736243.5
+   },
+   {
+    "fecha": "2026-10-16",
+    "saldo_inicial": 2736243.5,
+    "ventas": 10500,
+    "salario_trabajadores": 1050,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 1050,
+    "saldo_final": 2745693.5
+   },
+   {
+    "fecha": "2026-10-17",
+    "saldo_inicial": 2745693.5,
+    "ventas": 18000,
+    "salario_trabajadores": 1800,
+    "salario_administrador": 11772.46,
+    "salario_tatao": 23544.92,
+    "salario_carlos": 23544.92,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 60662.3,
+    "saldo_final": 2703031.2
+   },
+   {
+    "fecha": "2026-10-18",
+    "saldo_inicial": 2703031.2,
+    "ventas": 0,
+    "salario_trabajadores": 0,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 0,
+    "saldo_final": 2703031.2
+   },
+   {
+    "fecha": "2026-10-19",
+    "saldo_inicial": 2703031.2,
+    "ventas": 67260,
+    "salario_trabajadores": 6190,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 6190,
+    "saldo_final": 2764101.2
+   },
+   {
+    "fecha": "2026-10-20",
+    "saldo_inicial": 2764101.2,
+    "ventas": 101340,
+    "salario_trabajadores": 8275,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 540,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 8815,
+    "saldo_final": 2856626.2
+   },
+   {
+    "fecha": "2026-10-21",
+    "saldo_inicial": 2856626.2,
+    "ventas": 112620,
+    "salario_trabajadores": 10420,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 10420,
+    "saldo_final": 2958826.2
+   },
+   {
+    "fecha": "2026-10-22",
+    "saldo_inicial": 2958826.2,
+    "ventas": 0,
+    "salario_trabajadores": 1800,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 1800,
+    "saldo_final": 2957026.2
+   },
+   {
+    "fecha": "2026-10-23",
+    "saldo_inicial": 2957026.2,
+    "ventas": 119250,
+    "salario_trabajadores": 10595,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 10595,
+    "saldo_final": 3065681.2
+   },
+   {
+    "fecha": "2026-10-24",
+    "saldo_inicial": 3065681.2,
+    "ventas": 120300,
+    "salario_trabajadores": 10070,
+    "salario_administrador": 17906,
+    "salario_tatao": 35812,
+    "salario_carlos": 35812,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 99600,
+    "saldo_final": 3086381.2
+   },
+   {
+    "fecha": "2026-10-25",
+    "saldo_inicial": 3086381.2,
+    "ventas": 0,
+    "salario_trabajadores": 0,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 0,
+    "saldo_final": 3086381.2
+   },
+   {
+    "fecha": "2026-10-26",
+    "saldo_inicial": 3086381.2,
+    "ventas": 107190,
+    "salario_trabajadores": 9270,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9270,
+    "saldo_final": 3184301.2
+   },
+   {
+    "fecha": "2026-10-27",
+    "saldo_inicial": 3184301.2,
+    "ventas": 85950,
+    "salario_trabajadores": 8185,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 45000,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 53185,
+    "saldo_final": 3217066.2
+   },
+   {
+    "fecha": "2026-10-28",
+    "saldo_inicial": 3217066.2,
+    "ventas": 90390,
+    "salario_trabajadores": 8170,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 170000,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 178170,
+    "saldo_final": 3129286.2
+   },
+   {
+    "fecha": "2026-10-29",
+    "saldo_inicial": 3129286.2,
+    "ventas": 120060,
+    "salario_trabajadores": 10990,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 10990,
+    "saldo_final": 3238356.2
+   },
+   {
+    "fecha": "2026-10-30",
+    "saldo_inicial": 3238356.2,
+    "ventas": 77940,
+    "salario_trabajadores": 7430,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 8200,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 15630,
+    "saldo_final": 3300666.2
+   },
+   {
+    "fecha": "2026-10-31",
+    "saldo_inicial": 3300666.2,
+    "ventas": 37050,
+    "salario_trabajadores": 3925,
+    "salario_administrador": 18376.12,
+    "salario_tatao": 36752.24,
+    "salario_carlos": 36752.24,
+    "materias_primas": 1956503,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 2052308.6,
+    "saldo_final": 1285407.6
+   },
+   {
+    "fecha": "2026-11-01",
+    "saldo_inicial": 1285407.6,
+    "ventas": 0,
+    "salario_trabajadores": 0,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 0,
+    "saldo_final": 1285407.6
+   },
+   {
+    "fecha": "2026-11-02",
+    "saldo_inicial": 1285407.6,
+    "ventas": 130100,
+    "salario_trabajadores": 10425,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 10425,
+    "saldo_final": 1405082.6
+   },
+   {
+    "fecha": "2026-11-03",
+    "saldo_inicial": 1405082.6,
+    "ventas": 107240,
+    "salario_trabajadores": 9200,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 9200,
+    "saldo_final": 1503122.6
+   },
+   {
+    "fecha": "2026-11-04",
+    "saldo_inicial": 1503122.6,
+    "ventas": 71100,
+    "salario_trabajadores": 4555,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 4555,
+    "saldo_final": 1569667.6
+   },
+   {
+    "fecha": "2026-11-05",
+    "saldo_inicial": 1569667.6,
+    "ventas": 148820,
+    "salario_trabajadores": 8855,
+    "salario_administrador": 0,
+    "salario_tatao": 0,
+    "salario_carlos": 0,
+    "materias_primas": 0,
+    "materiales": 0,
+    "limpieza": 0,
+    "electricidad": 0,
+    "total_gastos": 8855,
+    "saldo_final": 1709632.6
+   }
+  ]
+ },
+ "reglas_negocio": [
+  "Ingresos = suma de Importe en registros.ingresos (una fila por cliente, producto y vale).",
+  "Unidades vendidas = Cantidad de registros.ingresos. Unidades producidas = Cantidad de registros.produccion; el producto 'Masas' no cuenta como unidad.",
+  "Ganancia = unidades vendidas del día y producto × ganancia_por_unidad vigente ese día (la vigencia más reciente con vigente_desde <= fecha en catalogos.ganancia_por_unidad_vigencias). Masas tiene ganancia 0.",
+  "Salarios de trabajadores = filas de registros.gastos con concepto 'Salario'. Por día y producto equivalen a unidades producidas × pago_por_unidad_trabajadores (catalogos.productos).",
+  "Materiales (tarjeta del PANEL) = Ingresos − Salarios − Ganancia. Margen = Ganancia / Ingresos.",
+  "Reparto de la ganancia (por semana domingo–sábado): fondo del negocio = ganancia × porcentaje_fondo_negocio; lo que queda × porcentaje_administrador = salario del administrador; el resto se divide en partes iguales entre numero_duenos (Tatao y Carlos).",
+  "Caja diaria: saldo_final = saldo_inicial + ventas − salario de trabajadores − salarios del reparto (en su fecha_pago) − materias primas − materiales − limpieza − electricidad. El saldo inicial del primer día es caja.configuracion.saldo_inicial.",
+  "Los gastos de materias primas, materiales, limpieza y electricidad que descuentan la caja son los de registros.movimientos; de registros.gastos solo cuenta el concepto 'Salario'.",
+  "El reparto de una semana queda 'Pendiente' hasta que tenga fecha_pago; la caja lo descuenta el día de esa fecha."
+ ],
+ "observaciones_datos": [
+  {
+   "tipo": "gasto_en_Gastos_sin_registro_en_MOVIMIENTOS",
+   "detalle": "Estas filas de registros.gastos no son salario y no tienen un movimiento con la misma fecha e importe; la hoja CAJA no las descuenta.",
+   "filas": [
+    {
+     "fila_excel": 176,
+     "fecha": "2026-11-05",
+     "concepto": "Materias Primas",
+     "producto": "Azúcar",
+     "importe": 228160
+    },
+    {
+     "fila_excel": 177,
+     "fecha": "2026-11-05",
+     "concepto": "Materias Primas",
+     "producto": "Huevos",
+     "importe": 300
+    }
+   ],
+   "total": 228460
+  },
+  {
+   "tipo": "gastos_no_salariales_en_Gastos",
+   "detalle": "registros.gastos incluye 12 filas que no son 'Salario' (compras y gastos anteriores a la hoja MOVIMIENTOS). No sumarlas junto con registros.movimientos para no duplicar."
+  },
+  {
+   "tipo": "ingresos_repetidos_exactos",
+   "detalle": "Filas de registros.ingresos idénticas en todos sus campos. Se conservan porque PANEL y CAJA las suman; confirma si son ventas distintas o duplicados.",
+   "grupos": [
+    {
+     "fecha": "2026-09-21",
+     "cliente": "Otros",
+     "producto": "Masarreal",
+     "cantidad": 30,
+     "importe": 4200,
+     "vale": "004-A",
+     "filas_excel": [
+      450,
+      451
+     ]
+    },
+    {
+     "fecha": "2026-09-22",
+     "cliente": "Otros",
+     "producto": "Masarreal",
+     "cantidad": 30,
+     "importe": 4200,
+     "vale": "008-A",
+     "filas_excel": [
+      435,
+      436
+     ]
+    },
+    {
+     "fecha": "2026-09-25",
+     "cliente": "Otros",
+     "producto": "Masarreal",
+     "cantidad": 30,
+     "importe": 4200,
+     "vale": "021",
+     "filas_excel": [
+      395,
+      396
+     ]
+    },
+    {
+     "fecha": "2026-10-03",
+     "cliente": "Otros",
+     "producto": "Masarreal",
+     "cantidad": 1,
+     "importe": 140,
+     "vale": "046",
+     "filas_excel": [
+      318,
+      319,
+      320
+     ]
+    },
+    {
+     "fecha": "2026-10-08",
+     "cliente": "Otros",
+     "producto": "Pasteles",
+     "cantidad": 2,
+     "importe": 300,
+     "vale": "062",
+     "filas_excel": [
+      261,
+      269
+     ]
+    },
+    {
+     "fecha": "2026-10-08",
+     "cliente": "Otros",
+     "producto": "Masarreal",
+     "cantidad": 2,
+     "importe": 300,
+     "vale": "062",
+     "filas_excel": [
+      263,
+      264
+     ]
+    },
+    {
+     "fecha": "2026-10-20",
+     "cliente": "Otros",
+     "producto": "Pasteles",
+     "cantidad": 1,
+     "importe": 150,
+     "vale": "095",
+     "filas_excel": [
+      176,
+      178
+     ]
+    }
+   ],
+   "filas_extra": 8
+  },
+  {
+   "tipo": "salario_distinto_de_produccion_x_pago",
+   "detalle": "Día y producto donde el salario registrado no coincide con unidades producidas × pago por unidad.",
+   "casos": [
+    {
+     "fecha": "2026-11-04",
+     "producto": "Masas",
+     "unidades_producidas": 6.0,
+     "salario_registrado": 0,
+     "salario_esperado": 900.0
+    },
+    {
+     "fecha": "2026-11-05",
+     "producto": "Masarreal",
+     "unidades_producidas": 420.0,
+     "salario_registrado": 3600.0,
+     "salario_esperado": 6300.0
+    }
+   ]
+  }
+ ]
+}
