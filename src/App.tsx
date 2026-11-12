@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
+import { AuthProvider } from './context/AuthContext';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { DashboardView } from './components/DashboardView';
@@ -13,6 +14,10 @@ import { PricesView } from './components/PricesView';
 import { CustomersView } from './components/CustomersView';
 import { ProductsView } from './components/ProductsView';
 import { AlertsView } from './components/AlertsView';
+import { UsersView } from './components/UsersView';
+import { AlertReminder } from './components/AlertReminder';
+import { SyncNotification } from './components/SyncNotification';
+import { CloudSyncModal } from './components/CloudSyncModal';
 
 const MainLayout: React.FC = () => {
   const { currentModule } = useApp();
@@ -39,9 +44,14 @@ const MainLayout: React.FC = () => {
       case 'Clientes':
         return <CustomersView />;
       case 'Productos':
+      case 'Materiales':
+      case 'Recetas':
         return <ProductsView />;
       case 'Alertas':
         return <AlertsView />;
+      case 'Usuarios':
+      case 'Ajustes':
+        return <UsersView />;
       default:
         return <DashboardView />;
     }
@@ -63,6 +73,15 @@ const MainLayout: React.FC = () => {
           {renderModuleView()}
         </main>
 
+        {/* Floating and Periodic Alert Reminder */}
+        <AlertReminder />
+
+        {/* Notificaciones y Aviso Previo de Sincronización Automática */}
+        <SyncNotification />
+
+        {/* Modal de Configuración y Sincronización en la Nube */}
+        <CloudSyncModal />
+
         <footer className="py-2.5 px-4 bg-white border-t border-gray-200 text-center text-xs text-gray-500 font-medium">
           Dulcería TATAO &copy; 2026
         </footer>
@@ -73,8 +92,10 @@ const MainLayout: React.FC = () => {
 
 export default function App() {
   return (
-    <AppProvider>
-      <MainLayout />
-    </AppProvider>
+    <AuthProvider>
+      <AppProvider>
+        <MainLayout />
+      </AppProvider>
+    </AuthProvider>
   );
 }

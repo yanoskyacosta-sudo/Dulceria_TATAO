@@ -9,7 +9,11 @@ export type ModuleName =
   | 'Precios'
   | 'Clientes'
   | 'Productos'
-  | 'Alertas';
+  | 'Materiales'
+  | 'Recetas'
+  | 'Alertas'
+  | 'Ajustes'
+  | 'Usuarios';
 
 export interface GananciaPorUnidadConfig {
   producto: string;
@@ -195,13 +199,29 @@ export interface IngredienteReceta {
   costoPorcion: number;
 }
 
+export interface UsuarioAutorizado {
+  id: string;
+  email: string;
+  nombre?: string;
+  rol: 'Administrador' | 'Operador' | 'Lector';
+  fechaAgregado: string;
+  activo: boolean;
+}
+
 export interface Receta {
   id: string;
   nombre: string;
   ingredientes: IngredienteReceta[];
-  costoTotal: number;
+  costoIngredientes?: number;
+  unidadesRinde?: number; // Unidades que rinde la receta
+  porcentajeAdicionalCostos?: number; // % Adicional sobre costos (mano de obra, agua, electricidad, etc)
+  porcentajeBeneficioEsperado?: number; // % Beneficio esperado
+  costoTotal: number; // Costo total incluyendo porcentaje adicional
+  costoUnitario?: number; // Costo por unidad
+  precioSugeridoUnitario?: number; // Precio con beneficio esperado
   fechaCreacion?: string;
   observaciones?: string;
+  notas?: string; // Nombre alternativo Notas
 }
 
 export interface AppData {
@@ -218,4 +238,5 @@ export interface AppData {
   justificaciones?: JustificacionDiferencia[];
   materialesReceta?: MaterialReceta[];
   recetas?: Receta[];
+  usuariosAutorizados?: UsuarioAutorizado[];
 }

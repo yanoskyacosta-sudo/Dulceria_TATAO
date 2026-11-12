@@ -5,6 +5,7 @@ import { QuickDatePreset, toISODate } from '../utils/dateUtils';
 import { ProduccionLote } from '../types';
 import { ConfirmModal } from './ConfirmModal';
 import { Plus, Trash2, Edit2 } from 'lucide-react';
+import { useEscToClose } from '../hooks/useEscToClose';
 
 interface DynamicRow {
   producto: string;
@@ -39,6 +40,10 @@ export const ProductionView: React.FC = () => {
 
   // Delete confirmation
   const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  useEscToClose(() => {
+    if (isModalOpen) setIsModalOpen(false);
+  });
 
   // Available sweet products
   const productOptions = useMemo(() => {

@@ -1,0 +1,7626 @@
+{
+  "meta": {
+    "siguienteVale": 145,
+    "periodo": {
+      "desde": "2026-09-21",
+      "hasta": "2026-11-03"
+    },
+    "pagoPorDulceTrabajador": {
+      "Conos": 15,
+      "Masarreal": 15,
+      "Masas": 150,
+      "Palmeritas": 10,
+      "Pasteles": 10,
+      "Señoritas": 15
+    },
+    "gananciaPorUnidad": [
+      {
+        "producto": "Señoritas",
+        "desde": "2026-09-21",
+        "valor": 77
+      },
+      {
+        "producto": "Conos",
+        "desde": "2026-09-21",
+        "valor": 22
+      },
+      {
+        "producto": "Conos",
+        "desde": "2026-09-24",
+        "valor": 52
+      },
+      {
+        "producto": "Pasteles",
+        "desde": "2026-09-21",
+        "valor": 42
+      },
+      {
+        "producto": "Masarreal",
+        "desde": "2026-09-21",
+        "valor": 25
+      },
+      {
+        "producto": "Palmeritas",
+        "desde": "2026-09-21",
+        "valor": 30
+      },
+      {
+        "producto": "Masas",
+        "desde": "2026-09-21",
+        "valor": 0
+      }
+    ],
+    "reparto": {
+      "fondoPct": 0.3,
+      "administradorPct": 0.2,
+      "duenos": [
+        "Tatao",
+        "Carlos"
+      ]
+    }
+  },
+  "repartos": [
+    {
+      "id": "rep-1",
+      "desde": "2026-09-20",
+      "hasta": "2026-09-26",
+      "ganancia": 150012,
+      "administrador": 21001.68,
+      "tatao": 42003.36,
+      "carlos": 42003.36,
+      "fechaPago": "2026-09-26",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-2",
+      "desde": "2026-09-27",
+      "hasta": "2026-10-03",
+      "ganancia": 147253,
+      "administrador": 20615.42,
+      "tatao": 41230.84,
+      "carlos": 41230.84,
+      "fechaPago": "2026-10-03",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-3",
+      "desde": "2026-10-04",
+      "hasta": "2026-10-10",
+      "ganancia": 124280,
+      "administrador": 17399.2,
+      "tatao": 34798.4,
+      "carlos": 34798.4,
+      "fechaPago": "2026-10-10",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-4",
+      "desde": "2026-10-11",
+      "hasta": "2026-10-17",
+      "ganancia": 84089,
+      "administrador": 11772.46,
+      "tatao": 23544.92,
+      "carlos": 23544.92,
+      "fechaPago": "2026-10-17",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-5",
+      "desde": "2026-10-18",
+      "hasta": "2026-10-24",
+      "ganancia": 127900,
+      "administrador": 17906,
+      "tatao": 35812,
+      "carlos": 35812,
+      "fechaPago": "2026-10-24",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-6",
+      "desde": "2026-10-25",
+      "hasta": "2026-10-31",
+      "ganancia": 131258,
+      "administrador": 18376.12,
+      "tatao": 36752.24,
+      "carlos": 36752.24,
+      "fechaPago": "2026-10-31",
+      "estado": "Pagado"
+    },
+    {
+      "id": "rep-7",
+      "desde": "2026-11-01",
+      "hasta": "2026-11-07",
+      "ganancia": 108880,
+      "administrador": 15243.2,
+      "tatao": 30486.4,
+      "carlos": 30486.4,
+      "fechaPago": null,
+      "estado": "Pendiente"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "cli-1",
+      "nombre": "Carlos",
+      "telefono": "+53 52112233",
+      "email": "carlos@tatao.cu",
+      "ci": "85010212345",
+      "direccion": "Calle Principal #12, Centro"
+    },
+    {
+      "id": "cli-2",
+      "nombre": "Erick",
+      "telefono": "+53 53445566",
+      "email": "",
+      "ci": "88051498765",
+      "direccion": ""
+    },
+    {
+      "id": "cli-3",
+      "nombre": "Jose",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-4",
+      "nombre": "Oliver",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-5",
+      "nombre": "Osdael",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-6",
+      "nombre": "Rentería",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-7",
+      "nombre": "Nuevo",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-8",
+      "nombre": "Titi",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-9",
+      "nombre": "Otros",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-10",
+      "nombre": "Yoan",
+      "telefono": "+53 54778899",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    },
+    {
+      "id": "cli-11",
+      "nombre": "Yanosky",
+      "telefono": "+53 50000000",
+      "email": "",
+      "ci": "",
+      "direccion": ""
+    }
+  ],
+  "productos": [
+    {
+      "id": "prod-1",
+      "nombre": "Conos",
+      "costoUnitario": 115.72,
+      "precioVigente": 220,
+      "historicoPrecios": [
+        {
+          "precio": 170,
+          "desde": "2026-09-21",
+          "hasta": "2026-09-23"
+        },
+        {
+          "precio": 200,
+          "desde": "2026-09-24",
+          "hasta": "2026-10-03"
+        },
+        {
+          "precio": 210,
+          "desde": "2026-10-05",
+          "hasta": "2026-10-31"
+        },
+        {
+          "precio": 220,
+          "desde": "2026-11-01",
+          "hasta": null
+        }
+      ]
+    },
+    {
+      "id": "prod-2",
+      "nombre": "Masarreal",
+      "costoUnitario": 97.96,
+      "precioVigente": 160,
+      "historicoPrecios": [
+        {
+          "precio": 140,
+          "desde": "2026-09-21",
+          "hasta": "2026-10-03"
+        },
+        {
+          "precio": 150,
+          "desde": "2026-10-05",
+          "hasta": "2026-10-31"
+        },
+        {
+          "precio": 160,
+          "desde": "2026-11-01",
+          "hasta": null
+        }
+      ]
+    },
+    {
+      "id": "prod-3",
+      "nombre": "Masas",
+      "costoUnitario": null,
+      "precioVigente": 0,
+      "historicoPrecios": [
+        {
+          "precio": 0,
+          "desde": "2026-09-21",
+          "hasta": null
+        }
+      ]
+    },
+    {
+      "id": "prod-4",
+      "nombre": "Palmeritas",
+      "costoUnitario": null,
+      "precioVigente": 160,
+      "historicoPrecios": [
+        {
+          "precio": 80,
+          "desde": "2026-09-21",
+          "hasta": "2026-10-03"
+        },
+        {
+          "precio": 160,
+          "desde": "2026-10-04",
+          "hasta": null
+        }
+      ]
+    },
+    {
+      "id": "prod-5",
+      "nombre": "Pasteles",
+      "costoUnitario": null,
+      "precioVigente": 160,
+      "historicoPrecios": [
+        {
+          "precio": 140,
+          "desde": "2026-09-21",
+          "hasta": "2026-10-03"
+        },
+        {
+          "precio": 150,
+          "desde": "2026-10-05",
+          "hasta": "2026-10-31"
+        },
+        {
+          "precio": 160,
+          "desde": "2026-11-01",
+          "hasta": null
+        }
+      ]
+    },
+    {
+      "id": "prod-6",
+      "nombre": "Señoritas",
+      "costoUnitario": null,
+      "precioVigente": 250,
+      "historicoPrecios": [
+        {
+          "precio": 230,
+          "desde": "2026-09-21",
+          "hasta": "2026-10-03"
+        },
+        {
+          "precio": 240,
+          "desde": "2026-10-05",
+          "hasta": "2026-10-31"
+        },
+        {
+          "precio": 250,
+          "desde": "2026-11-01",
+          "hasta": null
+        }
+      ]
+    }
+  ],
+  "produccion": [
+    {
+      "id": "lote-1",
+      "fecha": "2026-09-21",
+      "producto": "Conos",
+      "cantidad": 135,
+      "merma": 0,
+      "costo": 22950
+    },
+    {
+      "id": "lote-2",
+      "fecha": "2026-09-21",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 33600
+    },
+    {
+      "id": "lote-3",
+      "fecha": "2026-09-21",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-4",
+      "fecha": "2026-09-21",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 28000
+    },
+    {
+      "id": "lote-5",
+      "fecha": "2026-09-21",
+      "producto": "Señoritas",
+      "cantidad": 144,
+      "merma": 0,
+      "costo": 33120
+    },
+    {
+      "id": "lote-6",
+      "fecha": "2026-09-22",
+      "producto": "Conos",
+      "cantidad": 158,
+      "merma": 0,
+      "costo": 26860
+    },
+    {
+      "id": "lote-7",
+      "fecha": "2026-09-22",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 33600
+    },
+    {
+      "id": "lote-8",
+      "fecha": "2026-09-22",
+      "producto": "Masas",
+      "cantidad": 13,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-9",
+      "fecha": "2026-09-22",
+      "producto": "Pasteles",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-10",
+      "fecha": "2026-09-22",
+      "producto": "Señoritas",
+      "cantidad": 216,
+      "merma": 0,
+      "costo": 49680
+    },
+    {
+      "id": "lote-11",
+      "fecha": "2026-09-23",
+      "producto": "Conos",
+      "cantidad": 153,
+      "merma": 0,
+      "costo": 26010
+    },
+    {
+      "id": "lote-12",
+      "fecha": "2026-09-23",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-13",
+      "fecha": "2026-09-23",
+      "producto": "Masas",
+      "cantidad": 11,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-14",
+      "fecha": "2026-09-23",
+      "producto": "Pasteles",
+      "cantidad": 39,
+      "merma": 0,
+      "costo": 5460
+    },
+    {
+      "id": "lote-15",
+      "fecha": "2026-09-23",
+      "producto": "Señoritas",
+      "cantidad": 216,
+      "merma": 0,
+      "costo": 49680
+    },
+    {
+      "id": "lote-16",
+      "fecha": "2026-09-24",
+      "producto": "Conos",
+      "cantidad": 166,
+      "merma": 0,
+      "costo": 33200
+    },
+    {
+      "id": "lote-17",
+      "fecha": "2026-09-24",
+      "producto": "Masarreal",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 25200
+    },
+    {
+      "id": "lote-18",
+      "fecha": "2026-09-24",
+      "producto": "Masas",
+      "cantidad": 9,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-19",
+      "fecha": "2026-09-24",
+      "producto": "Pasteles",
+      "cantidad": 40,
+      "merma": 0,
+      "costo": 5600
+    },
+    {
+      "id": "lote-20",
+      "fecha": "2026-09-24",
+      "producto": "Señoritas",
+      "cantidad": 144,
+      "merma": 0,
+      "costo": 33120
+    },
+    {
+      "id": "lote-21",
+      "fecha": "2026-09-25",
+      "producto": "Conos",
+      "cantidad": 166,
+      "merma": 0,
+      "costo": 33200
+    },
+    {
+      "id": "lote-22",
+      "fecha": "2026-09-25",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 33600
+    },
+    {
+      "id": "lote-23",
+      "fecha": "2026-09-25",
+      "producto": "Masas",
+      "cantidad": 14,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-24",
+      "fecha": "2026-09-25",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 28000
+    },
+    {
+      "id": "lote-25",
+      "fecha": "2026-09-25",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 41400
+    },
+    {
+      "id": "lote-26",
+      "fecha": "2026-09-26",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-27",
+      "fecha": "2026-09-28",
+      "producto": "Conos",
+      "cantidad": 155,
+      "merma": 0,
+      "costo": 31000
+    },
+    {
+      "id": "lote-28",
+      "fecha": "2026-09-28",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-29",
+      "fecha": "2026-09-28",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 16560
+    },
+    {
+      "id": "lote-30",
+      "fecha": "2026-09-29",
+      "producto": "Conos",
+      "cantidad": 170,
+      "merma": 0,
+      "costo": 34000
+    },
+    {
+      "id": "lote-31",
+      "fecha": "2026-09-29",
+      "producto": "Masarreal",
+      "cantidad": 360,
+      "merma": 0,
+      "costo": 50400
+    },
+    {
+      "id": "lote-32",
+      "fecha": "2026-09-29",
+      "producto": "Masas",
+      "cantidad": 13,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-33",
+      "fecha": "2026-09-29",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 28000
+    },
+    {
+      "id": "lote-34",
+      "fecha": "2026-09-29",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 41400
+    },
+    {
+      "id": "lote-35",
+      "fecha": "2026-09-30",
+      "producto": "Conos",
+      "cantidad": 165,
+      "merma": 0,
+      "costo": 33000
+    },
+    {
+      "id": "lote-36",
+      "fecha": "2026-09-30",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-37",
+      "fecha": "2026-09-30",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-38",
+      "fecha": "2026-09-30",
+      "producto": "Pasteles",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-39",
+      "fecha": "2026-09-30",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 41400
+    },
+    {
+      "id": "lote-40",
+      "fecha": "2026-10-01",
+      "producto": "Conos",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-41",
+      "fecha": "2026-10-01",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-42",
+      "fecha": "2026-10-01",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-43",
+      "fecha": "2026-10-01",
+      "producto": "Pasteles",
+      "cantidad": 100,
+      "merma": 0,
+      "costo": 14000
+    },
+    {
+      "id": "lote-44",
+      "fecha": "2026-10-01",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 24840
+    },
+    {
+      "id": "lote-45",
+      "fecha": "2026-10-02",
+      "producto": "Conos",
+      "cantidad": 82,
+      "merma": 0,
+      "costo": 16400
+    },
+    {
+      "id": "lote-46",
+      "fecha": "2026-10-02",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 16800
+    },
+    {
+      "id": "lote-47",
+      "fecha": "2026-10-02",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-48",
+      "fecha": "2026-10-02",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 16560
+    },
+    {
+      "id": "lote-49",
+      "fecha": "2026-10-03",
+      "producto": "Conos",
+      "cantidad": 45,
+      "merma": 0,
+      "costo": 9000
+    },
+    {
+      "id": "lote-50",
+      "fecha": "2026-10-03",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 33600
+    },
+    {
+      "id": "lote-51",
+      "fecha": "2026-10-03",
+      "producto": "Palmeritas",
+      "cantidad": 30,
+      "merma": 0,
+      "costo": 2400
+    },
+    {
+      "id": "lote-52",
+      "fecha": "2026-10-03",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 28000
+    },
+    {
+      "id": "lote-53",
+      "fecha": "2026-10-03",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 24840
+    },
+    {
+      "id": "lote-54",
+      "fecha": "2026-10-05",
+      "producto": "Conos",
+      "cantidad": 170,
+      "merma": 0,
+      "costo": 35700
+    },
+    {
+      "id": "lote-55",
+      "fecha": "2026-10-05",
+      "producto": "Masarreal",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 27000
+    },
+    {
+      "id": "lote-56",
+      "fecha": "2026-10-05",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-57",
+      "fecha": "2026-10-05",
+      "producto": "Señoritas",
+      "cantidad": 140,
+      "merma": 0,
+      "costo": 33600
+    },
+    {
+      "id": "lote-58",
+      "fecha": "2026-10-06",
+      "producto": "Conos",
+      "cantidad": 128,
+      "merma": 0,
+      "costo": 26880
+    },
+    {
+      "id": "lote-59",
+      "fecha": "2026-10-06",
+      "producto": "Masas",
+      "cantidad": 13,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-60",
+      "fecha": "2026-10-06",
+      "producto": "Pasteles",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-61",
+      "fecha": "2026-10-06",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 25920
+    },
+    {
+      "id": "lote-62",
+      "fecha": "2026-10-07",
+      "producto": "Conos",
+      "cantidad": 131,
+      "merma": 0,
+      "costo": 27510
+    },
+    {
+      "id": "lote-63",
+      "fecha": "2026-10-07",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-64",
+      "fecha": "2026-10-07",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-65",
+      "fecha": "2026-10-07",
+      "producto": "Pasteles",
+      "cantidad": 100,
+      "merma": 0,
+      "costo": 15000
+    },
+    {
+      "id": "lote-66",
+      "fecha": "2026-10-07",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 17280
+    },
+    {
+      "id": "lote-67",
+      "fecha": "2026-10-08",
+      "producto": "Conos",
+      "cantidad": 86,
+      "merma": 0,
+      "costo": 18060
+    },
+    {
+      "id": "lote-68",
+      "fecha": "2026-10-08",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-69",
+      "fecha": "2026-10-08",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-70",
+      "fecha": "2026-10-08",
+      "producto": "Pasteles",
+      "cantidad": 100,
+      "merma": 0,
+      "costo": 15000
+    },
+    {
+      "id": "lote-71",
+      "fecha": "2026-10-08",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 43200
+    },
+    {
+      "id": "lote-72",
+      "fecha": "2026-10-09",
+      "producto": "Conos",
+      "cantidad": 170,
+      "merma": 0,
+      "costo": 35700
+    },
+    {
+      "id": "lote-73",
+      "fecha": "2026-10-09",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-74",
+      "fecha": "2026-10-09",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-75",
+      "fecha": "2026-10-09",
+      "producto": "Pasteles",
+      "cantidad": 80,
+      "merma": 0,
+      "costo": 12000
+    },
+    {
+      "id": "lote-76",
+      "fecha": "2026-10-09",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 43200
+    },
+    {
+      "id": "lote-77",
+      "fecha": "2026-10-10",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-78",
+      "fecha": "2026-10-11",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-79",
+      "fecha": "2026-10-12",
+      "producto": "Conos",
+      "cantidad": 176,
+      "merma": 0,
+      "costo": 36960
+    },
+    {
+      "id": "lote-80",
+      "fecha": "2026-10-12",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-81",
+      "fecha": "2026-10-12",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-82",
+      "fecha": "2026-10-12",
+      "producto": "Señoritas",
+      "cantidad": 216,
+      "merma": 0,
+      "costo": 51840
+    },
+    {
+      "id": "lote-83",
+      "fecha": "2026-10-13",
+      "producto": "Conos",
+      "cantidad": 172,
+      "merma": 0,
+      "costo": 36120
+    },
+    {
+      "id": "lote-84",
+      "fecha": "2026-10-13",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-85",
+      "fecha": "2026-10-13",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-86",
+      "fecha": "2026-10-13",
+      "producto": "Señoritas",
+      "cantidad": 252,
+      "merma": 0,
+      "costo": 60480
+    },
+    {
+      "id": "lote-87",
+      "fecha": "2026-10-14",
+      "producto": "Conos",
+      "cantidad": 124,
+      "merma": 0,
+      "costo": 26040
+    },
+    {
+      "id": "lote-88",
+      "fecha": "2026-10-15",
+      "producto": "Conos",
+      "cantidad": 125,
+      "merma": 0,
+      "costo": 26250
+    },
+    {
+      "id": "lote-89",
+      "fecha": "2026-10-15",
+      "producto": "Masarreal",
+      "cantidad": 170,
+      "merma": 0,
+      "costo": 25500
+    },
+    {
+      "id": "lote-90",
+      "fecha": "2026-10-15",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-91",
+      "fecha": "2026-10-15",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 17280
+    },
+    {
+      "id": "lote-92",
+      "fecha": "2026-10-16",
+      "producto": "Masarreal",
+      "cantidad": 70,
+      "merma": 0,
+      "costo": 10500
+    },
+    {
+      "id": "lote-93",
+      "fecha": "2026-10-17",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-94",
+      "fecha": "2026-10-19",
+      "producto": "Conos",
+      "cantidad": 206,
+      "merma": 0,
+      "costo": 43260
+    },
+    {
+      "id": "lote-95",
+      "fecha": "2026-10-19",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-96",
+      "fecha": "2026-10-19",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-97",
+      "fecha": "2026-10-19",
+      "producto": "Pasteles",
+      "cantidad": 40,
+      "merma": 0,
+      "costo": 6000
+    },
+    {
+      "id": "lote-98",
+      "fecha": "2026-10-20",
+      "producto": "Conos",
+      "cantidad": 127,
+      "merma": 0,
+      "costo": 26670
+    },
+    {
+      "id": "lote-99",
+      "fecha": "2026-10-20",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-100",
+      "fecha": "2026-10-20",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-101",
+      "fecha": "2026-10-20",
+      "producto": "Pasteles",
+      "cantidad": 205,
+      "merma": 0,
+      "costo": 30750
+    },
+    {
+      "id": "lote-102",
+      "fecha": "2026-10-20",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 25920
+    },
+    {
+      "id": "lote-103",
+      "fecha": "2026-10-21",
+      "producto": "Conos",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 25200
+    },
+    {
+      "id": "lote-104",
+      "fecha": "2026-10-21",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-105",
+      "fecha": "2026-10-21",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-106",
+      "fecha": "2026-10-21",
+      "producto": "Pasteles",
+      "cantidad": 160,
+      "merma": 0,
+      "costo": 24000
+    },
+    {
+      "id": "lote-107",
+      "fecha": "2026-10-21",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 25920
+    },
+    {
+      "id": "lote-108",
+      "fecha": "2026-10-22",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-109",
+      "fecha": "2026-10-23",
+      "producto": "Conos",
+      "cantidad": 89,
+      "merma": 0,
+      "costo": 18690
+    },
+    {
+      "id": "lote-110",
+      "fecha": "2026-10-23",
+      "producto": "Masarreal",
+      "cantidad": 360,
+      "merma": 0,
+      "costo": 54000
+    },
+    {
+      "id": "lote-111",
+      "fecha": "2026-10-23",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-112",
+      "fecha": "2026-10-23",
+      "producto": "Pasteles",
+      "cantidad": 80,
+      "merma": 0,
+      "costo": 12000
+    },
+    {
+      "id": "lote-113",
+      "fecha": "2026-10-23",
+      "producto": "Señoritas",
+      "cantidad": 144,
+      "merma": 0,
+      "costo": 34560
+    },
+    {
+      "id": "lote-114",
+      "fecha": "2026-10-24",
+      "producto": "Conos",
+      "cantidad": 94,
+      "merma": 0,
+      "costo": 19740
+    },
+    {
+      "id": "lote-115",
+      "fecha": "2026-10-24",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-116",
+      "fecha": "2026-10-24",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-117",
+      "fecha": "2026-10-24",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 30000
+    },
+    {
+      "id": "lote-118",
+      "fecha": "2026-10-24",
+      "producto": "Señoritas",
+      "cantidad": 144,
+      "merma": 0,
+      "costo": 34560
+    },
+    {
+      "id": "lote-119",
+      "fecha": "2026-10-26",
+      "producto": "Conos",
+      "cantidad": 131,
+      "merma": 0,
+      "costo": 27510
+    },
+    {
+      "id": "lote-120",
+      "fecha": "2026-10-26",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-121",
+      "fecha": "2026-10-26",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-122",
+      "fecha": "2026-10-26",
+      "producto": "Pasteles",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-123",
+      "fecha": "2026-10-26",
+      "producto": "Señoritas",
+      "cantidad": 107,
+      "merma": 0,
+      "costo": 25680
+    },
+    {
+      "id": "lote-124",
+      "fecha": "2026-10-27",
+      "producto": "Conos",
+      "cantidad": 127,
+      "merma": 0,
+      "costo": 26670
+    },
+    {
+      "id": "lote-125",
+      "fecha": "2026-10-27",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-126",
+      "fecha": "2026-10-27",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-127",
+      "fecha": "2026-10-27",
+      "producto": "Pasteles",
+      "cantidad": 160,
+      "merma": 0,
+      "costo": 24000
+    },
+    {
+      "id": "lote-128",
+      "fecha": "2026-10-27",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 17280
+    },
+    {
+      "id": "lote-129",
+      "fecha": "2026-10-28",
+      "producto": "Conos",
+      "cantidad": 151,
+      "merma": 0,
+      "costo": 31710
+    },
+    {
+      "id": "lote-130",
+      "fecha": "2026-10-28",
+      "producto": "Masarreal",
+      "cantidad": 60,
+      "merma": 0,
+      "costo": 9000
+    },
+    {
+      "id": "lote-131",
+      "fecha": "2026-10-28",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-132",
+      "fecha": "2026-10-28",
+      "producto": "Pasteles",
+      "cantidad": 160,
+      "merma": 0,
+      "costo": 24000
+    },
+    {
+      "id": "lote-133",
+      "fecha": "2026-10-28",
+      "producto": "Señoritas",
+      "cantidad": 107,
+      "merma": 0,
+      "costo": 25680
+    },
+    {
+      "id": "lote-134",
+      "fecha": "2026-10-29",
+      "producto": "Conos",
+      "cantidad": 166,
+      "merma": 0,
+      "costo": 34860
+    },
+    {
+      "id": "lote-135",
+      "fecha": "2026-10-29",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-136",
+      "fecha": "2026-10-29",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-137",
+      "fecha": "2026-10-29",
+      "producto": "Pasteles",
+      "cantidad": 40,
+      "merma": 0,
+      "costo": 6000
+    },
+    {
+      "id": "lote-138",
+      "fecha": "2026-10-29",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 43200
+    },
+    {
+      "id": "lote-139",
+      "fecha": "2026-10-30",
+      "producto": "Conos",
+      "cantidad": 86,
+      "merma": 0,
+      "costo": 18060
+    },
+    {
+      "id": "lote-140",
+      "fecha": "2026-10-30",
+      "producto": "Masarreal",
+      "cantidad": 84,
+      "merma": 0,
+      "costo": 12600
+    },
+    {
+      "id": "lote-141",
+      "fecha": "2026-10-30",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-142",
+      "fecha": "2026-10-30",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 30000
+    },
+    {
+      "id": "lote-143",
+      "fecha": "2026-10-30",
+      "producto": "Señoritas",
+      "cantidad": 72,
+      "merma": 0,
+      "costo": 17280
+    },
+    {
+      "id": "lote-144",
+      "fecha": "2026-10-31",
+      "producto": "Conos",
+      "cantidad": 85,
+      "merma": 0,
+      "costo": 17850
+    },
+    {
+      "id": "lote-145",
+      "fecha": "2026-10-31",
+      "producto": "Masarreal",
+      "cantidad": 90,
+      "merma": 0,
+      "costo": 13500
+    },
+    {
+      "id": "lote-146",
+      "fecha": "2026-10-31",
+      "producto": "Masas",
+      "cantidad": 6,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-147",
+      "fecha": "2026-10-31",
+      "producto": "Pasteles",
+      "cantidad": 40,
+      "merma": 0,
+      "costo": 6000
+    },
+    {
+      "id": "lote-148",
+      "fecha": "2026-11-02",
+      "producto": "Conos",
+      "cantidad": 125,
+      "merma": 0,
+      "costo": 26250
+    },
+    {
+      "id": "lote-149",
+      "fecha": "2026-11-02",
+      "producto": "Masarreal",
+      "cantidad": 240,
+      "merma": 0,
+      "costo": 36000
+    },
+    {
+      "id": "lote-150",
+      "fecha": "2026-11-02",
+      "producto": "Masas",
+      "cantidad": 7,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-151",
+      "fecha": "2026-11-02",
+      "producto": "Pasteles",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 18000
+    },
+    {
+      "id": "lote-152",
+      "fecha": "2026-11-02",
+      "producto": "Señoritas",
+      "cantidad": 180,
+      "merma": 0,
+      "costo": 43200
+    },
+    {
+      "id": "lote-153",
+      "fecha": "2026-11-03",
+      "producto": "Conos",
+      "cantidad": 132,
+      "merma": 0,
+      "costo": 29040
+    },
+    {
+      "id": "lote-154",
+      "fecha": "2026-11-03",
+      "producto": "Masarreal",
+      "cantidad": 120,
+      "merma": 0,
+      "costo": 19200
+    },
+    {
+      "id": "lote-155",
+      "fecha": "2026-11-03",
+      "producto": "Masas",
+      "cantidad": 12,
+      "merma": 0,
+      "costo": 0
+    },
+    {
+      "id": "lote-156",
+      "fecha": "2026-11-03",
+      "producto": "Pasteles",
+      "cantidad": 200,
+      "merma": 0,
+      "costo": 32000
+    },
+    {
+      "id": "lote-157",
+      "fecha": "2026-11-03",
+      "producto": "Señoritas",
+      "cantidad": 108,
+      "merma": 0,
+      "costo": 27000
+    }
+  ],
+  "ventas": [
+    {
+      "id": "vnt-1",
+      "vale": "004-A",
+      "fecha": "2026-09-21",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 3,
+          "importe": 420
+        }
+      ],
+      "importeTotal": 8820
+    },
+    {
+      "id": "vnt-2",
+      "vale": "004",
+      "fecha": "2026-09-21",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 19,
+          "importe": 3230
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 84,
+          "importe": 19320
+        }
+      ],
+      "importeTotal": 35150
+    },
+    {
+      "id": "vnt-3",
+      "vale": "003",
+      "fecha": "2026-09-21",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 6800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 21600
+    },
+    {
+      "id": "vnt-4",
+      "vale": "002",
+      "fecha": "2026-09-21",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 8500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 72,
+          "importe": 10080
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 100,
+          "importe": 14000
+        }
+      ],
+      "importeTotal": 32580
+    },
+    {
+      "id": "vnt-5",
+      "vale": "001",
+      "fecha": "2026-09-21",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 25,
+          "importe": 4250
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 2800
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4600
+        }
+      ],
+      "importeTotal": 18650
+    },
+    {
+      "id": "vnt-6",
+      "vale": "008-A",
+      "fecha": "2026-09-22",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 5,
+          "importe": 700
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 5,
+          "importe": 1150
+        }
+      ],
+      "importeTotal": 10250
+    },
+    {
+      "id": "vnt-7",
+      "vale": "008",
+      "fecha": "2026-09-22",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 58,
+          "importe": 9860
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 35,
+          "importe": 4900
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 76,
+          "importe": 17480
+        }
+      ],
+      "importeTotal": 32240
+    },
+    {
+      "id": "vnt-8",
+      "vale": "007",
+      "fecha": "2026-09-22",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 6800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 75,
+          "importe": 17250
+        }
+      ],
+      "importeTotal": 29650
+    },
+    {
+      "id": "vnt-9",
+      "vale": "006",
+      "fecha": "2026-09-22",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 60,
+          "importe": 10200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 16800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 60,
+          "importe": 13800
+        }
+      ],
+      "importeTotal": 46400
+    },
+    {
+      "id": "vnt-10",
+      "vale": "005",
+      "fecha": "2026-09-22",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 8400
+    },
+    {
+      "id": "vnt-11",
+      "vale": "012",
+      "fecha": "2026-09-23",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 46,
+          "importe": 7820
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 39,
+          "importe": 5460
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 100,
+          "importe": 23000
+        }
+      ],
+      "importeTotal": 36280
+    },
+    {
+      "id": "vnt-12",
+      "vale": "011",
+      "fecha": "2026-09-23",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 42,
+          "importe": 7140
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 76,
+          "importe": 17480
+        }
+      ],
+      "importeTotal": 24620
+    },
+    {
+      "id": "vnt-13",
+      "vale": "010",
+      "fecha": "2026-09-23",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 6800
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 75,
+          "importe": 10500
+        }
+      ],
+      "importeTotal": 17300
+    },
+    {
+      "id": "vnt-14",
+      "vale": "009",
+      "fecha": "2026-09-23",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 25,
+          "importe": 5000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 21200
+    },
+    {
+      "id": "vnt-15",
+      "vale": "016-A",
+      "fecha": "2026-09-24",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 4,
+          "importe": 800
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 10,
+          "importe": 1400
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 5,
+          "importe": 1150
+        }
+      ],
+      "importeTotal": 3350
+    },
+    {
+      "id": "vnt-16",
+      "vale": "016",
+      "fecha": "2026-09-24",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 35,
+          "importe": 4900
+        }
+      ],
+      "importeTotal": 4900
+    },
+    {
+      "id": "vnt-17",
+      "vale": "015",
+      "fecha": "2026-09-24",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 42,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 75,
+          "importe": 10500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 28100
+    },
+    {
+      "id": "vnt-18",
+      "vale": "014",
+      "fecha": "2026-09-24",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 39,
+          "importe": 8970
+        }
+      ],
+      "importeTotal": 16970
+    },
+    {
+      "id": "vnt-19",
+      "vale": "013",
+      "fecha": "2026-09-24",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 80,
+          "importe": 16000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 60,
+          "importe": 13800
+        }
+      ],
+      "importeTotal": 43800
+    },
+    {
+      "id": "vnt-20",
+      "vale": "021-A",
+      "fecha": "2026-09-25",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 5,
+          "importe": 700
+        }
+      ],
+      "importeTotal": 700
+    },
+    {
+      "id": "vnt-21",
+      "vale": "021",
+      "fecha": "2026-09-25",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        }
+      ],
+      "importeTotal": 8400
+    },
+    {
+      "id": "vnt-22",
+      "vale": "020",
+      "fecha": "2026-09-25",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 26,
+          "importe": 5200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 65,
+          "importe": 9100
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 29100
+    },
+    {
+      "id": "vnt-23",
+      "vale": "019",
+      "fecha": "2026-09-25",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 50,
+          "importe": 11500
+        }
+      ],
+      "importeTotal": 23100
+    },
+    {
+      "id": "vnt-24",
+      "vale": "018",
+      "fecha": "2026-09-25",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 70,
+          "importe": 9800
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 30,
+          "importe": 6900
+        }
+      ],
+      "importeTotal": 35100
+    },
+    {
+      "id": "vnt-25",
+      "vale": "017",
+      "fecha": "2026-09-25",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 60,
+          "importe": 12000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 60,
+          "importe": 13800
+        }
+      ],
+      "importeTotal": 39800
+    },
+    {
+      "id": "vnt-26",
+      "vale": "024",
+      "fecha": "2026-09-26",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 6,
+          "importe": 840
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 4,
+          "importe": 560
+        }
+      ],
+      "importeTotal": 1400
+    },
+    {
+      "id": "vnt-27",
+      "vale": "023",
+      "fecha": "2026-09-26",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        }
+      ],
+      "importeTotal": 7000
+    },
+    {
+      "id": "vnt-28",
+      "vale": "022",
+      "fecha": "2026-09-26",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 8400
+    },
+    {
+      "id": "vnt-29",
+      "vale": "027",
+      "fecha": "2026-09-28",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 52,
+          "importe": 11960
+        }
+      ],
+      "importeTotal": 19960
+    },
+    {
+      "id": "vnt-30",
+      "vale": "026",
+      "fecha": "2026-09-28",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 85,
+          "importe": 17000
+        }
+      ],
+      "importeTotal": 17000
+    },
+    {
+      "id": "vnt-31",
+      "vale": "025",
+      "fecha": "2026-09-28",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4600
+        }
+      ],
+      "importeTotal": 10600
+    },
+    {
+      "id": "vnt-32",
+      "vale": "032",
+      "fecha": "2026-09-29",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 32,
+          "importe": 4480
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 1,
+          "importe": 140
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 3,
+          "importe": 420
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 2,
+          "importe": 280
+        }
+      ],
+      "importeTotal": 10920
+    },
+    {
+      "id": "vnt-33",
+      "vale": "031",
+      "fecha": "2026-09-29",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 100,
+          "importe": 14000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 36800
+    },
+    {
+      "id": "vnt-34",
+      "vale": "030",
+      "fecha": "2026-09-29",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 28,
+          "importe": 5600
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 28,
+          "importe": 3920
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 38,
+          "importe": 8740
+        }
+      ],
+      "importeTotal": 18260
+    },
+    {
+      "id": "vnt-35",
+      "vale": "029",
+      "fecha": "2026-09-29",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 80,
+          "importe": 16000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 16800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 100,
+          "importe": 14000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 80,
+          "importe": 18400
+        }
+      ],
+      "importeTotal": 65200
+    },
+    {
+      "id": "vnt-36",
+      "vale": "028",
+      "fecha": "2026-09-29",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4600
+        }
+      ],
+      "importeTotal": 21200
+    },
+    {
+      "id": "vnt-37",
+      "vale": "036",
+      "fecha": "2026-09-30",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 35,
+          "importe": 7000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 50,
+          "importe": 11500
+        }
+      ],
+      "importeTotal": 18500
+    },
+    {
+      "id": "vnt-38",
+      "vale": "035",
+      "fecha": "2026-09-30",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 38,
+          "importe": 8740
+        }
+      ],
+      "importeTotal": 21740
+    },
+    {
+      "id": "vnt-39",
+      "vale": "034",
+      "fecha": "2026-09-30",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 80,
+          "importe": 16000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 90,
+          "importe": 12600
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 80,
+          "importe": 18400
+        }
+      ],
+      "importeTotal": 52600
+    },
+    {
+      "id": "vnt-40",
+      "vale": "033",
+      "fecha": "2026-09-30",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 10,
+          "importe": 2300
+        }
+      ],
+      "importeTotal": 14700
+    },
+    {
+      "id": "vnt-41",
+      "vale": "039",
+      "fecha": "2026-10-01",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 99,
+          "importe": 19800
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 16800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 68,
+          "importe": 15640
+        }
+      ],
+      "importeTotal": 57840
+    },
+    {
+      "id": "vnt-42",
+      "vale": "038",
+      "fecha": "2026-10-01",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9200
+        }
+      ],
+      "importeTotal": 22800
+    },
+    {
+      "id": "vnt-43",
+      "vale": "037",
+      "fecha": "2026-10-01",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 41,
+          "importe": 8200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 2800
+        }
+      ],
+      "importeTotal": 11000
+    },
+    {
+      "id": "vnt-44",
+      "vale": "042",
+      "fecha": "2026-10-02",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 22,
+          "importe": 4400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 32,
+          "importe": 7360
+        }
+      ],
+      "importeTotal": 15960
+    },
+    {
+      "id": "vnt-45",
+      "vale": "041",
+      "fecha": "2026-10-02",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4600
+        }
+      ],
+      "importeTotal": 14800
+    },
+    {
+      "id": "vnt-46",
+      "vale": "040",
+      "fecha": "2026-10-02",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4600
+        }
+      ],
+      "importeTotal": 19000
+    },
+    {
+      "id": "vnt-47",
+      "vale": "046",
+      "fecha": "2026-10-03",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 1,
+          "importe": 140
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 1,
+          "importe": 140
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 1,
+          "importe": 140
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 6,
+          "importe": 840
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 8400
+        },
+        {
+          "producto": "Palmeritas",
+          "cantidad": 30,
+          "importe": 2400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 2800
+        }
+      ],
+      "importeTotal": 14860
+    },
+    {
+      "id": "vnt-48",
+      "vale": "045",
+      "fecha": "2026-10-03",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 25,
+          "importe": 5000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 13400
+    },
+    {
+      "id": "vnt-49",
+      "vale": "044",
+      "fecha": "2026-10-03",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 5600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 28,
+          "importe": 6440
+        }
+      ],
+      "importeTotal": 19040
+    },
+    {
+      "id": "vnt-50",
+      "vale": "043",
+      "fecha": "2026-10-03",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 16800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 80,
+          "importe": 11200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 80,
+          "importe": 18400
+        }
+      ],
+      "importeTotal": 50400
+    },
+    {
+      "id": "vnt-51",
+      "vale": "050",
+      "fecha": "2026-10-05",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 27000
+    },
+    {
+      "id": "vnt-52",
+      "vale": "049",
+      "fecha": "2026-10-05",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 52,
+          "importe": 10920
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 20520
+    },
+    {
+      "id": "vnt-53",
+      "vale": "048",
+      "fecha": "2026-10-05",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 29100
+    },
+    {
+      "id": "vnt-54",
+      "vale": "047",
+      "fecha": "2026-10-05",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 28,
+          "importe": 5880
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 19680
+    },
+    {
+      "id": "vnt-55",
+      "vale": "053",
+      "fecha": "2026-10-06",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 21000
+    },
+    {
+      "id": "vnt-56",
+      "vale": "052",
+      "fecha": "2026-10-06",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 38,
+          "importe": 7980
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 33,
+          "importe": 7920
+        }
+      ],
+      "importeTotal": 21900
+    },
+    {
+      "id": "vnt-57",
+      "vale": "051",
+      "fecha": "2026-10-06",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 27900
+    },
+    {
+      "id": "vnt-58",
+      "vale": "057-A",
+      "fecha": "2026-10-07",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 1,
+          "importe": 150
+        }
+      ],
+      "importeTotal": 150
+    },
+    {
+      "id": "vnt-59",
+      "vale": "057",
+      "fecha": "2026-10-07",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 31,
+          "importe": 6510
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 59,
+          "importe": 8850
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 17,
+          "importe": 4080
+        }
+      ],
+      "importeTotal": 23940
+    },
+    {
+      "id": "vnt-60",
+      "vale": "056",
+      "fecha": "2026-10-07",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4500
+        }
+      ],
+      "importeTotal": 10800
+    },
+    {
+      "id": "vnt-61",
+      "vale": "055",
+      "fecha": "2026-10-07",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 18000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 40800
+    },
+    {
+      "id": "vnt-62",
+      "vale": "054",
+      "fecha": "2026-10-07",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 20100
+    },
+    {
+      "id": "vnt-63",
+      "vale": "062",
+      "fecha": "2026-10-08",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 2,
+          "importe": 300
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 1,
+          "importe": 210
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 2,
+          "importe": 300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 2,
+          "importe": 300
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 1,
+          "importe": 150
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 1,
+          "importe": 240
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 2,
+          "importe": 420
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 5,
+          "importe": 750
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 2,
+          "importe": 300
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 2,
+          "importe": 480
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 3,
+          "importe": 450
+        }
+      ],
+      "importeTotal": 3900
+    },
+    {
+      "id": "vnt-64",
+      "vale": "061",
+      "fecha": "2026-10-08",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 23,
+          "importe": 4830
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 14430
+    },
+    {
+      "id": "vnt-65",
+      "vale": "060",
+      "fecha": "2026-10-08",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 35,
+          "importe": 5250
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 49,
+          "importe": 11760
+        }
+      ],
+      "importeTotal": 17010
+    },
+    {
+      "id": "vnt-66",
+      "vale": "059",
+      "fecha": "2026-10-08",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 58,
+          "importe": 8700
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 68,
+          "importe": 16320
+        }
+      ],
+      "importeTotal": 37320
+    },
+    {
+      "id": "vnt-67",
+      "vale": "058",
+      "fecha": "2026-10-08",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 21600
+    },
+    {
+      "id": "vnt-68",
+      "vale": "066",
+      "fecha": "2026-10-09",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 48,
+          "importe": 11520
+        }
+      ],
+      "importeTotal": 24420
+    },
+    {
+      "id": "vnt-69",
+      "vale": "065",
+      "fecha": "2026-10-09",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 18900
+    },
+    {
+      "id": "vnt-70",
+      "vale": "064",
+      "fecha": "2026-10-09",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 70,
+          "importe": 14700
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 72,
+          "importe": 17280
+        }
+      ],
+      "importeTotal": 46980
+    },
+    {
+      "id": "vnt-71",
+      "vale": "063",
+      "fecha": "2026-10-09",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 18600
+    },
+    {
+      "id": "vnt-72",
+      "vale": "067-B",
+      "fecha": "2026-10-10",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 11,
+          "importe": 1650
+        }
+      ],
+      "importeTotal": 1650
+    },
+    {
+      "id": "vnt-73",
+      "vale": "067",
+      "fecha": "2026-10-10",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 109,
+          "importe": 16350
+        }
+      ],
+      "importeTotal": 16350
+    },
+    {
+      "id": "vnt-74",
+      "vale": "071",
+      "fecha": "2026-10-12",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 72,
+          "importe": 17280
+        }
+      ],
+      "importeTotal": 36780
+    },
+    {
+      "id": "vnt-75",
+      "vale": "070",
+      "fecha": "2026-10-12",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 36,
+          "importe": 7560
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 54,
+          "importe": 12960
+        }
+      ],
+      "importeTotal": 20520
+    },
+    {
+      "id": "vnt-76",
+      "vale": "069",
+      "fecha": "2026-10-12",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 70,
+          "importe": 16800
+        }
+      ],
+      "importeTotal": 31800
+    },
+    {
+      "id": "vnt-77",
+      "vale": "068",
+      "fecha": "2026-10-12",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 17700
+    },
+    {
+      "id": "vnt-78",
+      "vale": "076",
+      "fecha": "2026-10-13",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 56,
+          "importe": 13440
+        }
+      ],
+      "importeTotal": 13440
+    },
+    {
+      "id": "vnt-79",
+      "vale": "075",
+      "fecha": "2026-10-13",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 81,
+          "importe": 17010
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 51,
+          "importe": 7650
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 70,
+          "importe": 16800
+        }
+      ],
+      "importeTotal": 41460
+    },
+    {
+      "id": "vnt-80",
+      "vale": "074",
+      "fecha": "2026-10-13",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 15600
+    },
+    {
+      "id": "vnt-81",
+      "vale": "073",
+      "fecha": "2026-10-13",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 60,
+          "importe": 12600
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 100,
+          "importe": 24000
+        }
+      ],
+      "importeTotal": 41100
+    },
+    {
+      "id": "vnt-82",
+      "vale": "072",
+      "fecha": "2026-10-13",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 1,
+          "importe": 210
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 5,
+          "importe": 750
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 6,
+          "importe": 1440
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 4,
+          "importe": 600
+        }
+      ],
+      "importeTotal": 3000
+    },
+    {
+      "id": "vnt-83",
+      "vale": "079",
+      "fecha": "2026-10-14",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 5,
+          "importe": 1050
+        }
+      ],
+      "importeTotal": 1050
+    },
+    {
+      "id": "vnt-84",
+      "vale": "078",
+      "fecha": "2026-10-14",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 79,
+          "importe": 16590
+        }
+      ],
+      "importeTotal": 16590
+    },
+    {
+      "id": "vnt-85",
+      "vale": "077",
+      "fecha": "2026-10-14",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 8400
+    },
+    {
+      "id": "vnt-86",
+      "vale": "083",
+      "fecha": "2026-10-15",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 5,
+          "importe": 1050
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 4,
+          "importe": 960
+        }
+      ],
+      "importeTotal": 2010
+    },
+    {
+      "id": "vnt-87",
+      "vale": "082",
+      "fecha": "2026-10-15",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 17400
+    },
+    {
+      "id": "vnt-88",
+      "vale": "081",
+      "fecha": "2026-10-15",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 18,
+          "importe": 3780
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 21,
+          "importe": 5040
+        }
+      ],
+      "importeTotal": 17820
+    },
+    {
+      "id": "vnt-89",
+      "vale": "080",
+      "fecha": "2026-10-15",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 34,
+          "importe": 7140
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 19440
+    },
+    {
+      "id": "vnt-90",
+      "vale": "084",
+      "fecha": "2026-10-16",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 70,
+          "importe": 10500
+        }
+      ],
+      "importeTotal": 10500
+    },
+    {
+      "id": "vnt-91",
+      "vale": "086",
+      "fecha": "2026-10-17",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 9000
+    },
+    {
+      "id": "vnt-92",
+      "vale": "085",
+      "fecha": "2026-10-17",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 4,
+          "importe": 600
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 6,
+          "importe": 900
+        }
+      ],
+      "importeTotal": 9000
+    },
+    {
+      "id": "vnt-93",
+      "vale": "090",
+      "fecha": "2026-10-19",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        }
+      ],
+      "importeTotal": 3000
+    },
+    {
+      "id": "vnt-94",
+      "vale": "089",
+      "fecha": "2026-10-19",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 66,
+          "importe": 13860
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 22860
+    },
+    {
+      "id": "vnt-95",
+      "vale": "088",
+      "fecha": "2026-10-19",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 100,
+          "importe": 21000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 30000
+    },
+    {
+      "id": "vnt-96",
+      "vale": "087",
+      "fecha": "2026-10-19",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        }
+      ],
+      "importeTotal": 11400
+    },
+    {
+      "id": "vnt-97",
+      "vale": "095",
+      "fecha": "2026-10-20",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 1,
+          "importe": 150
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 1,
+          "importe": 150
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 3,
+          "importe": 630
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 10,
+          "importe": 1500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 3,
+          "importe": 720
+        }
+      ],
+      "importeTotal": 6150
+    },
+    {
+      "id": "vnt-98",
+      "vale": "094",
+      "fecha": "2026-10-20",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 38,
+          "importe": 5700
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 50,
+          "importe": 12000
+        }
+      ],
+      "importeTotal": 24000
+    },
+    {
+      "id": "vnt-99",
+      "vale": "093",
+      "fecha": "2026-10-20",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 19,
+          "importe": 3990
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        }
+      ],
+      "importeTotal": 9990
+    },
+    {
+      "id": "vnt-100",
+      "vale": "092",
+      "fecha": "2026-10-20",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 75,
+          "importe": 11250
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 34050
+    },
+    {
+      "id": "vnt-101",
+      "vale": "091",
+      "fecha": "2026-10-20",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 35,
+          "importe": 7350
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 27150
+    },
+    {
+      "id": "vnt-102",
+      "vale": "s/v",
+      "fecha": "2026-10-21",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 1,
+          "importe": 240
+        }
+      ],
+      "importeTotal": 240
+    },
+    {
+      "id": "vnt-103",
+      "vale": "100",
+      "fecha": "2026-10-21",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7500
+        }
+      ],
+      "importeTotal": 7500
+    },
+    {
+      "id": "vnt-104",
+      "vale": "099",
+      "fecha": "2026-10-21",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 35,
+          "importe": 7350
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 32,
+          "importe": 7680
+        }
+      ],
+      "importeTotal": 31530
+    },
+    {
+      "id": "vnt-105",
+      "vale": "098",
+      "fecha": "2026-10-21",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 25,
+          "importe": 5250
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 14550
+    },
+    {
+      "id": "vnt-106",
+      "vale": "097",
+      "fecha": "2026-10-21",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 90,
+          "importe": 13500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 37800
+    },
+    {
+      "id": "vnt-107",
+      "vale": "096",
+      "fecha": "2026-10-21",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 21000
+    },
+    {
+      "id": "vnt-108",
+      "vale": "105",
+      "fecha": "2026-10-23",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 18000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 2,
+          "importe": 480
+        }
+      ],
+      "importeTotal": 18480
+    },
+    {
+      "id": "vnt-109",
+      "vale": "104",
+      "fecha": "2026-10-23",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 90,
+          "importe": 13500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 47,
+          "importe": 11280
+        }
+      ],
+      "importeTotal": 28980
+    },
+    {
+      "id": "vnt-110",
+      "vale": "103",
+      "fecha": "2026-10-23",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 19,
+          "importe": 3990
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 16590
+    },
+    {
+      "id": "vnt-111",
+      "vale": "102",
+      "fecha": "2026-10-23",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 90,
+          "importe": 13500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 34200
+    },
+    {
+      "id": "vnt-112",
+      "vale": "101",
+      "fecha": "2026-10-23",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 21000
+    },
+    {
+      "id": "vnt-113",
+      "vale": "110",
+      "fecha": "2026-10-24",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 5,
+          "importe": 750
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 12,
+          "importe": 1800
+        }
+      ],
+      "importeTotal": 2550
+    },
+    {
+      "id": "vnt-114",
+      "vale": "109",
+      "fecha": "2026-10-24",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 24,
+          "importe": 5040
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 108,
+          "importe": 16200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 69,
+          "importe": 16560
+        }
+      ],
+      "importeTotal": 43800
+    },
+    {
+      "id": "vnt-115",
+      "vale": "108",
+      "fecha": "2026-10-24",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 15600
+    },
+    {
+      "id": "vnt-116",
+      "vale": "107",
+      "fecha": "2026-10-24",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 115,
+          "importe": 17250
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 45150
+    },
+    {
+      "id": "vnt-117",
+      "vale": "106",
+      "fecha": "2026-10-24",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 13200
+    },
+    {
+      "id": "vnt-118",
+      "vale": "115",
+      "fecha": "2026-10-26",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 9000
+    },
+    {
+      "id": "vnt-119",
+      "vale": "114",
+      "fecha": "2026-10-26",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 4800
+    },
+    {
+      "id": "vnt-120",
+      "vale": "113",
+      "fecha": "2026-10-26",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 31,
+          "importe": 6510
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 23310
+    },
+    {
+      "id": "vnt-121",
+      "vale": "112",
+      "fecha": "2026-10-26",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 100,
+          "importe": 21000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 18000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 100,
+          "importe": 15000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 62400
+    },
+    {
+      "id": "vnt-122",
+      "vale": "111",
+      "fecha": "2026-10-26",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 32,
+          "importe": 7680
+        }
+      ],
+      "importeTotal": 7680
+    },
+    {
+      "id": "vnt-123",
+      "vale": "119",
+      "fecha": "2026-10-27",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        }
+      ],
+      "importeTotal": 13200
+    },
+    {
+      "id": "vnt-124",
+      "vale": "118",
+      "fecha": "2026-10-27",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 14100
+    },
+    {
+      "id": "vnt-125",
+      "vale": "117",
+      "fecha": "2026-10-27",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 50,
+          "importe": 10500
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 100,
+          "importe": 15000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 42900
+    },
+    {
+      "id": "vnt-126",
+      "vale": "116",
+      "fecha": "2026-10-27",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 27,
+          "importe": 5670
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 17,
+          "importe": 4080
+        }
+      ],
+      "importeTotal": 15750
+    },
+    {
+      "id": "vnt-127",
+      "vale": "123",
+      "fecha": "2026-10-28",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 9000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 32,
+          "importe": 7680
+        }
+      ],
+      "importeTotal": 20880
+    },
+    {
+      "id": "vnt-128",
+      "vale": "122",
+      "fecha": "2026-10-28",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 23,
+          "importe": 4830
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 12630
+    },
+    {
+      "id": "vnt-129",
+      "vale": "121",
+      "fecha": "2026-10-28",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 80,
+          "importe": 16800
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 50,
+          "importe": 7500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 37200
+    },
+    {
+      "id": "vnt-130",
+      "vale": "120",
+      "fecha": "2026-10-28",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 28,
+          "importe": 5880
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 19680
+    },
+    {
+      "id": "vnt-131",
+      "vale": "128",
+      "fecha": "2026-10-29",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 16,
+          "importe": 3360
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 18,
+          "importe": 2700
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 12,
+          "importe": 1800
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 5,
+          "importe": 1200
+        }
+      ],
+      "importeTotal": 9060
+    },
+    {
+      "id": "vnt-132",
+      "vale": "127",
+      "fecha": "2026-10-29",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6300
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 75,
+          "importe": 11250
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 80,
+          "importe": 19200
+        }
+      ],
+      "importeTotal": 36750
+    },
+    {
+      "id": "vnt-133",
+      "vale": "126",
+      "fecha": "2026-10-29",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 40,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 18000
+    },
+    {
+      "id": "vnt-134",
+      "vale": "125",
+      "fecha": "2026-10-29",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 90,
+          "importe": 13500
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 28,
+          "importe": 4200
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        }
+      ],
+      "importeTotal": 34500
+    },
+    {
+      "id": "vnt-135",
+      "vale": "124",
+      "fecha": "2026-10-29",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 57,
+          "importe": 8550
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        }
+      ],
+      "importeTotal": 21750
+    },
+    {
+      "id": "vnt-136",
+      "vale": "133",
+      "fecha": "2026-10-30",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 24,
+          "importe": 3600
+        }
+      ],
+      "importeTotal": 3600
+    },
+    {
+      "id": "vnt-137",
+      "vale": "132",
+      "fecha": "2026-10-30",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 50,
+          "importe": 7500
+        }
+      ],
+      "importeTotal": 7500
+    },
+    {
+      "id": "vnt-138",
+      "vale": "131",
+      "fecha": "2026-10-30",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 17,
+          "importe": 4080
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 26,
+          "importe": 5460
+        }
+      ],
+      "importeTotal": 15540
+    },
+    {
+      "id": "vnt-139",
+      "vale": "130",
+      "fecha": "2026-10-30",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 80,
+          "importe": 12000
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8400
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8400
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        }
+      ],
+      "importeTotal": 33300
+    },
+    {
+      "id": "vnt-140",
+      "vale": "129",
+      "fecha": "2026-10-30",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 30,
+          "importe": 4500
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 4800
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 30,
+          "importe": 4500
+        }
+      ],
+      "importeTotal": 18000
+    },
+    {
+      "id": "vnt-141",
+      "vale": "135",
+      "fecha": "2026-10-31",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Masarreal",
+          "cantidad": 88,
+          "importe": 13200
+        }
+      ],
+      "importeTotal": 13200
+    },
+    {
+      "id": "vnt-142",
+      "vale": "134",
+      "fecha": "2026-10-31",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 85,
+          "importe": 17850
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6000
+        }
+      ],
+      "importeTotal": 23850
+    },
+    {
+      "id": "vnt-143",
+      "vale": "140",
+      "fecha": "2026-11-02",
+      "cliente": "Otros",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 1,
+          "importe": 220
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 5,
+          "importe": 1250
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 11070
+    },
+    {
+      "id": "vnt-144",
+      "vale": "139",
+      "fecha": "2026-11-02",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 34,
+          "importe": 7480
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 76,
+          "importe": 19000
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9600
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6400
+        }
+      ],
+      "importeTotal": 42480
+    },
+    {
+      "id": "vnt-145",
+      "vale": "138",
+      "fecha": "2026-11-02",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 44,
+          "importe": 11000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3200
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4400
+        }
+      ],
+      "importeTotal": 18600
+    },
+    {
+      "id": "vnt-146",
+      "vale": "137",
+      "fecha": "2026-11-02",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 70,
+          "importe": 15400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 40,
+          "importe": 6400
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8750
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 40150
+    },
+    {
+      "id": "vnt-147",
+      "vale": "136",
+      "fecha": "2026-11-02",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 5000
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 20,
+          "importe": 3200
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 60,
+          "importe": 9600
+        }
+      ],
+      "importeTotal": 17800
+    },
+    {
+      "id": "vnt-148",
+      "vale": "144",
+      "fecha": "2026-11-03",
+      "cliente": "Yoan",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 30,
+          "importe": 6600
+        },
+        {
+          "producto": "Masarreal",
+          "cantidad": 120,
+          "importe": 19200
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 9600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 33,
+          "importe": 8250
+        }
+      ],
+      "importeTotal": 43650
+    },
+    {
+      "id": "vnt-149",
+      "vale": "143",
+      "fecha": "2026-11-03",
+      "cliente": "Osdael",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 20,
+          "importe": 4400
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 48,
+          "importe": 7680
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 5000
+        }
+      ],
+      "importeTotal": 17080
+    },
+    {
+      "id": "vnt-150",
+      "vale": "142",
+      "fecha": "2026-11-03",
+      "cliente": "Erick",
+      "lineas": [
+        {
+          "producto": "Pasteles",
+          "cantidad": 60,
+          "importe": 9600
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 35,
+          "importe": 8750
+        },
+        {
+          "producto": "Conos",
+          "cantidad": 42,
+          "importe": 9240
+        }
+      ],
+      "importeTotal": 27590
+    },
+    {
+      "id": "vnt-151",
+      "vale": "141",
+      "fecha": "2026-11-03",
+      "cliente": "Carlos",
+      "lineas": [
+        {
+          "producto": "Conos",
+          "cantidad": 40,
+          "importe": 8800
+        },
+        {
+          "producto": "Pasteles",
+          "cantidad": 32,
+          "importe": 5120
+        },
+        {
+          "producto": "Señoritas",
+          "cantidad": 20,
+          "importe": 5000
+        }
+      ],
+      "importeTotal": 18920
+    }
+  ],
+  "gastos": [
+    {
+      "id": "gst-prod-lote-1",
+      "fecha": "2026-09-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2025,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-1",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-2",
+      "fecha": "2026-09-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-2",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-3",
+      "fecha": "2026-09-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-3",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-4",
+      "fecha": "2026-09-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-4",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-5",
+      "fecha": "2026-09-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2160,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-5",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-6",
+      "fecha": "2026-09-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2370,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-6",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-7",
+      "fecha": "2026-09-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-7",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-8",
+      "fecha": "2026-09-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1950,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-8",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-9",
+      "fecha": "2026-09-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1200,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-9",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-10",
+      "fecha": "2026-09-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 3240,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-10",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-11",
+      "fecha": "2026-09-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2295,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-11",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-12",
+      "fecha": "2026-09-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-12",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-13",
+      "fecha": "2026-09-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1650,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-13",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-14",
+      "fecha": "2026-09-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 390,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-14",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-15",
+      "fecha": "2026-09-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 3240,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-15",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-16",
+      "fecha": "2026-09-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2490,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-16",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-17",
+      "fecha": "2026-09-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-17",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-18",
+      "fecha": "2026-09-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1350,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-18",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-19",
+      "fecha": "2026-09-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-19",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-20",
+      "fecha": "2026-09-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2160,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-20",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-21",
+      "fecha": "2026-09-25",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2490,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-21",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-22",
+      "fecha": "2026-09-25",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-22",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-23",
+      "fecha": "2026-09-25",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 2100,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-23",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-24",
+      "fecha": "2026-09-25",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-24",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-25",
+      "fecha": "2026-09-25",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-25",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-26",
+      "fecha": "2026-09-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-26",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-27",
+      "fecha": "2026-09-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2325,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-27",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-28",
+      "fecha": "2026-09-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-28",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-29",
+      "fecha": "2026-09-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-29",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-30",
+      "fecha": "2026-09-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2550,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-30",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-31",
+      "fecha": "2026-09-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 5400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-31",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-32",
+      "fecha": "2026-09-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1950,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-32",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-33",
+      "fecha": "2026-09-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-33",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-34",
+      "fecha": "2026-09-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-34",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-35",
+      "fecha": "2026-09-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2475,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-35",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-36",
+      "fecha": "2026-09-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-36",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-37",
+      "fecha": "2026-09-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-37",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-38",
+      "fecha": "2026-09-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1200,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-38",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-39",
+      "fecha": "2026-09-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-39",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-40",
+      "fecha": "2026-10-01",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-40",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-41",
+      "fecha": "2026-10-01",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-41",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-42",
+      "fecha": "2026-10-01",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-42",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-43",
+      "fecha": "2026-10-01",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-43",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-44",
+      "fecha": "2026-10-01",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-44",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-45",
+      "fecha": "2026-10-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1230,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-45",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-46",
+      "fecha": "2026-10-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-46",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-47",
+      "fecha": "2026-10-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-47",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-48",
+      "fecha": "2026-10-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-48",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-49",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 675,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-49",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-50",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-50",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-51",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Palmeritas",
+      "importe": 300,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-51",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-52",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-52",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-53",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-53",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-54",
+      "fecha": "2026-10-05",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2550,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-54",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-55",
+      "fecha": "2026-10-05",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-55",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-56",
+      "fecha": "2026-10-05",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-56",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-57",
+      "fecha": "2026-10-05",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2100,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-57",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-58",
+      "fecha": "2026-10-06",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1920,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-58",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-59",
+      "fecha": "2026-10-06",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1950,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-59",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-60",
+      "fecha": "2026-10-06",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1200,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-60",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-61",
+      "fecha": "2026-10-06",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-61",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-62",
+      "fecha": "2026-10-07",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1965,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-62",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-63",
+      "fecha": "2026-10-07",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-63",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-64",
+      "fecha": "2026-10-07",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-64",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-65",
+      "fecha": "2026-10-07",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-65",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-66",
+      "fecha": "2026-10-07",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-66",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-67",
+      "fecha": "2026-10-08",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1290,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-67",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-68",
+      "fecha": "2026-10-08",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-68",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-69",
+      "fecha": "2026-10-08",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-69",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-70",
+      "fecha": "2026-10-08",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-70",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-71",
+      "fecha": "2026-10-08",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-71",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-72",
+      "fecha": "2026-10-09",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2550,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-72",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-73",
+      "fecha": "2026-10-09",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-73",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-74",
+      "fecha": "2026-10-09",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-74",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-75",
+      "fecha": "2026-10-09",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-75",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-76",
+      "fecha": "2026-10-09",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-76",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-77",
+      "fecha": "2026-10-10",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-77",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-78",
+      "fecha": "2026-10-11",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-78",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-79",
+      "fecha": "2026-10-12",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2640,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-79",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-80",
+      "fecha": "2026-10-12",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-80",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-81",
+      "fecha": "2026-10-12",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-81",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-82",
+      "fecha": "2026-10-12",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 3240,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-82",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-83",
+      "fecha": "2026-10-13",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2580,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-83",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-84",
+      "fecha": "2026-10-13",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-84",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-85",
+      "fecha": "2026-10-13",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-85",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-86",
+      "fecha": "2026-10-13",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 3780,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-86",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-87",
+      "fecha": "2026-10-14",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1860,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-87",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-88",
+      "fecha": "2026-10-15",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1875,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-88",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-89",
+      "fecha": "2026-10-15",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 2550,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-89",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-90",
+      "fecha": "2026-10-15",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-90",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-91",
+      "fecha": "2026-10-15",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-91",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-92",
+      "fecha": "2026-10-16",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1050,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-92",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-93",
+      "fecha": "2026-10-17",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-93",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-94",
+      "fecha": "2026-10-19",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 3090,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-94",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-95",
+      "fecha": "2026-10-19",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-95",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-96",
+      "fecha": "2026-10-19",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-96",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-97",
+      "fecha": "2026-10-19",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-97",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-98",
+      "fecha": "2026-10-20",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1905,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-98",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-99",
+      "fecha": "2026-10-20",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-99",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-100",
+      "fecha": "2026-10-20",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-100",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-101",
+      "fecha": "2026-10-20",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2050,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-101",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-102",
+      "fecha": "2026-10-20",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-102",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-103",
+      "fecha": "2026-10-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-103",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-104",
+      "fecha": "2026-10-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-104",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-105",
+      "fecha": "2026-10-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-105",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-106",
+      "fecha": "2026-10-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-106",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-107",
+      "fecha": "2026-10-21",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-107",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-108",
+      "fecha": "2026-10-22",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-108",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-109",
+      "fecha": "2026-10-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1335,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-109",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-110",
+      "fecha": "2026-10-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 5400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-110",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-111",
+      "fecha": "2026-10-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-111",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-112",
+      "fecha": "2026-10-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-112",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-113",
+      "fecha": "2026-10-23",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2160,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-113",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-114",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1410,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-114",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-115",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-115",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-116",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-116",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-117",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-117",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-118",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2160,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-118",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-119",
+      "fecha": "2026-10-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1965,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-119",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-120",
+      "fecha": "2026-10-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-120",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-121",
+      "fecha": "2026-10-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-121",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-122",
+      "fecha": "2026-10-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1200,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-122",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-123",
+      "fecha": "2026-10-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1605,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-123",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-124",
+      "fecha": "2026-10-27",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1905,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-124",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-125",
+      "fecha": "2026-10-27",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-125",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-126",
+      "fecha": "2026-10-27",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-126",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-127",
+      "fecha": "2026-10-27",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-127",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-128",
+      "fecha": "2026-10-27",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-128",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-129",
+      "fecha": "2026-10-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2265,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-129",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-130",
+      "fecha": "2026-10-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-130",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-131",
+      "fecha": "2026-10-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-131",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-132",
+      "fecha": "2026-10-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-132",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-133",
+      "fecha": "2026-10-28",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1605,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-133",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-134",
+      "fecha": "2026-10-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 2490,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-134",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-135",
+      "fecha": "2026-10-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-135",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-136",
+      "fecha": "2026-10-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-136",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-137",
+      "fecha": "2026-10-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-137",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-138",
+      "fecha": "2026-10-29",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-138",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-139",
+      "fecha": "2026-10-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1290,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-139",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-140",
+      "fecha": "2026-10-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1260,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-140",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-141",
+      "fecha": "2026-10-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-141",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-142",
+      "fecha": "2026-10-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-142",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-143",
+      "fecha": "2026-10-30",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1080,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-143",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-144",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1275,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-144",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-145",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1350,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-145",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-146",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 900,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-146",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-147",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 400,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-147",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-148",
+      "fecha": "2026-11-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1875,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-148",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-149",
+      "fecha": "2026-11-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 3600,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-149",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-150",
+      "fecha": "2026-11-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1050,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-150",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-151",
+      "fecha": "2026-11-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 1200,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-151",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-152",
+      "fecha": "2026-11-02",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 2700,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-152",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-153",
+      "fecha": "2026-11-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Conos",
+      "importe": 1980,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-153",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-154",
+      "fecha": "2026-11-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Masarreal",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-154",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-155",
+      "fecha": "2026-11-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Masas",
+      "importe": 1800,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-155",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-156",
+      "fecha": "2026-11-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Pasteles",
+      "importe": 2000,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-156",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-prod-lote-157",
+      "fecha": "2026-11-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Señoritas",
+      "importe": 1620,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Trabajadores",
+      "loteId": "lote-157",
+      "generadoPor": "Producción"
+    },
+    {
+      "id": "gst-rep-rep-1-adm",
+      "fecha": "2026-09-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 21001.68,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-1",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-1-tat",
+      "fecha": "2026-09-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 42003.36,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-1",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-1-car",
+      "fecha": "2026-09-26",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 42003.36,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-1",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-2-adm",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 20615.42,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-2",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-2-tat",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 41230.84,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-2",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-2-car",
+      "fecha": "2026-10-03",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 41230.84,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-2",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-3-adm",
+      "fecha": "2026-10-10",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 17399.2,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-3",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-3-tat",
+      "fecha": "2026-10-10",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 34798.4,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-3",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-3-car",
+      "fecha": "2026-10-10",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 34798.4,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-3",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-4-adm",
+      "fecha": "2026-10-17",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 11772.46,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-4",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-4-tat",
+      "fecha": "2026-10-17",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 23544.92,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-4",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-4-car",
+      "fecha": "2026-10-17",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 23544.92,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-4",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-5-adm",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 17906,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-5",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-5-tat",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 35812,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-5",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-5-car",
+      "fecha": "2026-10-24",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 35812,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-5",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-6-adm",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Administrador",
+      "importe": 18376.12,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Administrador",
+      "repartoId": "rep-6",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-6-tat",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Tatao",
+      "importe": 36752.24,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-6",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-rep-rep-6-car",
+      "fecha": "2026-10-31",
+      "categoria": "Salarios",
+      "concepto": "Salario Carlos",
+      "importe": 36752.24,
+      "formaPago": "Efectivo",
+      "tipoSalario": "Dueños",
+      "repartoId": "rep-6",
+      "generadoPor": "Reparto"
+    },
+    {
+      "id": "gst-op-1",
+      "fecha": "2026-09-30",
+      "categoria": "Limpieza",
+      "concepto": "Limpieza",
+      "importe": 1000,
+      "formaPago": "Efectivo"
+    },
+    {
+      "id": "gst-op-2",
+      "fecha": "2026-10-01",
+      "categoria": "Materiales",
+      "concepto": "Balanza",
+      "importe": 4150,
+      "formaPago": "Efectivo"
+    },
+    {
+      "id": "gst-op-3",
+      "fecha": "2026-10-04",
+      "categoria": "Limpieza",
+      "concepto": "Limpieza",
+      "importe": 1000,
+      "formaPago": "Efectivo"
+    },
+    {
+      "id": "gst-op-4",
+      "fecha": "2026-10-07",
+      "categoria": "Electricidad",
+      "concepto": "Electricidad",
+      "importe": 6530,
+      "formaPago": "Efectivo"
+    },
+    {
+      "id": "gst-op-5",
+      "fecha": "2026-10-20",
+      "categoria": "Materiales",
+      "concepto": "Estropajo",
+      "importe": 540,
+      "formaPago": "Efectivo"
+    },
+    {
+      "id": "gst-op-6",
+      "fecha": "2026-10-31",
+      "categoria": "Materias Primas",
+      "concepto": "Compra de materias primas",
+      "importe": 1956503,
+      "formaPago": "Efectivo"
+    }
+  ],
+  "almacen": [
+    {
+      "id": "alm-1",
+      "codigo": "MP-0001",
+      "producto": "Cobertura",
+      "unidad": "cubeta",
+      "existencia": 0.5,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-1-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0.5,
+          "saldoResultante": 0.5,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-2",
+      "codigo": "MP-0002",
+      "producto": "Harina (Nacional)",
+      "unidad": "saco",
+      "existencia": 0.7,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-2-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0.7,
+          "saldoResultante": 0.7,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-3",
+      "codigo": "MP-0003",
+      "producto": "Colorante",
+      "unidad": "bolsa",
+      "existencia": 0.9,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-3-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0.9,
+          "saldoResultante": 0.9,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-4",
+      "codigo": "MP-0004",
+      "producto": "Sal",
+      "unidad": "saco",
+      "existencia": 0.9,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-4-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0.9,
+          "saldoResultante": 0.9,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-5",
+      "codigo": "MP-0005",
+      "producto": "Harina (IMSA)",
+      "unidad": "saco",
+      "existencia": 1,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-5-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 1,
+          "saldoResultante": 1,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-6",
+      "codigo": "MP-0006",
+      "producto": "Harina (BONOLI)",
+      "unidad": "saco",
+      "existencia": 1,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-6-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 1,
+          "saldoResultante": 1,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-7",
+      "codigo": "MP-0007",
+      "producto": "Polvo de hornear",
+      "unidad": "pqt",
+      "existencia": 1.35,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-7-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 1.35,
+          "saldoResultante": 1.35,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-8",
+      "codigo": "MP-0008",
+      "producto": "Maicena",
+      "unidad": "saco",
+      "existencia": 2,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-8-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 2,
+          "saldoResultante": 2,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-9",
+      "codigo": "MP-0009",
+      "producto": "Saborizante (Vainilla)",
+      "unidad": "pomo",
+      "existencia": 2,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-9-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 2,
+          "saldoResultante": 2,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-10",
+      "codigo": "MP-0010",
+      "producto": "Azúcar (JOE SUPPLY)",
+      "unidad": "saco",
+      "existencia": 4,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-10-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 4,
+          "saldoResultante": 4,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-11",
+      "codigo": "MP-0011",
+      "producto": "Harina (Porto Bello)",
+      "unidad": "saco",
+      "existencia": 4,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-11-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 4,
+          "saldoResultante": 4,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-12",
+      "codigo": "MP-0012",
+      "producto": "Leche en polvo",
+      "unidad": "bolsa",
+      "existencia": 5,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-12-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 5,
+          "saldoResultante": 5,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-13",
+      "codigo": "MP-0013",
+      "producto": "Manteca (masoliver)",
+      "unidad": "caja",
+      "existencia": 5,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-13-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 5,
+          "saldoResultante": 5,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-14",
+      "codigo": "MP-0014",
+      "producto": "Saborizante (Leche condensada)",
+      "unidad": "pomo",
+      "existencia": 3,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-14-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 3,
+          "saldoResultante": 3,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-15",
+      "codigo": "MP-0015",
+      "producto": "Barra de Guayabas (buenas)",
+      "unidad": "U",
+      "existencia": 6,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 5,
+      "movimientos": [
+        {
+          "id": "mov-15-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 6,
+          "saldoResultante": 6,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-16",
+      "codigo": "MP-0016",
+      "producto": "Barra de Guayabas (new)",
+      "unidad": "U",
+      "existencia": 49,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 5,
+      "movimientos": [
+        {
+          "id": "mov-16-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 49,
+          "saldoResultante": 49,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-17",
+      "codigo": "MP-0017",
+      "producto": "Detergente",
+      "unidad": "bolsa",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-17-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-18",
+      "codigo": "MP-0018",
+      "producto": "Leche en polvo",
+      "unidad": "bolsa",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-18-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-19",
+      "codigo": "MP-0019",
+      "producto": "Leche en polvo",
+      "unidad": "bolsa",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-19-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-20",
+      "codigo": "MP-0020",
+      "producto": "Supernotermul",
+      "unidad": "cubeta",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-20-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-21",
+      "codigo": "MP-0021",
+      "producto": "Manteca (masoliver)",
+      "unidad": "Kg",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-21-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-22",
+      "codigo": "MP-0022",
+      "producto": "Margarina (Cinco estrellas)",
+      "unidad": "kg",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-22-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-23",
+      "codigo": "MP-0023",
+      "producto": "Margarina (Alastur)",
+      "unidad": "U",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-23-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    },
+    {
+      "id": "alm-24",
+      "codigo": "MP-0024",
+      "producto": "Margarina (Multiusos)",
+      "unidad": "U",
+      "existencia": 0,
+      "fechaConteo": "2026-10-31",
+      "stockMinimo": 2,
+      "movimientos": [
+        {
+          "id": "mov-24-1",
+          "fecha": "2026-10-31",
+          "tipo": "Entrada",
+          "cantidad": 0,
+          "saldoResultante": 0,
+          "concepto": "Inventario Inicial",
+          "comprobante": "INV-001"
+        }
+      ]
+    }
+  ],
+  "caja": {
+    "saldoInicial": 1300000,
+    "fechaInicio": "2026-09-21"
+  }
+}

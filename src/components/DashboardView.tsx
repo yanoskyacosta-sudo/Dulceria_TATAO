@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
+import { Cloud, RefreshCw, Settings } from 'lucide-react';
 import {
   formatNumber,
   formatDate,
@@ -16,6 +17,10 @@ export const DashboardView: React.FC = () => {
     fechaHasta,
     setDateRange,
     applyQuickPreset,
+    isSyncing,
+    lastCloudSync,
+    syncWithCloud,
+    setIsCloudSyncModalOpen,
   } = useApp();
 
   const [clienteFiltro, setClienteFiltro] = useState<string>('Todos');
@@ -121,6 +126,58 @@ export const DashboardView: React.FC = () => {
 
   return (
     <div className="space-y-4 pb-10">
+      {/* Barra de Sincronización con la Nube */}
+      <div className="flex flex-wrap items-center justify-between gap-3 bg-gradient-to-r from-amber-50 via-white to-orange-50 border border-amber-200/90 rounded-xl px-4 py-2.5 shadow-2xs">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+            <Cloud className={`w-4 h-4 ${isSyncing ? 'animate-spin' : ''}`} />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-black text-xs text-gray-900 tracking-tight">
+                Sincronización con la Nube (PostgreSQL)
+              </span>
+              <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Conectado
+              </span>
+            </div>
+            <p className="text-[11px] text-gray-600 mt-0.5">
+              {lastCloudSync
+                ? `Última sincronización: ${lastCloudSync.toLocaleTimeString('es-CU', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                  })} • Auto-sincronización cada 30 min activa con aviso preventivo`
+                : 'Auto-sincronización cada 30 min activa con aviso preventivo de 30s'}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={() => syncWithCloud('pull')}
+            disabled={isSyncing}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-600 hover:bg-amber-700 active:bg-amber-800 disabled:opacity-60 text-white rounded-lg text-xs font-bold transition-colors shadow-2xs cursor-pointer"
+            title="Descargar las últimas ventas y registros actualizados en la nube"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin' : ''}`} />
+            <span>{isSyncing ? 'Sincronizando...' : 'Sincronizar con la nube'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsCloudSyncModalOpen(true)}
+            className="flex items-center gap-1 px-2.5 py-1.5 bg-white hover:bg-amber-50 text-amber-900 rounded-lg text-xs font-semibold border border-amber-300 transition-colors cursor-pointer"
+            title="Abrir opciones de sincronización y respaldo en la nube"
+          >
+            <Settings className="w-3.5 h-3.5 text-amber-700" />
+            <span className="hidden sm:inline">Opciones</span>
+          </button>
+        </div>
+      </div>
+
       {/* Filters Bar (Header Row 2 rendered inside view) */}
       <div className="bg-white border border-gray-200 rounded-lg p-2.5 shadow-2xs">
         <div className="flex flex-wrap items-center justify-between gap-2.5">

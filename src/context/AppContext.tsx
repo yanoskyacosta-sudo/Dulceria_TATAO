@@ -14,6 +14,7 @@ import {
   JustificacionDiferencia,
   MaterialReceta,
   Receta,
+  UsuarioAutorizado,
 } from '../types';
 import { getDefaultDateRange, getQuickRange, QuickDatePreset } from '../utils/dateUtils';
 import { getPrecioVigente, getPagoPorDulce, calculateReparto, calculateReconciliation } from '../lib/calculations';
@@ -112,10 +113,35 @@ interface AppContextType {
   updateReceta: (id: string, rec: Partial<Receta>) => void;
   deleteReceta: (id: string) => void;
 
+  // Ajustes -> Usuarios
+  usuariosAutorizados: UsuarioAutorizado[];
+  addUsuarioAutorizado: (usr: Omit<UsuarioAutorizado, 'id' | 'fechaAgregado'>) => void;
+  updateUsuarioAutorizado: (id: string, usr: Partial<UsuarioAutorizado>) => void;
+  deleteUsuarioAutorizado: (id: string) => void;
+
   // Facturas
   getNextFacturaNumber: () => string;
   addFactura: (factura: Omit<FacturaItem, 'id'>) => void;
   deleteFactura: (id: string) => void;
+
+  // Respaldos
+  importBackup: (backupContent: string) => boolean;
+  exportBackup: () => void;
+
+  // Sincronización en la Nube & Auto-sync
+  isSyncing: boolean;
+  lastCloudSync: Date | null;
+  syncStatusMessage: { type: 'success' | 'error' | 'info'; text: string } | null;
+  setSyncStatusMessage: (msg: { type: 'success' | 'error' | 'info'; text: string } | null) => void;
+  autoSyncWarning: { active: boolean; secondsLeft: number } | null;
+  isAutoSyncEnabled: boolean;
+  setIsAutoSyncEnabled: (enabled: boolean) => void;
+  isCloudSyncModalOpen: boolean;
+  setIsCloudSyncModalOpen: (open: boolean) => void;
+  syncWithCloud: (mode?: 'pull' | 'push') => Promise<{ success: boolean; message: string }>;
+  postponeAutoSync: (minutes?: number) => void;
+  dismissAutoSyncWarning: () => void;
+  triggerManualAutoSyncTest: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -194,6 +220,22 @@ function normalizeData(raw: Partial<AppData> | null | undefined): AppData {
 
   const normRecetas = Array.isArray(raw.recetas) ? raw.recetas : [];
 
+  const defaultUsuarios: UsuarioAutorizado[] = [
+    {
+      id: 'usr-admin-yanosky',
+      email: 'acostacastilleroyanosky@gmail.com',
+      nombre: 'Yanosky Acosta (Admin)',
+      rol: 'Administrador',
+      fechaAgregado: '2026-11-10',
+      activo: true,
+    },
+  ];
+
+  const normUsuarios: UsuarioAutorizado[] =
+    Array.isArray(raw.usuariosAutorizados) && raw.usuariosAutorizados.length > 0
+      ? raw.usuariosAutorizados
+      : defaultUsuarios;
+
   return {
     meta: raw.meta || init.meta,
     repartos: Array.isArray(raw.repartos) ? raw.repartos : init.repartos || [],
@@ -208,10 +250,48 @@ function normalizeData(raw: Partial<AppData> | null | undefined): AppData {
     justificaciones: Array.isArray(raw.justificaciones) ? raw.justificaciones : [],
     materialesReceta: normMateriales,
     recetas: normRecetas,
+    usuariosAutorizados: normUsuarios,
   };
 }
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  // Cloud Sync & 30-minute Auto-Sync State
+  const [isSyncing, setIsSyncing] = useState<boolean>(false);
+  const [lastCloudSync, setLastCloudSync] = useState<Date | null>(() => {
+    try {
+      const s = localStorage.getItem('dulceria_tatao_last_sync');
+      return s ? new Date(s) : new Date();
+    } catch {
+      return new Date();
+    }
+  });
+  const [syncStatusMessage, setSyncStatusMessage] = useState<{
+    type: 'success' | 'error' | 'info';
+    text: string;
+  } | null>(null);
+  const [autoSyncWarning, setAutoSyncWarning] = useState<{
+    active: boolean;
+    secondsLeft: number;
+  } | null>(null);
+  const [isAutoSyncEnabled, setIsAutoSyncEnabledState] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('dulceria_tatao_auto_sync') !== 'false';
+    } catch {
+      return true;
+    }
+  });
+  const [isCloudSyncModalOpen, setIsCloudSyncModalOpen] = useState<boolean>(false);
+  const [nextAutoSyncTime, setNextAutoSyncTime] = useState<number>(() => Date.now() + 30 * 60 * 1000);
+
+  const setIsAutoSyncEnabled = (enabled: boolean) => {
+    setIsAutoSyncEnabledState(enabled);
+    try {
+      localStorage.setItem('dulceria_tatao_auto_sync', String(enabled));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   // Load data from localStorage or default to datos_tatao.json
   const [data, setData] = useState<AppData>(() => {
     let result: AppData;
@@ -219,7 +299,14 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        result = normalizeData(parsed);
+        const normSaved = normalizeData(parsed);
+        const init = initialJson as unknown as AppData;
+        // Prefer freshly updated file if it contains more records than old cached localStorage
+        if ((init.ventas?.length || 0) > (normSaved.ventas?.length || 0)) {
+          result = normalizeData(init);
+        } else {
+          result = normSaved;
+        }
       } else {
         result = normalizeData(initialJson as unknown as AppData);
       }
@@ -244,14 +331,226 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     return result;
   });
 
-  // Save data to localStorage on every state change
+  const isHydratedRef = React.useRef<boolean>(false);
+
+  // Save data to localStorage and sync with Cloud SQL PostgreSQL backend
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (e) {
       console.error('Error saving data to localStorage', e);
     }
+
+    // Do NOT push unhydrated state back to PostgreSQL on initial render
+    if (!isHydratedRef.current) {
+      return;
+    }
+
+    // Debounced background sync to Cloud SQL PostgreSQL
+    const syncTimer = setTimeout(() => {
+      fetch('/api/data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ appData: data }),
+      }).catch((err) => {
+        // Silently handle offline/network deviations
+      });
+    }, 1200);
+
+    return () => clearTimeout(syncTimer);
   }, [data]);
+
+  // Initial load from Cloud SQL PostgreSQL to ensure multi-device synchronization
+  useEffect(() => {
+    let isMounted = true;
+    async function hydrateFromPostgres() {
+      try {
+        const res = await fetch('/api/data');
+        if (res.ok) {
+          const result = await res.json();
+          if (result && result.data && isMounted) {
+            const remoteData = normalizeData(result.data);
+            const init = initialJson as unknown as AppData;
+
+            // Intelligently select whichever dataset is richer/newer
+            const initVentas = init.ventas?.length || 0;
+            const remoteVentas = remoteData.ventas?.length || 0;
+            const currentVentas = data.ventas?.length || 0;
+
+            let chosen = remoteData;
+            if (initVentas > remoteVentas && initVentas >= currentVentas) {
+              chosen = normalizeData(init);
+              // Update remote with richer init dataset
+              fetch('/api/data', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ appData: chosen }),
+              }).catch(() => {});
+            }
+
+            setData(chosen);
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(chosen));
+            } catch {}
+
+            const syncDate = new Date();
+            setLastCloudSync(syncDate);
+            try {
+              localStorage.setItem('dulceria_tatao_last_sync', syncDate.toISOString());
+            } catch {}
+          } else if (result && !result.data) {
+            // Seed PostgreSQL with current data on first run
+            await fetch('/api/data', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ appData: data }),
+            });
+          }
+        }
+      } catch (err) {
+        // Fall back gracefully to localStorage
+      } finally {
+        isHydratedRef.current = true;
+      }
+    }
+    hydrateFromPostgres();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  // Sync with Cloud SQL PostgreSQL: pull or push
+  const syncWithCloud = async (
+    mode: 'pull' | 'push' = 'pull'
+  ): Promise<{ success: boolean; message: string }> => {
+    setIsSyncing(true);
+    try {
+      if (mode === 'push') {
+        const res = await fetch('/api/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ appData: data }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const syncDate = new Date();
+        setLastCloudSync(syncDate);
+        try {
+          localStorage.setItem('dulceria_tatao_last_sync', syncDate.toISOString());
+        } catch {}
+        const msg = `Datos locales guardados en la nube con éxito a las ${syncDate.toLocaleTimeString('es-CU')}.`;
+        setSyncStatusMessage({ type: 'success', text: msg });
+        setTimeout(() => setSyncStatusMessage(null), 5000);
+        return { success: true, message: msg };
+      } else {
+        // Pull latest from Cloud SQL PostgreSQL
+        const res = await fetch('/api/data');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const result = await res.json();
+        if (result && result.data) {
+          const normalized = normalizeData(result.data);
+          setData(normalized);
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+          } catch {}
+          const syncDate = new Date();
+          setLastCloudSync(syncDate);
+          try {
+            localStorage.setItem('dulceria_tatao_last_sync', syncDate.toISOString());
+          } catch {}
+          const vCount = normalized.ventas?.length || 0;
+          const pCount = normalized.produccion?.length || 0;
+          const gCount = normalized.gastos?.length || 0;
+          const msg = `Sincronización con la nube completada: ${vCount} ventas, ${pCount} lotes y ${gCount} gastos al día.`;
+          setSyncStatusMessage({ type: 'success', text: msg });
+          setTimeout(() => setSyncStatusMessage(null), 5000);
+          return { success: true, message: msg };
+        } else {
+          throw new Error('No se encontraron datos remotos en la base de datos');
+        }
+      }
+    } catch (err: any) {
+      const errorMsg = `Error al sincronizar con la nube: ${err.message || 'Error de conexión'}`;
+      setSyncStatusMessage({ type: 'error', text: errorMsg });
+      setTimeout(() => setSyncStatusMessage(null), 6000);
+      return { success: false, message: errorMsg };
+    } finally {
+      setIsSyncing(false);
+      // Reschedule next auto sync for 30 minutes from now
+      setNextAutoSyncTime(Date.now() + 30 * 60 * 1000);
+    }
+  };
+
+  // Postpone scheduled auto-sync (e.g. 10 minutes)
+  const postponeAutoSync = (minutes = 10) => {
+    setAutoSyncWarning(null);
+    const newTarget = Date.now() + minutes * 60 * 1000;
+    setNextAutoSyncTime(newTarget);
+    setSyncStatusMessage({
+      type: 'info',
+      text: `Sincronización aplazada ${minutes} minutos. Puedes continuar trabajando.`,
+    });
+    setTimeout(() => setSyncStatusMessage(null), 4000);
+  };
+
+  // Dismiss auto-sync warning and reset for next 30 min cycle
+  const dismissAutoSyncWarning = () => {
+    setAutoSyncWarning(null);
+    setNextAutoSyncTime(Date.now() + 30 * 60 * 1000);
+  };
+
+  // Manually test advance warning for demo / verification
+  const triggerManualAutoSyncTest = () => {
+    setNextAutoSyncTime(Date.now() + 30 * 1000);
+    setAutoSyncWarning({ active: true, secondsLeft: 30 });
+  };
+
+  // 30-minute Auto-Sync Countdown and Warning logic
+  useEffect(() => {
+    if (!isAutoSyncEnabled) {
+      setAutoSyncWarning(null);
+      return;
+    }
+
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const msRemaining = nextAutoSyncTime - now;
+
+      // 30 seconds before sync: trigger advance warning
+      if (msRemaining <= 30000 && msRemaining > 0) {
+        const secondsLeft = Math.max(1, Math.ceil(msRemaining / 1000));
+        setAutoSyncWarning({ active: true, secondsLeft });
+      } else if (msRemaining <= 0) {
+        // Time to sync!
+        // Safety check: is user actively typing in an input, textarea, or select?
+        const activeTag = document.activeElement?.tagName;
+        const isEditing =
+          activeTag === 'INPUT' || activeTag === 'TEXTAREA' || activeTag === 'SELECT';
+
+        if (isEditing) {
+          // Postpone automatically by 5 minutes to avoid interrupting active typing
+          setNextAutoSyncTime(Date.now() + 5 * 60 * 1000);
+          setAutoSyncWarning(null);
+          setSyncStatusMessage({
+            type: 'info',
+            text: 'Sincronización aplazada 5 minutos para proteger los datos que estás editando.',
+          });
+          setTimeout(() => setSyncStatusMessage(null), 5000);
+        } else {
+          // Smoothly perform auto-sync
+          setAutoSyncWarning(null);
+          setNextAutoSyncTime(Date.now() + 30 * 60 * 1000);
+          syncWithCloud('pull');
+        }
+      } else {
+        // Outside warning window
+        if (autoSyncWarning) {
+          setAutoSyncWarning(null);
+        }
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [isAutoSyncEnabled, nextAutoSyncTime, autoSyncWarning]);
 
   // Reconciliation note
   const [reconciliationNote, setReconciliationNote] = useState<string>(() => {
@@ -296,7 +595,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     const prodObj = data.productos.find((p) => p.nombre === lote.producto);
     const precioVigente = prodObj ? getPrecioVigente(prodObj, lote.fecha) : 0;
     const costo = lote.cantidad * precioVigente;
-    const newLoteId = `lote-${Date.now()}`;
+    const newLoteId = `lote-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
 
     const newLote: ProduccionLote = {
       ...lote,
@@ -945,6 +1244,170 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     });
   };
 
+  // ----------------------------------------------------
+  // SUBMENÚ 1: MATERIALES (RECETAS)
+  // ----------------------------------------------------
+  const addMaterialReceta = (mat: Omit<MaterialReceta, 'id'>) => {
+    const newId = `mat-${Date.now()}`;
+    const newMat: MaterialReceta = {
+      ...mat,
+      id: newId,
+    };
+    setData((prev) => ({
+      ...prev,
+      materialesReceta: [newMat, ...(prev.materialesReceta || [])],
+    }));
+  };
+
+  const updateMaterialReceta = (id: string, patch: Partial<MaterialReceta>) => {
+    setData((prev) => ({
+      ...prev,
+      materialesReceta: (prev.materialesReceta || []).map((m) =>
+        m.id === id ? { ...m, ...patch } : m
+      ),
+    }));
+  };
+
+  const deleteMaterialReceta = (id: string) => {
+    setData((prev) => ({
+      ...prev,
+      materialesReceta: (prev.materialesReceta || []).filter((m) => m.id !== id),
+    }));
+  };
+
+  // ----------------------------------------------------
+  // SUBMENÚ 2: RECETAS
+  // ----------------------------------------------------
+  const addReceta = (rec: Omit<Receta, 'id'>) => {
+    const newId = `rec-${Date.now()}`;
+    const newRec: Receta = {
+      ...rec,
+      id: newId,
+      fechaCreacion: new Date().toISOString(),
+    };
+    setData((prev) => ({
+      ...prev,
+      recetas: [newRec, ...(prev.recetas || [])],
+    }));
+  };
+
+  const updateReceta = (id: string, patch: Partial<Receta>) => {
+    setData((prev) => ({
+      ...prev,
+      recetas: (prev.recetas || []).map((r) =>
+        r.id === id ? { ...r, ...patch } : r
+      ),
+    }));
+  };
+
+  const deleteReceta = (id: string) => {
+    setData((prev) => ({
+      ...prev,
+      recetas: (prev.recetas || []).filter((r) => r.id !== id),
+    }));
+  };
+
+  // ----------------------------------------------------
+  // AJUSTES: USUARIOS AUTORIZADOS (GMAIL / CUENTAS)
+  // ----------------------------------------------------
+  const addUsuarioAutorizado = (usr: Omit<UsuarioAutorizado, 'id' | 'fechaAgregado'>) => {
+    const newId = `usr-${Date.now()}`;
+    const newUsr: UsuarioAutorizado = {
+      ...usr,
+      id: newId,
+      fechaAgregado: new Date().toISOString().slice(0, 10),
+    };
+    setData((prev) => ({
+      ...prev,
+      usuariosAutorizados: [...(prev.usuariosAutorizados || []), newUsr],
+    }));
+  };
+
+  const updateUsuarioAutorizado = (id: string, patch: Partial<UsuarioAutorizado>) => {
+    setData((prev) => ({
+      ...prev,
+      usuariosAutorizados: (prev.usuariosAutorizados || []).map((u) =>
+        u.id === id ? { ...u, ...patch } : u
+      ),
+    }));
+  };
+
+  const deleteUsuarioAutorizado = (id: string) => {
+    setData((prev) => ({
+      ...prev,
+      usuariosAutorizados: (prev.usuariosAutorizados || []).filter((u) => u.id !== id),
+    }));
+  };
+
+  // Exportar respaldo de datos compatible con localStorage y Vercel
+  const exportBackup = () => {
+    try {
+      const dump: Record<string, string> = {
+        [STORAGE_KEY]: JSON.stringify(data),
+      };
+      const blob = new Blob([JSON.stringify(dump, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `respaldo-datos-tatao-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error('Error exportando respaldo', e);
+    }
+  };
+
+  // Importar y aplicar respaldo de datos
+  const importBackup = (backupContent: string): boolean => {
+    try {
+      const parsed = JSON.parse(backupContent);
+      let targetData: AppData | null = null;
+
+      if (parsed && typeof parsed === 'object') {
+        if (parsed[STORAGE_KEY]) {
+          targetData = typeof parsed[STORAGE_KEY] === 'string'
+            ? JSON.parse(parsed[STORAGE_KEY])
+            : parsed[STORAGE_KEY];
+        } else if (parsed.meta && parsed.ventas) {
+          targetData = parsed;
+        }
+      }
+
+      if (targetData) {
+        const normalized = normalizeData(targetData);
+        setData(normalized);
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+        } catch (e) {
+          console.error('Error guardando en localStorage', e);
+        }
+
+        // Sincronizar de inmediato con PostgreSQL
+        fetch('/api/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ appData: normalized }),
+        }).catch((err) => console.warn('Could not sync imported backup to Cloud SQL:', err));
+
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.error('Error importando respaldo', e);
+      return false;
+    }
+  };
+
+  // Contador global de alertas pendientes
+  const pendingAlertsCount = useMemo(() => {
+    const conc = calculateReconciliation(
+      data.produccion,
+      data.ventas,
+      data.justificaciones || []
+    );
+    return conc.totalPendientes;
+  }, [data.produccion, data.ventas, data.justificaciones]);
+
   const value = {
     data,
     currentModule,
@@ -955,6 +1418,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     applyQuickPreset,
     reconciliationNote,
     saveReconciliationNote,
+
+    pendingAlertsCount,
 
     justificaciones: data.justificaciones || [],
     addJustificacion,
@@ -993,9 +1458,40 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     updateCostoUnitario,
     updateParametrosProducto,
 
+    addMaterialReceta,
+    updateMaterialReceta,
+    deleteMaterialReceta,
+
+    addReceta,
+    updateReceta,
+    deleteReceta,
+
+    usuariosAutorizados: data.usuariosAutorizados || [],
+    addUsuarioAutorizado,
+    updateUsuarioAutorizado,
+    deleteUsuarioAutorizado,
+
     getNextFacturaNumber,
     addFactura,
     deleteFactura,
+
+    importBackup,
+    exportBackup,
+
+    // Cloud Sync & Auto-sync
+    isSyncing,
+    lastCloudSync,
+    syncStatusMessage,
+    setSyncStatusMessage,
+    autoSyncWarning,
+    isAutoSyncEnabled,
+    setIsAutoSyncEnabled,
+    isCloudSyncModalOpen,
+    setIsCloudSyncModalOpen,
+    syncWithCloud,
+    postponeAutoSync,
+    dismissAutoSyncWarning,
+    triggerManualAutoSyncTest,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

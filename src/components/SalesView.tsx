@@ -5,6 +5,7 @@ import { QuickDatePreset, toISODate } from '../utils/dateUtils';
 import { VentaVale, LineaVenta } from '../types';
 import { ConfirmModal } from './ConfirmModal';
 import { Plus, Trash2, Edit2 } from 'lucide-react';
+import { useEscToClose } from '../hooks/useEscToClose';
 
 interface DynamicSaleRow {
   producto: string;
@@ -46,6 +47,10 @@ export const SalesView: React.FC = () => {
 
   // Delete confirmation
   const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  useEscToClose(() => {
+    if (isModalOpen) setIsModalOpen(false);
+  });
 
   const productOptions = useMemo(() => {
     return data.productos.map((p) => p.nombre);
@@ -224,7 +229,18 @@ export const SalesView: React.FC = () => {
       });
     }
 
-    setIsModalOpen(false);
+    // Instead of setIsModalOpen(false), reset form fields
+    const today = toISODate(new Date());
+    setFecha(today);
+    setCliente('');
+    setFormaPago('Efectivo');
+    const defaultProd = productOptions[0] || '';
+    const prodObj = data.productos.find((p) => p.nombre === defaultProd);
+    const defaultPrice = prodObj ? String(getPrecioVigente(prodObj, today)) : '';
+    setRows([
+      { producto: defaultProd, cantidad: '', precio: defaultPrice },
+      { producto: defaultProd, cantidad: '', precio: defaultPrice },
+    ]);
   };
 
   const quickButtons: QuickDatePreset[] = ['Hoy', 'Semana', 'Todo'];

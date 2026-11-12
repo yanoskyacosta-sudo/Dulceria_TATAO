@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { ModuleName } from '../types';
 import {
@@ -14,6 +14,12 @@ import {
   Cake,
   Bell,
   X,
+  Settings,
+  ChevronDown,
+  ChevronRight,
+  Boxes,
+  BookOpen,
+  UserCheck,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -26,7 +32,7 @@ interface MenuItem {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const MENU_ITEMS: MenuItem[] = [
+const PRIMARY_MENU_ITEMS: MenuItem[] = [
   { name: 'Panel', icon: LayoutDashboard },
   { name: 'Producción', icon: Factory },
   { name: 'Ventas', icon: ShoppingCart },
@@ -36,12 +42,33 @@ const MENU_ITEMS: MenuItem[] = [
   { name: 'Almacén', icon: Package },
   { name: 'Precios', icon: Tag },
   { name: 'Clientes', icon: Users },
-  { name: 'Productos', icon: Cake },
-  { name: 'Alertas', icon: Bell },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, onCloseMobile }) => {
-  const { currentModule, setCurrentModule } = useApp();
+  const { currentModule, setCurrentModule, pendingAlertsCount } = useApp();
+
+  // Track expanded state of collapsible menus
+  const isProductosActive =
+    currentModule === 'Productos' ||
+    currentModule === 'Materiales' ||
+    currentModule === 'Recetas';
+
+  const isAjustesActive =
+    currentModule === 'Ajustes' ||
+    currentModule === 'Usuarios' ||
+    currentModule === 'Alertas';
+
+  const [isProductosOpen, setIsProductosOpen] = useState(isProductosActive);
+  const [isAjustesOpen, setIsAjustesOpen] = useState(isAjustesActive);
+
+  // Auto-expand if active module changes into one of their submodules
+  useEffect(() => {
+    if (isProductosActive) setIsProductosOpen(true);
+  }, [isProductosActive]);
+
+  useEffect(() => {
+    if (isAjustesActive) setIsAjustesOpen(true);
+  }, [isAjustesActive]);
 
   const handleSelect = (moduleName: ModuleName) => {
     setCurrentModule(moduleName);
@@ -91,9 +118,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, onCloseMobile })
 
         {/* Navigation list */}
         <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
-          {MENU_ITEMS.map((item) => {
+          {PRIMARY_MENU_ITEMS.map((item) => {
             const Icon = item.icon;
             const isActive = currentModule === item.name;
+
             return (
               <button
                 key={item.name}
@@ -114,6 +142,173 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpenMobile, onCloseMobile })
               </button>
             );
           })}
+
+          {/* Menú Desplegable: PRODUCTOS (con Submenús: Productos, Materiales, Recetas) */}
+          <div className="pt-0.5">
+            <button
+              type="button"
+              onClick={() => {
+                if (!isProductosOpen) {
+                  setIsProductosOpen(true);
+                  if (!isProductosActive) handleSelect('Productos');
+                } else {
+                  setIsProductosOpen(false);
+                }
+              }}
+              className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium rounded-md transition-colors ${
+                isProductosActive && !isProductosOpen
+                  ? 'bg-amber-500 text-slate-950 font-semibold'
+                  : isProductosActive
+                  ? 'bg-slate-800/80 text-white font-medium'
+                  : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <Cake
+                  className={`w-4 h-4 shrink-0 ${
+                    isProductosActive && !isProductosOpen ? 'text-slate-950' : 'text-amber-400'
+                  }`}
+                />
+                <span className="truncate">Productos</span>
+              </div>
+              {isProductosOpen ? (
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+              ) : (
+                <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+              )}
+            </button>
+
+            {/* Submenús de Productos */}
+            {isProductosOpen && (
+              <div className="ml-4 pl-2 border-l border-slate-700/80 mt-0.5 space-y-0.5">
+                <button
+                  type="button"
+                  onClick={() => handleSelect('Productos')}
+                  className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                    currentModule === 'Productos'
+                      ? 'bg-amber-500 text-slate-950 font-semibold shadow-xs'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  <Cake className="w-3.5 h-3.5 shrink-0" />
+                  <span>Productos</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSelect('Materiales')}
+                  className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                    currentModule === 'Materiales'
+                      ? 'bg-amber-500 text-slate-950 font-semibold shadow-xs'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  <Boxes className="w-3.5 h-3.5 shrink-0" />
+                  <span>Materiales</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSelect('Recetas')}
+                  className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                    currentModule === 'Recetas'
+                      ? 'bg-amber-500 text-slate-950 font-semibold shadow-xs'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                  <span>Recetas</span>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Menú Desplegable: AJUSTES (con Submenús: Usuarios, Alertas) */}
+          <div className="pt-1 mt-1 border-t border-slate-800">
+            <button
+              type="button"
+              onClick={() => {
+                if (!isAjustesOpen) {
+                  setIsAjustesOpen(true);
+                  if (!isAjustesActive) handleSelect('Usuarios');
+                } else {
+                  setIsAjustesOpen(false);
+                }
+              }}
+              className={`w-full flex items-center justify-between px-3 py-2 text-xs font-medium rounded-md transition-colors ${
+                isAjustesActive && !isAjustesOpen
+                  ? 'bg-amber-500 text-slate-950 font-semibold'
+                  : isAjustesActive
+                  ? 'bg-slate-800/80 text-white font-medium'
+                  : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <Settings
+                  className={`w-4 h-4 shrink-0 ${
+                    isAjustesActive && !isAjustesOpen ? 'text-slate-950' : 'text-amber-400'
+                  }`}
+                />
+                <span className="truncate">Ajustes</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                {pendingAlertsCount > 0 && !isAjustesOpen && (
+                  <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-amber-500 text-slate-950 animate-pulse">
+                    {pendingAlertsCount}
+                  </span>
+                )}
+                {isAjustesOpen ? (
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                ) : (
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                )}
+              </div>
+            </button>
+
+            {/* Submenús de Ajustes */}
+            {isAjustesOpen && (
+              <div className="ml-4 pl-2 border-l border-slate-700/80 mt-0.5 space-y-0.5">
+                <button
+                  type="button"
+                  onClick={() => handleSelect('Usuarios')}
+                  className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                    currentModule === 'Usuarios' || currentModule === 'Ajustes'
+                      ? 'bg-amber-500 text-slate-950 font-semibold shadow-xs'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  <UserCheck className="w-3.5 h-3.5 shrink-0" />
+                  <span>Usuarios</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleSelect('Alertas')}
+                  className={`w-full flex items-center justify-between px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                    currentModule === 'Alertas'
+                      ? 'bg-amber-500 text-slate-950 font-semibold shadow-xs'
+                      : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Bell className="w-3.5 h-3.5 shrink-0" />
+                    <span>Alertas</span>
+                  </div>
+                  {pendingAlertsCount > 0 && (
+                    <span
+                      className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold ${
+                        currentModule === 'Alertas'
+                          ? 'bg-slate-950 text-amber-400'
+                          : 'bg-amber-500 text-slate-950 animate-pulse'
+                      }`}
+                    >
+                      {pendingAlertsCount}
+                    </span>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Sidebar Footer */}
